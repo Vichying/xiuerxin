@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 个人信息 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>个人信息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/userCenter.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <!-- 未登录 -->
+          <!-- <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a> -->
+          <!-- 已登录 - 点击去用户中心 -->
+          <a href="javascript:void(0);"><img src="../../static/picture/icon_denl_01.png" alt=""> 张三</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html" class="active">首页</a></li>
+            <li><a href="../creditExamination.html">信用体检</a></li>
+            <li><a href="../creditRestoration.html">信用修复</a></li>
+            <li><a href="../restorationPublicity.html">修复公示</a></li>
+            <li><a href="../riskMonitoring.html">风险监控</a></li>
+            <li><a href="../creditUniversity.html">信用大学</a></li>
+            <li><a href="../openPlatform.html">开放平台</a></li>
+            <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="topBannerBox">
+    <div class="positionText">当前位置：<a href="../../home.html" style="color: #333;">首页</a>>用户中心><span>个人信息</span></div>
+  </div>
+
+  <main>
+    <div class="contentBox clear">
+      <!-- 左侧导航 -->
+      <div class="left foldTabBox">
+
+      </div>
+      <div class="right contBox">
+        <div class="rightTopTitle">个人信息</div>
+        <div class="rightUserInfoBox">
+          <div class="clear iteminfoBox">
+            <div class="left">用户名：</div>
+            <div class="left">张三</div>
+          </div>
+          <div class="clear iteminfoBox">
+            <div class="left">手机号码：</div>
+            <div class="left">16888886666</div>
+          </div>
+          <div class="clear iteminfoBox">
+            <div class="left">用户密码：</div>
+            <div class="left">******</div>
+            <div class="left changePwBtn" onclick="changePwFn()">修改密码</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/userCenter.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  function changePwFn() {
+    window.location.href = "./changePasswordA.html"
+  }
+</script>
+
+</html>

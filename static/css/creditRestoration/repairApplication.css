@@ -1,0 +1,105 @@
+body{background-color: #F7F8FA;}
+main{width: 1050px;margin: 0 auto;padding-top: 60px;}
+.topPositionBox{padding-top: 65px;margin-bottom: 30px;}
+.topPositionBox p{font-size: 16px;}
+.topPositionBox p span{color: #1164DF;}
+.applicationBox{background-color: #fff;padding: 22px 30px;margin-bottom: 50px;}
+.applicationBox .title{font-size: 18px;margin-bottom: 20px;font-weight: bold;}
+.line{width: 100%;border-bottom: 1px solid #ddd;}
+.stepBox{padding: 54px 78px;}
+.stepListBox{display: flex;display: -webkit-flex;justify-content: space-between;}
+.subline{width: 145px;border-bottom: 2px dashed #ddd;position: relative;top: -77px;}
+.activeLine{border-bottom: 2px solid #1164DF;}
+.stepListBox .stepItemBox{text-align: center;}
+.stepListBox .stepItemBox img{margin-bottom: 20px;width: 62px;height: 62px;}
+.stepListBox .stepItemBox p{font-size: 16px;}
+
+.formBox{padding: 40px 78px;}
+.formBox .commonInput{width: 360px;height: 42px;border: 1px solid #DDDDDD;padding: 0 15px;margin-left: 36px;}
+.formBox label{margin-bottom: 36px;}
+.labelDiy{font-size: 16px;font-weight: bold;display: inline;}
+
+/* 单选框自定义样式 */
+.radioBox input{display: none;}
+.radioBox label{cursor: pointer;position: relative;}
+.radioBox label::before{display: inline-block;content: "";width: 18px;height: 18px;border-radius: 50%;border: 2px solid rgba(193, 200, 211, 1);margin-right: 6px;vertical-align: middle;}
+/* 选中 */
+.radioBox input:checked+label::after{display: inline-block;content: "";width: 10px;height: 10px;border-radius: 50%;position: absolute;left: 4px;bottom: 4px;background-color: #1164DF;}
+
+/* 上传公司营业执照 */
+.uploadImgBox {position: relative;top: 25px;}
+.uploadImgBox .warp-content {border: 1px solid #DDD;border-radius: 4px;width: 260px;height: 350px;line-height: 350px;text-align: center;}
+.uploadImgBox input {position: absolute;top: 0;left: 0;border: 1px solid #DDD;border-radius: 4px;;width: 260px;height: 350px;background: #F7F8FA;opacity: 0;cursor: pointer;
+}
+.uploadImgBox img {width: 260px;height: 350px;border: 1px solid #DDD;border-radius: 4px;;vertical-align: bottom;
+}
+/* 上传身份证 */
+.uploadIDBox {margin-top: 25px;}
+.warp{position: relative;}
+.uploadIDBox .left{margin-right: 60px;}
+.uploadIDBox .warp-content {border: 1px solid #DDD;border-radius: 4px;width: 100%;height: 200px;line-height: 200px;text-align: center;}
+.uploadIDBox input {position: absolute;top: 0;left: 0;border: 1px solid #DDD;border-radius: 4px;;width: 330px;height: 200px;background: #F7F8FA;opacity: 0;cursor: pointer;
+}
+.uploadIDBox input:hover{border: 1px solid #F00;}
+.uploadIDBox img {width: 330px;height: 200px;border: 1px solid #DDD;border-radius: 4px;;vertical-align: bottom;}
+.uploadBtnBox{text-align: center;}
+.uploadBtnBox button{width: 180px;height: 52px;line-height: 52px;color: #fff;background: #1164DF;border: 1px solid #1164DF;}
+.uploadBtnBox button:hover{background-color: #FF9000;color: #fff;border: 1px solid #FF9000;}
+.uploadBtnBox button[disabled] {background:#ccc; border:0; }
+.uploadBtnBox button[disabled]:hover {background:#ccc; border:0; }
+.uploadBtnBox .prevStepBtn{background-color: #fff;color: #1164DF;margin-right: 20px;}
+.uploadBtnBox .prevStepBtn a{color: #1164DF;display: block;}
+.uploadBtnBox .prevStepBtn:hover a{color: #fff;}
+#alertDanger{position: fixed;z-index: 15;width: 500px;top: 12%;left: 50%;margin-left: -250px;display: none;}
+
+/* 第二步 */
+.NOTitle{padding: 13px 15px;background-color: #F7F8FA;margin-bottom: 20PX;}
+.reportListBox{margin-bottom: 40px;}
+.reportitemBox{position: relative;border-bottom: 1px solid #eee;margin-bottom: 20px;}
+.reportitemBox .left span,.trainTimeBox .left span{color: #f00;}
+.reportitemBox .right{font-size: 16px;}
+.reportitemBox .right span a{color:#1164DF;}
+.reportitemBox .title,.trainTimeBox .title{margin-right: 20px;font-size: 16px;font-weight: bold;width: 150px;}
+#datetimepicker1,#datetimepicker2{width: 320px;}
+#datetimepicker1{float: left;}
+#datetimepicker2{float: right;}
+.dateTimeVal{border-radius: 0!important;}
+.reportitemBox .warp-content {border: 1px solid #DDD;border-radius: 2px;width: 74px;text-align: center;line-height: 28px;background: #1164DF;color: #fff;margin-top: -5px;}
+.reportitemBox .warp-content:hover,.reportitemBox input:hover{cursor: pointer;}
+.reportitemBox input {position: absolute;top: -4px;left: 170px;border: 1px solid #DDD;border-radius: 2px;width: 74px;height: 28px;background: #1164DF;opacity: 0;cursor: pointer;
+}
+
+.uploadListBox{padding: 8px;width: 440px;background: #F7F8FA;margin: 10px 0;color: #616161;font-size: 12px;}
+/* 严重非法人 */
+.seriousNOlegalPerson{display: none;}
+.seriousNOlegalPerson label{margin-bottom: 30px;}
+.seriousNOlegalPerson label input{margin-left:14px!important;}
+.modal-dialog{margin-top: 240px;}
+
+/* 第三步 */
+.threeBox .topTitel{font-size: 18px;margin-bottom: 20px;text-align: center;}
+.threeBox .textBox{margin-bottom: 50px;font-size: 16px;}
+.uploadBtnBox .btnDefault{border: 1px solid #ddd;background-color: #fff;color: #333;margin-right: 20px;}
+.uploadBtnBox .btnDefault:hover{color: #fff;}
+
+/* 第四步 */
+.fourBox .topTitle{margin-bottom: 40px;text-align: center;font-size: 18px;font-weight: bold;}
+.fourBox .payInfoBox{padding: 40px 30px;border: 1px solid #ddd;margin-bottom: 50px;}
+.fourBox .timeAndMoney{font-size: 18px;margin-bottom: 18px;}
+.fourBox .timeAndMoney span{color: #FF9000;}
+.fourBox .payInfoBox table{width: 100%;margin-bottom: 30px;}
+.fourBox .payInfoBox table thead tr th,.fourBox .payInfoBox table tbody tr td{padding: 16px 24px;border: 1px solid #ddd;font-size: 18px;}
+.fourBox .payInfoBox table thead tr th{background: #F7F8FA;}
+.fourBox .payTypeItemBox{width: 350px;padding: 20px 30px;border: 1px solid #ddd;border-radius: 4px;}
+.fourBox .payTypeItemBox:hover{cursor: pointer;}
+.fourBox .zfIconImg{margin-left: 35px;}
+
+.agreetoterms {width:100%; float: left;}
+.agreetoterms label{ float: left;width: 100%; color: #FF9000;font-size: 18px;line-height: 44px;
+font-weight: 400;}
+.agreetoterms label input {float: left;margin-top: 16px}
+.agreetoterms label span { float: left;margin-left: 10px; }
+button[disabled] {
+background:#ccc; 
+ border:0; 
+}

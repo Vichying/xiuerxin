@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body{
+  font-size: 14px;
+}
+
+
+
+
+//公用
+.page_top{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding:18px  25px 18px 35px;
+  min-height: 105px;
+  .info_title{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+  .go_back{
+    padding-top: 30px;
+  }
+  .add{
+    background-color: #e7f4ff;
+    border: 1px dashed #1890ff;
+    color: #1890ff;
+    display: flex;
+    width: 150px;
+    height: 68px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    .htd_add{
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+}
+.page_con{
+  margin: 20px;
+  padding: 20px;
+  min-width: 1200px;
+  background: #fff;
+  min-height: 550px;
+}
+.page_tion{
+  margin-top:20px;
+  display: flex;
+  .el-pagination{
+    margin-left: auto;
+  }
+}
+.page_tabs{
+  .el-tabs__header{
+    background: #fff;
+    padding: 0 20px;
+    margin-bottom: 0;
+    .el-tabs__nav-wrap{
+      &::after{
+        background: transparent;
+      }
+    }
+  }
+  .el-tabs__content{
+    margin: 20px;
+    min-width: 1000px;
+    min-height: 500px;
+    padding: 20px;
+    background-color: #fff;
+  }
+}
+
+.content_ruleForm{
+  .el-form-item__content{
+    max-width: 30%;
+  }
+}
+//删除提示框样式修改
+
+.del_pop{
+  .el-popconfirm{
+    .el-popconfirm__main{
+      margin-bottom: 10px;
+    }
+  }
+}

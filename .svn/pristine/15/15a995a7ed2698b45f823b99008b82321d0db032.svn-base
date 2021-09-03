@@ -1,0 +1,30 @@
+main{padding: 30px 62px;background-image: url("../../static/images/reporPDF/img_beijing_pdf.png");background-size: 100%;background-position: center;}
+.topMain{padding-top: 54px;}
+#qrcode,#qrcode2,#qrcode3{margin-bottom: 8px;}
+.topLogoBox .right .text{text-align: center;}
+.middleTitleBox{text-align: center;margin: 186px 0 530px;}
+.middleTitleBox h1{font-size: 66px;color: #000;font-weight: 500;margin-bottom: 100px;}
+.middleInfoBox{width: 630px;margin: 0 auto;margin-bottom: 15px;}
+.middleInfoBox .left{width: 50%;text-align: left;font-size: 24px;}
+.middleInfoBox .title{font-weight: bold;}
+.topTable{width: 640px;margin: 0 auto;margin-bottom: 160px;}
+table{width: 100%;}
+table tr td{padding: 24px 25px;border: 1px solid #999;font-size: 24px;}
+table tr td:first-child,table tr td:nth-child(3){font-weight: bold;}
+/* 第二页 */
+.topLogoBox{padding: 30px 0 10px;border-bottom: 1px dashed #999;margin-bottom: 76px;}
+.topLogoBox .right .text{margin-bottom: 8px;text-align: left;}
+.statementTitleBox{position: relative;}
+.statementTitleBox h1{font-size: 56px;font-weight: bold;text-align: center;}
+.secondQrcode{position: absolute;right: 0;top: -48px;text-align: center;}
+.statementDesc{margin-top: 80px;margin-bottom: 765px;}
+.statementDesc p{font-size: 16px;line-height: 2em;font-weight: 400;}
+/* 第三页 */
+.thirdBox{margin-bottom: 70px;}
+.reportTextBox .subTitle{font-size: 24px;font-weight: bold;margin: 10px 0 24px;}
+.reportTextBox .subDesc{font-size: 24px;font-weight: bold;margin: 60px 0 28px;}
+/* 第四页 */
+table thead tr th{padding: 24px 25px;border: 1px solid #999;font-size: 24px;font-weight: bold;}
+.bottomTable tbody tr td:nth-child(3){font-weight: normal;}
+.reportDescriptionBox{padding: 36px 22px;border: 1px solid #999;}
+.reportDescriptionBox p{font-size: 20px;font-weight: 400;line-height: 2.2em;}

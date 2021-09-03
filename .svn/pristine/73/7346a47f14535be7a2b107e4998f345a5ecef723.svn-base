@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/common.css">
+  <link rel="stylesheet" href="../static/css/creditUniversity.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <!-- 未登录 -->
+          <!-- <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a> -->
+          <!-- 已登录 - 点击去用户中心 -->
+          <a href="../pages/userCenter/personalInfo.html"><img src="../static/picture/icon_denl_01.png" alt=""> 张三</a>
+          <a href="../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../home.html">首页</a></li>
+            <li><a href="./creditExamination.html">信用体检</a></li>
+            <li><a href="./creditRestoration.html">信用修复</a></li>
+            <li><a href="./restorationPublicity.html">修复公示</a></li>
+            <li><a href="./riskMonitoring.html">风险监控</a></li>
+            <li><a href="javascript:void(0);" class="active">信用大学</a></li>
+            <li><a href="./openPlatform.html">开放平台</a></li>
+            <li><a href="./about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- 侧导航开始 -->
+    <div class="rightFload">
+      <div class="pf_div">
+        <ul class="divBox">
+          <li class="l1" id="li_tel">
+            <img src="../static/picture/icon_kfdh_01.png" alt="">
+            <p>客服电话</p>
+          </li>
+          <li class="l2" id="li_wx">
+            <img src="../static/picture/icon_kfdh_wx.png" alt="">
+            <p>微信公众号</p>
+          </li>
+          <li id="gobakTop">
+            <img src="../static/picture/icon_kfdh_02.png" alt="">
+            <p>返回顶部</p>
+          </li>
+        </ul>
+        <div class="tele" id="tel">021-62311883</div>
+        <div class="wxEwm" id="wx">
+          <img src="../static/picture/img_erwm _01.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- 侧导航结束 -->
+  </header>
+  <div class="bannerBox">
+    <img src="../static/images/BannerUniversity.png" alt="">
+  </div>
+  <div class="tabTopBox">
+    <div class="navBox clear">
+      <div class="tabLeft left">
+        <ul class="clear">
+          <li><a href="#policyNews">政策新闻</a></li>
+          <li><a href="#dynamics">信用动态</a></li>
+          <li><a href="#classicCase">典型案例</a></li>
+          <!-- <li><a href="#creditTraining">信用培训</a></li> -->
+          <li><a href="#trainer">培训讲师</a></li>
+        </ul>
+      </div>
+      <div class="tebRight right">
+        <ul class="clear">
+          <li>
+            <a href="###">
+              <img src="../static/picture/icon_kczx_01.png" alt="">
+              <p>课程中心</p>
+            </a>
+          </li>
+          <li>
+            <a href="###">
+              <img src="../static/picture/icon_wdxx_01.png" alt="">
+              <p>我的学习</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 政策新闻 -->
+  <div class="policyNews" id="policyNews">
+    <div class="subTtopTitle clear">
+      <div class="left">政策新闻</div>
+      <div class="right"><a href="./creditUniversity/policyNews.html">更多新闻>></a></div>
+    </div>
+    <div class="clear policyBox">
+      <div class="left imgBox">
+        <div id="myCarousel" class="carousel slide">
+          <!-- 轮播（Carousel）指标 -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- 轮播（Carousel）项目 -->
+          <div class="carousel-inner">
+            <div class="item active" onclick="toDetailFn(0)">
+              <img src="../static/images/icon_zcxw_01.png" alt="First slide">
+              <div class="carousel-caption">农行、交行等银行因违反支付结算规定被央行处罚</div>
+            </div>
+            <div class="item" onclick="toDetailFn(0)">
+              <img src="../static/images/icon_zcxw_01.png" alt="Second slide">
+              <div class="carousel-caption">农行、交行等银行因违反支付结算规定被央行处罚</div>
+            </div>
+            <div class="item" onclick="toDetailFn(0)">
+              <img src="../static/images/icon_zcxw_01.png" alt="Third slide">
+              <div class="carousel-caption">农行、交行等银行因违反支付结算规定被央行处罚</div>
+            </div>
+          </div>
+        </div>
+        <div class="marks"></div>
+      </div>
+      <div class="left listBox">
+        <h3>政策热榜</h3>
+        <ul class="listTextBox">
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+          <li class="clear" onclick="toDetailFn(0)">
+            <div class="left">福鼎市人民法院庭审语音识别系统采购项目福鼎市人民法院庭审语音识别系统采购项目</div>
+            <div class="right">2020-02-04</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 信用动态 -->
+  <div id="dynamics">
+    <div class="subTtopTitle clear">
+      <div class="left">信用动态</div>
+      <div class="right"><a href="./creditUniversity/creditDynamics.html">更多动态>></a></div>
+    </div>
+    <div class="dynamicsItemsBox">
+      <div class="itemBox" onclick="toDynamicsDetailFn(0)">
+        <div class="imgBox"><img src="../static/images/img_xydt_01.png" alt=""></div>
+        <div class="textBox">
+          <div class="title">深入推进社会信用体系建设</div>
+          <div class="clear">
+            <div class="left">来源： 信用中国</div>
+            <div class="right"> 2020-11-16 </div>
+          </div>
+        </div>
+      </div>
+      <div class="itemBox" onclick="toDynamicsDetailFn(0)">
+        <div class="imgBox"><img src="../static/images/img_xydt_02.png" alt=""></div>
+        <div class="textBox">
+          <div class="title">为研究生导师行为划线定“则”</div>
+          <div class="clear">
+            <div class="left">来源： 信用中国</div>
+            <div class="right"> 2020-11-16 </div>
+          </div>
+        </div>
+      </div>
+      <div class="itemBox" onclick="toDynamicsDetailFn(0)">
+        <div class="imgBox"><img src="../static/images/img_xydt_03.png" alt=""></div>
+        <div class="textBox">
+          <div class="title">搭建联网核查平台助力“信用</div>
+          <div class="clear">
+            <div class="left">来源： 信用中国</div>
+            <div class="right"> 2020-11-16 </div>
+          </div>
+        </div>
+      </div>
+      <div class="itemBox" onclick="toDynamicsDetailFn(0)">
+        <div class="imgBox"><img src="../static/images/img_xydt_04.png" alt=""></div>
+        <div class="textBox">
+          <div class="title">天津: 搭建多领域信用应用场景</div>
+          <div class="clear">
+            <div class="left">来源： 信用中国</div>
+            <div class="right"> 2020-11-16 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 典型案例 -->
+  <div id="classicCase">
+    <div class="subTtopTitle clear">
+      <div class="left">典型案例</div>
+      <div class="right"><a href="./creditUniversity/classicCase.html">更多案例>></a></div>
+    </div>
+    <div class="listBox">
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_01.png" alt="">
+        <div class="left text">
+          <h3>执行举措强震慑 司法拘留促执结</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_02.png" alt="">
+        <div class="left text">
+          <h3>银税互动”为小微企业复工复产“输氧...</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_03.png" alt="">
+        <div class="left text">
+          <h3>广告重点监测警示整治保健食品虚假违...</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_04.png" alt="">
+        <div class="left text">
+          <h3>恢复执行想赖账 失信限高促履行</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_05.png" alt="">
+        <div class="left text">
+          <h3>纳入失信处处受限 被执行人主动还款</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+      <div class="itemBox clear" onclick="toCaseDetailFn(0)">
+        <img class="left" src="../static/images/img_dxal_06.png" alt="">
+        <div class="left text">
+          <h3>被纳入税收“黑名单”个人贷款也会受阻</h3>
+          <p>来源： 信用中国</p>
+          <p> 2020-11-16 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 培训讲师 -->
+  <div id="trainer">
+    <div class="subTtopTitle clear">
+      <div class="left">培训讲师</div>
+    </div>
+    <div class="tableBox">
+      <!-- 培训讲师列表最多显示6条 -->
+      <table>
+        <thead>
+          <tr>
+            <th>讲师编号</th>
+            <th>注册日期</th>
+            <th>认证日期</th>
+            <th>主讲类目</th>
+            <th>讲师评分</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+          <tr>
+            <td>HF2020089-XRX</td>
+            <td>2020-10-26</td>
+            <td>2020-10-28</td>
+            <td>综合</td>
+            <td>98.5分</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btnBox">
+      <button onclick="moreTrainerFn()">更多讲师 ></button>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../static/js/commonJS.js"></script>
+<script src="../static/js/footer.js"></script>
+<script src="../static/js/base.js"></script>
+<script>
+  // 政策新闻轮播
+  $('#myCarousel').carousel({
+    interval: 3000,
+    wrap: true
+  })
+  $(".carousel-inner .item").click(function () {
+    console.log($(this))
+  })
+  // 政策新闻列表点击
+  $(".listTextBox li").click(function () {
+    console.log($(this))
+  })
+  // 政策新闻详情
+  function toDetailFn(val) {
+    window.location.href = "../pages/creditUniversity/policyNewsDetail.html?" + "id=" + val
+  }
+  // 信用动态详情
+  function toDynamicsDetailFn(val) {
+    window.location.href = "../pages/creditUniversity/creditDynamicsDetail.html?" + "id=" + val
+  }
+  // 典型案例详情
+  function toCaseDetailFn(val) {
+    window.location.href = "../pages/creditUniversity/classicCaseDetail.html?" + "id=" + val
+  }
+  // // 信用培训详情
+  // function toTrainingDetailFn(val){
+  //   window.location.href = "../pages/creditUniversity/creditTrainingDetail.html?" + "id=" + val
+  // }
+  // 更多培训讲师
+  function moreTrainerFn() {
+    window.location.href = "../pages/creditUniversity/trainers.html"
+  }
+</script>
+
+</html>

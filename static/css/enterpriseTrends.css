@@ -1,0 +1,34 @@
+.bannerBox{height: 366px;}
+.bannerBox img{height: 260px;}
+main{padding: 30px 0 60px;background-color: #F7F8FA;}
+.mainBox{width: 1050px;margin: 0 auto;}
+.mainBox .listBox{padding: 0 20px;background-color: #fff;}
+.mainBox .itemBox{padding: 20px 0;border-bottom: 1px solid #ddd;}
+.mainBox .itemBox:hover{cursor: pointer;}
+.mainBox .itemBox:hover h3{color: #FF9A23;}
+.mainBox .itemBox .imgBox{width: 280px 180px;margin-right: 30px;}
+.mainBox .itemBox .descBox h3{font-size: 16px;font-weight: bold;margin-bottom: 15px;}
+.mainBox .itemBox .descBox .descText{max-width: 698px;color: #666;margin-bottom: 72px;line-height: 24px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;}
+.sourceTimeBox{color: #666;}
+.sourceTimeBox .right img{margin-top: -3px;}
+/* 详情 */
+#topBannerBox{background-image: url("../images/img_banner_aboutLList.png");margin-top: 106px;height: 262px;background-size: cover;background-position: center;}
+#topBannerBox .positionText{width: 1050px;margin: 0 auto;padding-top: 20px;color: #333;font-size: 16px;}
+#topBannerBox .positionText span{color:#0161E1;}
+.contentBox{width: 1050px;margin: 0 auto;padding-top: 20px;}
+.detailBox{border: 1px solid #ddd;padding: 26px 30px;margin-bottom: 50px;}
+.detailBox .topTitle{font-size: 24px;margin-bottom: 18px;text-align: center;}
+.detailBox .sendTime{color: #666;text-align: center;}
+.detailBox .topLine{border-top: 1px solid #ddd;margin: 15px 0;}
+.detailBox .textBox{font-size: 16px;}
+.detailBox .textBox .topSubTitle{margin-bottom: 6px;}
+.detailBox .textBox p{text-indent:2em;}
+.detailBox .textBox .footerEditText{margin-top: 30px;}
+.detailBox .textBox h3{font-weight: bold;margin: 6px 0;}

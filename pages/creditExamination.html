@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 企业报告 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/creditExamination.css">
+    <link rel="stylesheet" href="../static/css/fileinput.min.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../home.html">首页</a></li>
+              <li><a href="javascript:void(0);" class="active">信用体检</a></li>
+              <li><a href="./creditRestoration.html">信用修复</a></li>
+              <li><a href="./restorationPublicity.html">修复公示</a></li>
+              <li><a href="./riskMonitoring.html">风险监控</a></li>
+              <li><a href="./creditUniversity.html">信用大学</a></li>
+              <li><a href="./openPlatform.html">开放平台</a></li>
+              <li><a href="./about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="bannerBox">
+    <img src="../static/images/Banner_01.png" alt="">
+  </div>
+
+  <main>
+    <!-- 搜索框 -->
+    <div>
+      <div class="tabBox">
+        <ul class="clear">
+          <li style="border-radius: 2px 0px 0px 0px;">个人信用体检</li>
+          <li class="tabActive" style="border-radius: 0px 2px 0px 0px;">企业信用体检</li>
+        </ul>
+      </div>
+      <div class="inputBox" id="creditInputBox">
+        <form class="bs-example bs-example-form" role="form">
+          <ul class="clear">
+            <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;display: none;">
+              <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+            </li>
+            <li class="left" id="creInput" style="display: none;">
+              <input type="text" name="identify" id="identify" class="formControl identify" placeholder="请输入身份证号码">
+            </li>
+            <li class="left" id="creInput2" style="border-radius: 0px 0px 0px 2px;">
+              <input type="text" name="identify" id="identify" class="formControl identify" placeholder="请输入企业全称 / 统一社会信用代码">
+            </li>
+            <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+              <button class="btn btn-default" type="button" onClick="searchBtn()">信用体检</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div style="font-size: 18px;margin-top: 20px;text-align: center;">已有<span class="marks">124，456、456</span>位用户参与了信用体检</div>
+    </div>
+    <!-- 批量体检按钮 -->
+    <button class="creditBtn" data-toggle="modal" data-target="#IrreparableModal">批量体检</button>
+    <!-- 在线信用服务 -->
+    <div class="creditServiceBox">
+      <h3>在线信用服务</h3>
+      <div class="">
+        <div class="rowBox clear">
+          <a class="colLg left colLgOne">
+            <img src="../static/images/img_chua_01.png" alt="">
+            <div>在线信用体检</div>
+          </a>
+          <a class="colLg left">
+            <img src="../static/images/img_chua_02.png" alt="">
+            <div>在线信用修复</div>
+          </a>
+          <a class="colLg left">
+            <img src="../static/images/img_chua_03.png" alt="">
+            <div>在线风险监控</div>
+          </a>
+          <a class="colLg left colLgLast">
+            <img src="../static/images/img_chua_04.png" alt="">
+            <div>在线信用培训</div>
+          </a>
+      </div>
+      </div>
+    </div>
+    <!-- 上传体检名单弹窗 -->
+    <!-- <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">上传体检名单</h4>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              </div>
+          </div>
+      </div>
+    </div> -->
+    <!-- 上传体检弹窗 -->
+<!--    <form>
+      <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog " role="document">
+                   <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">上传体检名单</h4>
+                  </div>
+
+                  <div class="modal-body">
+                      <div class="step-wapper">
+                       <div class="step first">
+                        <h3><span class="seq">1</span>导出模板</h3>
+                        <p>请下载导入模板，按模板标准填写后导入 <a href="~/Data/ExcelTemplate/Order.xlsx" class="btn-blue" target="_blank">下载模板</a></p>
+
+                       </div>
+                       <div class="step">
+                        <h3><span class="seq">2</span>导入文件</h3>
+                        <p>将填写好的模板文件导入 <a href="#" class="btn-border-blue txt_file" id="txt_file">上传文件</a> 未上传任何文件</p>
+                         <div class="tip-error">
+                           信用修复批量体检名单文件.xls <span class="bt-error-close"></span>
+                         </div>
+                       </div>
+
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                       <div class="modal-center"><button class="btn-m" >取消</button> <button class="btn-m-blue">上传</button></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </form>-->
+    <!-- 上传体检弹窗结束 -->
+
+    <!-- 体检成功弹窗开始 -->
+<!--          <form>
+            <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog " role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">体检成功</h4>
+                        </div>
+
+                        <div class="modal-body">
+                           <div class="popups-status">
+                             <span class="success-icon"></span> 您上传的文件中包含99个体检主体已成功完成，是否下载体检报告！
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                             <div class="modal-center"><button class="btn-m" >取消</button> <button class="btn-m-blue">下载报告</button> <button class="btn-m-border-blue">重新上传</button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>-->
+    <!-- 体检成功弹窗结束 -->
+
+    <!-- 体检失败弹窗开始 -->
+<!--    <form>
+      <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog " role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">体检失败</h4>
+                  </div>
+
+                  <div class="modal-body">
+                     <div class="popups-status">
+                       <span class="error-icon"></span> 您上传的文件格式有误，请重新上传！
+                     </div>
+                  </div>
+                  <div class="modal-footer">
+                       <div class="modal-center"><button class="btn-m" >取消</button> <button class="btn-m-blue">重新上传</button> <button class="btn-m-border-blue">下载模板</button> </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </form>-->
+    <!-- 体检失败弹窗结束 -->
+
+    <!-- 异常数据弹窗开始 -->
+    <form>
+      <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog " role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">上传数据存在异常</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="result-list-title"><span class="tip-title">异常数据12条</span><span class="close">×</span></div>
+                    <div class="result-list">
+                        <table>
+                          <tr><td>身份证号码</td><td>异常原因</td></tr>
+                          <tr><td>统一社会信用代码</td><td>异常原因</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                          <tr><td>00000</td><td><i class="err-ico"></i> 格式错误</td></tr>
+                        </table>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                       <div class="modal-center"><button class="btn-m" >取消</button> <button class="btn-m-border-blue">重新上传</button> <button class="btn-m-blue">继续下载</button> <button class="btn-m-border-blue">下载模板</button></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </form>
+    <!-- 异常数据弹窗结束 -->
+
+
+
+
+
+
+  </main>
+
+
+  <!-- 底部 -->
+  <footer id="commonFooter">
+    <div id="footerBox">
+      <div class="mainTextBox">
+        <ul class="">
+          <li class="title">联系我们</li>
+          <li>全称：修尔信</li>
+          <li>邮编：200000</li>
+          <li>电话：021-62311883</li>
+          <li>邮箱：tangxiaofeng@lawxp.com</li>
+        </ul>
+        <div class="footerLine"></div>
+        <ul class="">
+          <li class="title">网站导航</li>
+          <li class="clear">
+            <span class="left"><a href="###">网站首页</a></span>
+            <span class="left"><a href="###">信用体检</a></span>
+            <span class="left"><a href="###">信用修复</a></span>
+          </li>
+          <li class="clear">
+            <span class="left"><a href="###">修复公示</a></span>
+            <span class="left"><a href="###">风险监控</a></span>
+            <span class="left"><a href="###">信用大学</a></span>
+          </li>
+          <li class="clear">
+            <span class="left"><a href="###">开放平台</a></span>
+            <span class="left"><a href="###">关于修尔信</a></span>
+            <span class="left"><a href="###">联系我们</a></span>
+          </li>
+        </ul>
+        <div class="footerLine"></div>
+        <ul class="">
+          <li class="title">友情链接</li>
+          <li class="clear">
+            <span class="left"><a href="###">汇法网</a></span>
+            <span class="left"><a href="###">风险信息网</a></span>
+          </li>
+          <li class="clear">
+            <span class="left"><a href="###">催天下</a></span>
+            <span class="left"><a href="###">风险预警网</a></span>
+          </li>
+          <li class="clear">
+            <span class="left"><a href="###">九不欺</a></span>
+            <span class="left"><a href="###">合和社区</a></span>
+          </li>
+          <li class="clear">
+            <span class="left"><a href="###">信服生活</a></span>
+          </li>
+        </ul>
+        <div class="footerLine"></div>
+        <ul class="">
+          <li class="title">关注修尔信</li>
+          <img src="../static/images/img_gzhewm_01.png" alt="">
+          <li style="text-align: center;margin-top: 10px;">关注公众号</li>
+        </ul>
+      </div>
+    </div>
+    <div id="bootomBox">
+      <div class="box">
+        <img src="../static/picture/img_jhui_01.png" alt="">
+        <p>京公网安备 11010502039987号<span style="margin: 0 50px;">京ICP备16007659号-5</span>Copyright(C) 2010-2028 北京汇法信息技术有限公司 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <div id="container">
+    <div id="topLoader"> </div>
+    <button id="animateButton">Animate Loader</button>
+  </div>
+</body>
+<script src="../static/js/commonJS.js"></script>
+<script src="../static/js/creditExamination.js"></script>
+<script src="../static/js/fileinput.min.js"></script>
+<script>
+  $(function () {
+      //0.初始化fileinput
+      var oFileInput = new FileInput();
+      oFileInput.Init("txt_file", "/api/OrderApi/ImportOrder");
+  });
+  //初始化fileinput
+    var FileInput = function () {
+    var oFile = new Object();
+
+    //初始化fileinput控件（第一次初始化）
+    oFile.Init = function(ctrlName, uploadUrl) {
+    var control = $('#' + ctrlName);
+
+    //初始化上传控件的样式
+    control.fileinput({
+        language: 'ch', //设置语言
+        uploadUrl: uploadUrl, //上传的地址
+        allowedFileExtensions: ['jpg', 'gif', 'png'],//接收的文件后缀
+        showUpload: true, //是否显示上传按钮
+        showCaption: false,//是否显示标题
+        browseClass: "btn btn-primary", //按钮样式
+        //dropZoneEnabled: false,//是否显示拖拽区域
+        //minImageWidth: 50, //图片的最小宽度
+        //minImageHeight: 50,//图片的最小高度
+        //maxImageWidth: 1000,//图片的最大宽度
+        //maxImageHeight: 1000,//图片的最大高度
+        //maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+        //minFileCount: 0,
+        maxFileCount: 10, //表示允许同时上传的最大文件个数
+        enctype: 'multipart/form-data',
+        validateInitialCount:true,
+        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+        msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+    });
+
+    //导入文件上传完成之后的事件
+    $("#txt_file").on("fileuploaded", function (event, data, previewId, index) {
+        $("#myModal").modal("hide");
+        var data = data.response.lstOrderImport;
+        if (data == undefined) {
+            toastr.error('文件格式类型不正确');
+            return;
+        }
+        //1.初始化表格
+        var oTable = new TableInit();
+        oTable.Init(data);
+        $("#div_startimport").show();
+    });
+}
+    return oFile;
+};
+
+
+</script>
+</html>

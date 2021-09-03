@@ -1,0 +1,11 @@
+{
+  "https": {
+    "api": "https://www.xiuerxin.com"
+  },
+  "testHttps": {
+    "api": "https://www.xiuerxin.com"
+  },
+  "nhttp":{
+    "api":"https://log.xiuerxin.com"
+  }
+}

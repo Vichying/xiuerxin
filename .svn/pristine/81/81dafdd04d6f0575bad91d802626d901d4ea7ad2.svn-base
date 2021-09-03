@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 修复申请支付 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/creditRestoration/paySubmit.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt=""
+                style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html">首页</a></li>
+            <li><a href="../creditExamination.html">信用体检</a></li>
+            <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+            <li><a href="../restorationPublicity.html">修复公示</a></li>
+            <li><a href="../riskMonitoring.html">风险监控</a></li>
+            <li><a href="../creditUniversity.html">信用大学</a></li>
+            <li><a href="../openPlatform.html">开放平台</a></li>
+            <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html"
+          style="color: #333;">信用修复</a>><span>支付提交</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title" style="font-weight: bold;">支付提交</div>
+      <div class="descBox">订单详情可以通过个人中心<span><a href="###"> 我的订单 </a></span>进行核对处理</div>
+      <div class="payInfoBox">
+        <div class="theadBox clear">
+          <div class="left">服务订单号</div>
+          <div class="left">支付金额（元）</div>
+        </div>
+        <div class="tbodyBox clear">
+          <div class="left">3000000000096688</div>
+          <div class="left marks">￥1200.00</div>
+        </div>
+        <div class="tfooterBox">
+          <p class="payTypeTitle" id="payTypeTitle">支付宝支付</p>
+          <div class="qrcodeBox">
+            <div class="qrcodeBorder">
+              <div id="qrcode"></div>
+            </div>
+            <p id="payTypeDesc">请使用支付宝扫一扫</p>
+            <p>扫描二维码进行支付</p>
+          </div>
+          <div class="changePatType" id="toUseWXPay" onclick="toUseWXPay()" style="display: none;">
+            < 选择其他支付方式</div>
+              <div class="changePatType" id="toUseZFBPay" onclick="toUseZFBPay()" style="display: none;">
+                < 选择其他支付方式</div>
+              </div>
+          </div>
+        </div>
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.qrcode.min.js"></script>
+<script src="../../static/js/reportResults.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  let payType = window.location.href.split("payType=")[1]
+  console.log(payType)
+  // 测试支付二维码
+  outputQRCod("测试支付二维码", 170, 170);
+
+  $(function () {
+    if (payType == 1) {
+      $("#payTypeTitle").empty().html("支付宝支付")
+      $("#payTypeDesc").empty().html("请使用支付宝扫一扫")
+      $("#toUseWXPay").show()
+      $("#toUseZFBPay").hide()
+    } else if (payType == 2) {
+      $("#payTypeTitle").empty().html("微信支付")
+      $("#payTypeDesc").empty().html("请使用微信扫一扫")
+      $("#toUseZFBPay").show()
+      $("#toUseWXPay").hide()
+    }
+  })
+  function toUseWXPay() {
+    $("#payTypeTitle").empty().html("微信支付")
+    $("#payTypeDesc").empty().html("请使用微信扫一扫")
+    $("#toUseZFBPay").show()
+    $("#toUseWXPay").hide()
+    // 二维码改变为微信支付二维码
+  }
+  function toUseZFBPay() {
+    $("#payTypeTitle").empty().html("支付宝支付")
+    $("#payTypeDesc").empty().html("请使用支付宝扫一扫")
+    $("#toUseWXPay").show()
+    $("#toUseZFBPay").hide()
+    // 二维码改变为支付宝支付二维码
+  }
+
+
+</script>

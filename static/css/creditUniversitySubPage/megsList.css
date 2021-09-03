@@ -1,0 +1,43 @@
+body{background-color: #F7F8FA;}
+#topBannerBox{margin-top: 106px;height: 262px;background-size: cover;background-position: center;}
+#topBannerBox .positionText{width: 1050px;margin: 0 auto;padding-top: 20px;color: #333;font-size: 16px;}
+#topBannerBox .positionText span{color:#fff;}
+.classicCaseBox{background-image: url("../../images/img_banner_case.png");}
+.policyNewsBox{background-image: url("../../images/img_banner_08.png");}
+.dynamicsBox{background-image: url("../../images/img_banner_Dynamics.png");}
+.trainersBox{background-image: url("../../images/trainers_banner.png");}
+main{width: 1050px;margin: 0 auto;padding-top: 20px;}
+.leftListBox{width: 735px;background-color: #fff;padding: 0 20px;}
+.rightListBox{width: 300px;background-color: #fff;}
+.leftListBox .itemBox{padding: 20px 0;border-bottom: 1px solid #ddd;}
+.leftListBox .itemBox:hover h3{color: #FF9000;cursor: pointer;}
+.leftListBox .itemBox .itemImg{width: 200px;height: 130px;}
+.leftListBox .itemBox .desc{width: 475px;}
+.leftListBox .itemBox .desc h3{font-size: 16px;font-weight: bold;margin-bottom: 15px;}
+.leftListBox .itemBox .desc .text{width: 475px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;margin-bottom: 40px;color: #666;}
+.leftListBox .itemBox .desc .iconImg{width: 20px;height: 20px;vertical-align: middle;margin-right: 10px;}
+.leftListBox .itemBox .desc .timeBox{color: #666;}
+.rightListBox .topTitleBox{padding: 20px;border-bottom: 2px solid #EAEAEA;}
+.rightListBox .topTitle{padding-left: 8px;border-left: 3px solid #1164DF;font-size: 16px;font-weight: bold;}
+.rightListBox .itemBox{padding: 20px;border-bottom: 1px solid #ddd;}
+.rightListBox .itemBox .subTitle{font-size: 16px;margin-bottom: 20px;}
+.rightListBox .itemBox .sourceBox{color: #666;}
+.rightListBox .itemBox:last-child{border-bottom: 0;}
+.rightListBox .itemBox:hover .subTitle{color: #FF9000;cursor: pointer;}
+.trainersTitle{padding-left: 15px;border-left: 2px solid #FF9000;margin-bottom: 25px;font-size: 18px;font-weight: bold;}
+#trainer .tableBox{width: 1050px;margin: 0 auto;margin-bottom: 40px;}
+#trainer .tableBox table{width: 100%;}
+#trainer table thead tr th,#trainer table tbody tr td{height: 50px;padding-left: 20px;}
+#trainer table thead tr th{background: #1164DF;border: 1px solid #EAEAEA;color: #fff;font-size: 16px;}
+#trainer table tbody tr td{background: #FFFFFF;border: 1px solid #EAEAEA;}
+/* 详情 */
+.detailBox{border: 1px solid #ddd;padding: 26px 30px;margin-bottom: 50px;}
+.detailBox .topTitle{font-size: 24px;margin-bottom: 18px;}
+.detailBox .newsInfo .left{color: #666;}
+.detailBox .newsInfo .clumLine{height: 16px;border: 1px solid #ddd;margin: 0 50px;}
+.detailBox .topLine{border-top: 1px solid #ddd;margin: 15px 0;}
+.detailBox .textBox{font-size: 16px;}
+.detailBox .textBox .topSubTitle{margin-bottom: 6px;}
+.detailBox .textBox p{text-indent:2em;}
+.detailBox .textBox .footerEditText{margin-top: 30px;}
+.detailBox .textBox h3{font-weight: bold;margin: 6px 0;}

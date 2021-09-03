@@ -1,0 +1,243 @@
+main{max-width: 1050px;margin: 60px auto;}
+.tabBox ul li,.buttonBox{text-align: center;}
+.tabBox ul li:hover,.buttonBox:hover{cursor: pointer;}
+#creTipLeftText{border: 2px solid rgba(104, 110, 136, 0.4);height: 46px;line-height: 46px;width: 151px;padding-left: 0;padding-right: 0;}
+#creTipLeftText input{width: 100%;}
+#creInput{border: 2px solid rgba(104, 110, 136, 0.4);border-left: 0;height: 46px;line-height: 46px;border-right: 0;}
+.identify{width: 779px!important;}
+#creInput2{width: 930px;border-top: 2px solid rgba(104, 110, 136, 0.4);border-bottom: 2px solid rgba(104, 110, 136, 0.4);border-left: 2px solid rgba(104, 110, 136, 0.4);height: 46px;line-height: 46px;}
+#creditInputBox .buttonBox{background-color: #1164DF;}
+#creditInputBox .buttonBox:hover{background-color: #FFA825;}
+/* 批量体检按钮 */
+.creditBtn{width: 180px;height: 40px;background: #FFFFFF;border: 1px solid #1164DF;margin: 0 auto;line-height: 40px;text-align: center;font-size: 16px;color:#1164DF;margin-top: 40px;margin-bottom: 60px;display: block;}
+.creditBtn:hover{cursor: pointer;background-color: #FFA825;color: #fff;border: #FFA825 1px solid;}
+.creditBtn a:hover{color: #fff!important;}
+/* 在线信用服务 */
+.creditServiceBox {clear: both;}
+.creditServiceBox h3{font-size: 28px;text-align: center;margin-bottom: 48px;}
+.creditServiceBox .colLg{height: 240px;width: 20%;margin-right: 6%;}
+.creditServiceBox .colLg:hover{cursor: pointer;}
+.creditServiceBox .colLgLast{margin-right: 0;}
+.creditServiceBox .colLg img{width: 100%;}
+.creditServiceBox .colLg div{height: 60px;line-height: 60px;text-align: center;background: #F7F9FB;font-size: 16px;color: #333;}
+/* 信用体检（个人暂无数据） */
+.personalNoDataBox{margin-top: 45px;}
+.personalNoDataBox .title{font-size: 20px;margin-bottom: 22px;}
+.personalNoDataBox .imgBox{height: 690px;border: 1px solid #DDDDDD;text-align: center;}
+.personalNoDataBox .imgBox img{margin-top: 170px;margin-bottom: 30px;}
+.personalNoDataBox .imgBox p{font-size: 18px;color: #666;}
+/* 企业更多数据 */
+.companyMore h4{text-align: center;font-size: 20px;margin-bottom: 18px;font-weight: bold;}
+table{width: 100%;margin-bottom: 40px;}
+table thead tr th,table tbody tr td{border: 1px solid #DDD;padding-left: 20px;font-size: 16px;}
+table thead tr th{width: 50%;height: 52px;background-color: #F7F8FA;font-weight: bold;}
+table tbody tr td{width: 50%;height: 42px;}
+table tbody tr td.haveVal{color: #FF9000;}
+.checkResult{background: #1164DF;color: #fff;}
+.btnsBox .left{margin: 0 10px;}
+.resultATd{font-size: 20px;font-weight: bold;}
+.resultBTd{font-size: 20px;font-weight: bold;width: 11%;}
+.checkDesc{color: #1164DF;}
+.checkDesc:hover{cursor: pointer;}
+#qrcode{width: 146px;height: 146px;margin: 0 auto;padding: 2px;border: 1px dashed #000;}
+#IrreparableModal p{margin-bottom: 15px;}
+/* 体检图表样式 */
+.chart-radar {
+        border:1px solid #ddd;
+        width:100%;
+        height:690px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+.chart-radar canvas { width:800px; }
+/* 批量体检弹窗样式 */
+     .modal-header {border-bottom: 0;}
+      .modal-header h4 {font-size: 18px;}
+      .modal-footer {border-top: 0px;}
+      .modal-body {padding: 0 15px;}
+      .modal-content {border-radius: 4px;}
+      .modal-center {text-align: center;}
+      .modal-dialog {
+       margin-top:380px;
+      }
+      a{text-decoration: none;}
+      .step-wapper {
+        border:1px solid #ddd;
+        padding: 20px;
+        width: 100%;
+        height:238px;
+      }
+      .step {
+        width: 100%;
+        float: left;
+      }
+      .step h3 {
+        font-size: 16px;
+        height: 36px;
+        line-height: 36px;
+        font-weight: bold;
+      }
+      .step h3 span.seq {
+        display: inline-block;
+        width:30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        text-align: center;
+        float: left;
+        margin-left: -15px;
+        margin-right:10px;
+        background: #fff;
+        color:#959698;
+        font-size: 18px;
+        font-family: Arial;
+        font-weight: 400;
+      }
+
+
+      .step p{
+        font-size: 12px;
+        padding:0 10px;
+        font-family: Microsoft YaHei;
+      }
+      .step.first{
+        border-left:1px solid #ddd;
+      }
+      .btn-blue {
+        display: inline-block;
+        background: #1164DF;
+        border-radius: 2px;
+        height:28px;
+          line-height: 28px;
+        padding:0 10px;
+        font-size: 12px;
+        color: #fff;
+        margin: 0 5px;
+      }
+      .btn-border-blue {
+        display: inline-block;
+        border:1px solid #1164DF;
+        color:#1164DF;
+        border-radius: 2px;
+        height:28px;
+          line-height: 28px;
+        padding:0 10px;
+        font-size: 12px;
+      }
+      .btn-border-blue:hover {
+        color:#1164DF;
+      }
+      .btn-m {
+        height:30px;
+        border: 1px solid #ddd;
+        padding:0 15px;
+      }
+      .btn-m-blue {
+        display: inline-block;
+        background: #1164DF;
+        border-radius: 2px;
+        height:30px;
+        padding:0 15px;
+        font-size: 12px;
+        color: #fff;
+      }
+.btn-m-border-blue {
+    display: inline-block;
+    border:1px solid #1164DF;
+    color:#1164DF;
+    border-radius: 2px;
+    height:30px;
+    line-height: 30px;
+    padding:0 10px;
+    font-size: 12px;
+}
+.btn-m-border-blue:hover {
+    color:#1164DF;
+}
+ .tip-error{
+  background: #F7F7FB;
+  height:26px;
+  line-height: 26px;
+  width:100%;
+ }
+ .bt-error-close {display:inline-block;width:16px;height:16px;background: url(../images/cancel.png) no-repeat;float: right;margin: 5px;cursor: pointer;}
+ /**体检状态样式成功失败样式**/
+.popups-status {float: left;margin: 10px auto;height:50px;line-height: 50px;width:100%;}
+.popups-status .success-icon {display:inline-block;width:50px;height:50px;background: url(../images/icon_zhengq_01.png) no-repeat;float: right;margin-right:10px;margin-left:10px; float: left;}
+.popups-status .error-icon {display:inline-block;width:50px;height:50px;background: url(../images/icon_cuow_01.png) no-repeat;float: right;margin-right:10px;margin-left:10px;float: left;}
+/****批量体检数据异常样式****/
+.result-list-title {background: #FFF7EF;height:35px;line-height: 35px;font-size: 12px;color:#FF6600;}
+.result-list-title .tip-title { float: left;margin-left: 10px;line-height: 35px;}
+.result-list-title .close{float: right;margin-right: 10px;font-size: 12px;line-height: 35px;}
+.result-list {height: 250px;overflow-x: auto;font-size: 12px;}
+.result-list table tr td {border: 0;font-size: 12px;}
+.result-list table tr td .err-ico {display:inline-block;width:16px;height:16px;background: url(../images/icon_cw_01.png) no-repeat; float: left;}
+.result-list table tr:nth-child(odd){background:#F7F7FB;}
+/****案件详情样式****/
+.case-table {width:100%; margin-top: 40px;}
+.case-table h3 {height:45px; line-height: 45px;font-size: 18px;font-weight: 400;}
+.case-table table{font-size: 16px;}
+.case-table table tr td{width:calc(100% - 219px);padding:5px 10px; }
+.case-table table tr td.col-219{ width:219px;}
+.case-table table tr td a.link{color:#1164DF;text-decoration: none; float: right;font-size: 16px; margin-right: 15px;}
+.case-bt-center {width:100%;text-align: center;margin-bottom: 40px;}
+.case-bt-center button {height:50px;width:200px;background: #1164DF;color:#fff;margin: 0 5px; text-decoration: none;}
+.case-bt-center button:hover{background:#FF9A23;}
+.case-bt-center button.bt-border{background: #fff;color:#1164DF; border: 1px solid #1164DF;}
+.case-bt-center button.bt-border:hover{background:#FF9A23;color:#FFF; border: 1px solid #FF9A23;}
+/**成功案例列表样式**/
+.success-list {width:100%;height:300px;overflow-x: auto;}
+.success-case {width:100%;float: left;}
+.success-case h3{line-height: 35px;height:35px;}
+.success-case table {margin-bottom: 0;}
+.success-case table tr td{width: calc(100% - 200px); padding: 5px 8px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.success-case table tr td.left-title {width:200px;}
+.text-color-blue {color:#1164DF;}
+/**案件列表**/
+.case-list{width:100%;margin-top: 40px;clear: both;min-height:500px;}
+.case-list .top-title{background: #1164DF;color:#fff; height: 68px;font-size: 16px; line-height: 68px; text-align: center;}
+.case-list .left-list{width:220px;float: left;}
+.case-list .right-list{width:calc(100% - 230px);float: right;}
+.case-list .left-list .list-class {width: 100%;height:100%;}
+.case-list .left-list ul {clear: both;float: left;width: 100%;display: block;border: 1px solid #DDDDDD;border-bottom: 0;font-size: 16px;color:#333333;}
+.case-list .left-list ul li{ line-height: 52px;text-align: center;width: 100%;border-bottom: 1px solid #DDDDDD;}
+
+.case-list .left-list ul li span{display: block;height: 52px;width: 100%;background: #F7F8FA;border-bottom: 1px solid #DDDDDD;cursor: pointer;float: left;}
+.case-list .left-list ul li span i.ico-xia{display:inline-block;background-size:100%;margin-top:10px;background: url("../images/icon_xiangx_01.png") no-repeat;width:14px;height:14px;}
+.case-list .left-list ul li span i.ico-shang{display:inline-block;background-size:100%;margin-top:10px;background: url("../images/icon_xiangs_01.png") no-repeat;width:14px;height:14px;}
+.case-list .left-list ul li ul{border: 0;display: none;float: left; width: 100%;}
+.case-list .left-list ul li ul li a {cursor: pointer;color:#333;}
+
+/**案件列表样式**/
+.result-list-all {}
+.list-box{width: 100%;}
+
+
+.listBox .creditBtn {margin-bottom: 0px;}
+.listBox .topListBox{margin-bottom: 60px;}
+.topListBox .topListTitle{height: 68px;line-height: 68px;background-color: #1164DF;padding-left: 20px;color: #fff;font-size: 18px;}
+.listBox .itemBox{padding: 33px 30px;border: 1px solid #DDDDDD;}
+.checkInputBox{width: 18px;height: 18px;}
+.checkbox-inline input[type=checkbox]{width: 18px;height: 18px;}
+.textTitle h4{margin-bottom: 12px;}
+.textTitle:hover h4{color: #1164DF;cursor: pointer;}
+.textTitle{margin-right: 10px;}
+.textTitle p{width: 460px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 16px;color: #666;}
+.topListBox .itemBox .right{width: 120px;height: 36px;line-height: 36px;color: #fff;font-size: 16px;background: #1164DF;margin-top: 12px;}
+.bottomListBox .topListTitle{height: 68px;line-height: 68px;background-color: #F7F8FA;padding-left: 20px;color: #333;font-size: 18px;border: 1px solid #ddd;}
+.bottomListBox .itemBox{margin-top: -1px;}
+.bottomListBox .itemBox .right{width: 120px;height: 36px;line-height: 36px;color: #1164DF;font-size: 16px;background: #fff;margin-top: 12px;border: 1px solid #1164DF;}
+.itemBox .right:hover{background-color: #FF9000;border-color:  #FF9000;color: #fff;}
+.itemBox .seriousBreach{border: 0!important;color: #FF9000!important;}
+.itemBox .seriousBreach:hover{background-color: #fff!important;border: 0!important;color: #FF9000!important;}
+
+/* 全选 */
+.checkAllBox{padding: 30px;border: 1px solid #ddd;margin-top: -1px;margin-bottom: 80px;}
+.checkAllBox .checkAllText,.checkAllBox .checkedNum{line-height: 44px;}
+.checkAllBox .checkAllText{font-size: 18px;margin-right: 22px;}
+.checkAllBox .checkedNum{font-size: 16px;color: #666;}
+.checkAllBox .btnText{width: 120px;height: 36px;line-height: 36px;color: #fff;font-size: 16px;margin-top: 12px;background-color: #1164DF;}
+.checkAllBox .btnText:hover{background-color: #FF9000;border-color:  #FF9000;color: #fff;}
+.modal-dialog{margin-top: 240px;}
+.modal-dialog .modal-body p{margin-bottom: 20px;color: #666;}

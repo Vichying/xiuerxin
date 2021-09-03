@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a-upload{
+            padding: 0px 10px;
+            height: 28px;
+            line-height: 28px;
+            position: relative;
+            z-index:0;
+            border:1px solid #1164DF;
+            color:#1164DF;
+            border-radius: 2px;
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+            text-decoration: none;
+        }
+        .a-upload span{
+
+        }
+        .a-upload input{
+            position: absolute;
+            z-index:9999;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer;
+            width: 100%;
+            height:30px;
+        }
+        .a-upload:hover{
+            color: #FFFFFF;
+            background: #1164DF;
+            border-color: #1164DF;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .tip-error{
+            clear: both;
+            background: #F7F7FB;
+            height:26px;
+            line-height: 26px;
+            width:100%;
+        }
+        .bt-error-close {display:inline-block;width:16px;height:16px;background: url(../images/cancel.png) no-repeat;float: right;margin: 5px;cursor: pointer;}
+        .a-tip-text {
+            float:left;
+        }
+    </style>
+
+</head>
+<body>
+通用上传按钮样式交互
+<br/>
+<a href="javascript:;" class="a-upload"><input type="file" name="myFiles" ><span>上传文件</span></a> <span class="a-tip-text">未上传任何文件</span>
+<div class="tip-error">
+    信用修复批量体检名单文件.xls <span class="bt-error-close"></span>
+</div>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 修复申请成功 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/creditRestoration/paySubmit.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt=""
+                style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html">首页</a></li>
+            <li><a href="../creditExamination.html">信用体检</a></li>
+            <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+            <li><a href="../restorationPublicity.html">修复公示</a></li>
+            <li><a href="../riskMonitoring.html">风险监控</a></li>
+            <li><a href="../creditUniversity.html">信用大学</a></li>
+            <li><a href="../openPlatform.html">开放平台</a></li>
+            <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html"
+          style="color: #333;">信用修复</a>><a href="./repairApplication.html" style="color: #333;">信用修复申请</a>><a
+          href="./wxZfbPay.html?payType=1" style="color: #333;">支付提交</a>><span>申请成功</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title" style="font-weight: bold;">信用修复申请成功</div>
+      <div class="line"></div>
+      <div class="mainInfoBox">
+        <div class="topIconBox">
+          <img src="../../static/picture/icon_zfcg_01.png" alt="">
+        </div>
+        <div class="successDesc">恭喜您，您的信用修复申请成功！</div>
+        <!-- 优惠券 -->
+        <!-- <div id="cunponBox">
+          <div class="content">
+            <div class="money">
+              <text>¥</text>50
+            </div>
+            <div class='co'>
+              <div class="title">
+                无金额门槛
+              </div>
+            </div>
+          </div>
+          <div class="split-line"></div>
+          <div class="tip">
+            <div class="conditions">
+              风险监控服务代金券
+            </div>
+            <div class="timeText">
+              2018.12.08-2019.06.15
+            </div>
+          </div>
+        </div>
+        <div class="cunponDesc">本次修复服务赠送您100元的风险监控服务代金券</div> -->
+        <button class="riskMonitoring" onclick="freeExaminationFn()">免费体检风险监控服务</button>
+        <!-- <div class="erweimaBox">
+          <div id="qrcode"></div>
+        </div>
+        <p class="qrcodeDesc">扫码时刻关注修复报告生成进度</p> -->
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script type="text/javascript" src="../../static/js/jquery.qrcode.min.js"></script>
+<script src="../../static/js/reportResults.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  // 测试二维码
+  outputQRCod("测试二维码", 190, 190);
+  function freeExaminationFn() {
+    window.location.href = "../../pages/riskMonitoring.html"
+  }
+
+</script>

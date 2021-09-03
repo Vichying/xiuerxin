@@ -1,0 +1,49 @@
+/* 解决网速过慢时，会暴露vue代码问题 */
+[v-cloak]{
+  display: none;
+}
+.packageListBox{height: 1287px;width: 100%;}
+#riskBannerBox{margin-top: 106px;height: 262px;background-image: url("../images/icon_banner_01.png");background-size: cover;background-position: center;}
+#riskBannerBox .positionText{width: 1050px;margin: 0 auto;padding-top: 20px;color: #333;font-size: 16px;}
+#riskBannerBox .positionText span{color:#fff;}
+main{width: 1050px;margin: 0 auto;}
+.packageListBox .title{font-size: 20px;font-weight: bold;margin-bottom: 20px;margin-top: 34px;}
+.packageListBox .line{width: 100%;border-bottom: 1px solid #ddd;margin-bottom: 40px;}
+/* 单选套餐 */
+#radioBox .el-radio-button{margin:0 20px 20px 0!important;}
+#radioBox .el-radio-button__inner{border-color: #ddd!important;border-left: 1px solid #ddd!important;padding: 24px 22px!important;width: 246px;margin-bottom: 20px;border-radius: 4px!important;text-align: left!important;}
+#radioBox .el-radio-button:nth-child(4),#radioBox .el-radio-button:nth-child(8){margin-right: 0!important;}
+#radioBox .el-radio-button__orig-radio:checked+.el-radio-button__inner{background-color: #fff!important;color: #333;border: 1px solid #FF9000!important;}
+#radioBox .el-radio-button.is-active .el-radioBox-button__inner{background-color: #fff!important;border-color: #FF9000!important;border-left:1px solid #FF9000!important;color: #333!important;text-align: left!important;}
+#radioBox .el-radio-button__inner:hover{border:1px solid #FF9000!important;color: inherit;}
+#radioBox .el-radio-button.is-active .el-radio-button__inner{-webkit-box-shadow: inherit!important;box-shadow: inherit!important;}
+#radioBox .el-radio-button__inner .text{font-size: 16px;margin-bottom: 15px;}
+#radioBox .el-radio-button__inner .moneyBox{color: #FF9000;font-size: 18px;}
+#radioBox .el-radio-button__inner .moneyBox span{font-size: 26px;}
+/* 多选套餐 */
+#checkBox .el-checkbox-button__inner{border-color: #ddd!important;border-left:1px solid #ddd!important;text-align: left!important;padding: 24px 22px!important;width: 246px;margin-bottom: 20px;border-radius: 4px!important;}
+#checkBox .el-checkbox-button.is-checked .el-checkbox-button__inner{background-color: #fff!important;border-color: #FF9000!important;border-left:1px solid #FF9000!important;color: #333!important;text-align: left!important;}
+#checkBox .el-checkbox-button__inner:hover{border:1px solid #FF9000!important;color: inherit;}
+#checkBox .el-checkbox-button.is-checked .el-checkbox-button__inner{-webkit-box-shadow: inherit!important;box-shadow: inherit!important;}
+#checkBox .el-checkbox-button{margin-right: 20px;}
+#checkBox .el-checkbox-button.is-checked .el-checkbox-button__inner img{position: absolute;right: 0;top: 87px;}
+#checkBox .el-checkbox-button__inner .text{font-size: 16px;margin-bottom: 15px;}
+#checkBox .el-checkbox-button__inner .moneyBox{color: #FF9000;font-size: 18px;}
+#checkBox .el-checkbox-button__inner .moneyBox span{font-size: 26px;}
+#checkBox .el-checkbox-button:nth-child(4),#checkBox .el-checkbox-button:nth-child(8){margin-right: 0;}
+/* 付款价格 */
+.bottomPrice{width: 280px;}
+.bottomPrice .clear{margin-bottom: 28px;}
+.bottomPrice .left,.bottomPrice .right{font-size: 16px;}
+.bottomPrice .priceVal{color: #FF9000;font-size: 24px;    line-height: 12px;}
+.bottomPrice .priceVal span{font-size: 34px;}
+#nowPayBtn {padding: 17px 56px;font-size: 16px;color: #fff;background: #1164DF;}
+#nowPayBtn:hover{background-color: #FF9000;}
+
+/* 套餐说明 */
+.packageDescBox .title{font-size: 18px;font-weight: bold;margin: 30px;text-align: center;}
+.packageDescBox table{width: 100%;margin-bottom: 30px;}
+.packageDescBox table thead tr th,.packageDescBox table tbody tr td{padding: 18px 20px;font-size: 16px;border: 1px solid #ddd;}
+.packageDescBox table thead tr th{background-color: #F7F8FA;}
+.descBox h3{font-size: 16px;font-weight: bold;margin-bottom: 18px;}
+.descBox p{font-size: 16px;color: #666;margin-bottom: 40px;}

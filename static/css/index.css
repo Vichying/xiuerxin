@@ -1,0 +1,360 @@
+.paginationjs .paginationjs-pages li.active>a {
+    background: #FF9900 !important;
+}
+.page-body {
+    margin: 30px 0;
+}
+.nav-header {
+    width: 100%;
+    height: 80px;
+}
+
+.meun{
+    display: none;
+}
+.logo {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.meau-main{
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background-color: #060858;
+}
+.meau-main .topTitle{
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ccc;
+  font-size: 14px;
+}
+.meau-main .topTitle .left a{margin-left: 15px;color: #ccc;font-size: 14px;}
+.meau-main .topTitle .right a{margin-left: 20px;}
+.meau-main .topTitle .right a:last-child{color: #FFA825;}
+.meau-main .topTitle .right a img{vertical-align: text-bottom;}
+
+.nav-list {
+    float: right;
+}
+.nav-list ul li {
+    float: left;
+    position: relative;
+}
+
+.nav-list ul li .subnav{
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    width:130px;
+    height: auto;
+    z-index: 10;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 13px 42px 11px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.36s ease;
+
+}
+.nav-list .subnav li{
+    float: none;
+}
+.nav-list .subnav li a{
+    width: 100%;
+    font-size: 13px;
+    display: block;
+    font-weight: 500;
+    line-height: 48px;
+    color: #333333;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+    text-align: center;
+
+}
+.nav-list ul li .arrows-on{
+    visibility:  hidden;
+}
+.nav-list ul li .arrows{
+    visibility:  visible;
+}
+.nav-list ul li .active .arrows-on{
+    visibility:  visible;
+}
+.nav-list ul li .active .arrows{
+    visibility:  hidden;
+}
+.nav-list .subnav li:hover{
+    background: #FF9900;
+}
+.nav-list ul li:hover .subnav{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-list .subnav li:hover a{
+    color: #fff;
+}
+.nav-list>ul>li>a{
+    margin: 20px 10px;
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    line-height: 40px;
+    padding:0 15px;
+}
+.nav-list>ul>li>a img{
+    position: absolute;
+    top: 18px;
+    right: 2px;
+    padding-left: 5px;
+}
+.nav-list ul li .active {
+    color: #FF9900;
+}
+
+.nav-list ul li .active:after {
+    color: #FF9900;
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 80%;
+    background: #FF9900;
+    bottom: 0;
+    left: 50%;
+    opacity: 1
+}
+
+.nav-list>ul>li>a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF9900;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 0.6s cubic-bezier(.075, .82, .165, 1);
+    left: 50%;
+    opacity: 1
+}
+
+.nav-list>ul>li:hover>a:after {
+    width: 80%;
+    opacity: 1;
+}
+
+.nav-fixed {
+    position: absolute;
+    z-index: 2;
+}
+
+.nav-fixed .nav-list>ul>li>a {
+    color: #ffffff;
+}
+
+.nav-fixed .nav-list>ul>li>.active {
+    color: #FF9900;
+}
+
+.nav-container {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.next-mouse {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -11px;
+    z-index: 2;
+}
+
+.body-container {
+    position: relative;
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    left: 30px;
+}
+
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 1) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.6);
+    width: 8px;
+    height: 8px;
+    opacity: 0.5;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 12px 0;
+}
+
+.bg-video {
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+.banner-title{
+    width: 620px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -310px;
+    margin-top: -100px;
+    text-align: center;
+}
+.banner-title h1 {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.banner-title h3 {
+    font-size: 18px;
+    color: #ffffff;
+    padding-top: 14px;
+    font-weight: lighter;
+}
+#bannerTitleOne{
+  width: 1000px;
+  margin-left: -500px;
+}
+
+.common-main {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* .tabBox ul li{
+  width: 150px;
+  height: 46px;
+  line-height: 46px;
+  background: rgba(104, 110, 136, 0.8);
+  border-radius: 2px 0px 0px 0px;
+  float: left;
+  font-size: 18px;
+  color: #FFA825;
+}
+.tabBox ul li.tabActive{
+  background: #FFA825;
+  color: #fff;
+}
+.inputBox{
+  background-color: #fff;
+}
+.inputBox ul li{
+  height: 46px;
+  line-height: 46px;
+}
+.inputBox ul li.tipLeftText{
+  font-size: 16px;
+  color: #999;
+  padding-left: 20px;
+  padding-right: 49px;
+  border-right: 2px solid rgba(104, 110, 136, 0.4);
+}
+button{outline: none;border: 0;background-color: inherit;}
+.inputBox .formControl{
+  height: 36px;
+  width: 700px;
+  border: 0;
+  padding: 0 20px;
+  font-size:16px;
+}
+.inputBox input::-webkit-input-placeholder{  
+  color:#999;
+  font-size:16px;
+  }
+.inputBox input:-moz-placeholder{   
+  color:#999;
+  font-size:16px;
+}
+  
+.inputBox input::-moz-placeholder{
+  color:#999;
+  font-size:16px;
+}
+.inputBox input:-ms-input-placeholder{  
+  color:#999;
+  font-size:16px;
+}
+.inputBox .buttonBox{
+  width: 100px;
+  background: #FF9000;
+  border-radius: 0px 2px 2px 2px;
+}
+.inputBox .buttonBox button{
+  color: #fff;
+  font-size: 18px;
+} */
+
+
+.page-pagination {
+    margin: 30px 0;
+}
+
+
+.paginationjs-pages {
+    justify-content: center;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.paginationjs .paginationjs-pages {
+    float: none !important;
+}
+
+.pagination {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    margin-top: -65px;
+    left: 30px;
+    width: 10%;
+    height: 130px;
+    text-align: center;
+}
+.swiper-pagination-switch {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #fff;
+    margin:12px 0;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.swiper-active-switch {
+    background: #fff;
+    opacity: 1;
+}

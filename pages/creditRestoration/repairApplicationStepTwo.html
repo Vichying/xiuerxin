@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 修复申请 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/creditRestoration/repairApplication.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt=""
+                style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html">首页</a></li>
+            <li><a href="../creditExamination.html">信用体检</a></li>
+            <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+            <li><a href="../restorationPublicity.html">修复公示</a></li>
+            <li><a href="../riskMonitoring.html">风险监控</a></li>
+            <li><a href="../creditUniversity.html">信用大学</a></li>
+            <li><a href="../openPlatform.html">开放平台</a></li>
+            <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html"
+          style="color: #333;">信用修复</a> ><span>信用修复申请</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title">信用修复申请</div>
+      <div class="line"></div>
+      <div class="stepBox">
+        <div class="stepListBox">
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_01.png" alt="">
+            <p style="color:#1164DF;">基本信息填报</p>
+          </div>
+          <div class="subline subline2 activeLine"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanqBlue_02.png" alt="">
+            <p style="color:#1164DF;">修复材料上传</p>
+          </div>
+          <div class="subline subline3 activeLine"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_03.png" alt="">
+            <p>在线修复协议</p>
+          </div>
+          <div class="subline subline4"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_04.png" alt="">
+            <p>付款修复信用</p>
+          </div>
+        </div>
+      </div>
+      <!-- 填写信息第二步 -->
+      <div class="formBox">
+        <div class="NOTitle">案件号：<span>13246541654</span></div>
+        <div class="reportListBox">
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 法结案/履约证明：</div>
+            <div class="left uploadInputBox">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" onchange="testFileFn()" />
+
+            </div>
+            <div class="right"> </div>
+          </div>
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 信用修复申请书：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right">《信用修复申请书》 <span><a href="###">模板下载</a></span></div>
+          </div>
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 信用修复承诺书：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right">《信用修复承诺书》 <span><a href="###">模板下载</a></span></div>
+          </div>
+        </div>
+        <div class="NOTitle">案件号：<span>13246541654</span></div>
+        <div class="reportListBox">
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 法结案/履约证明：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right"> </div>
+          </div>
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 信用修复申请书：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right">《信用修复申请书》 <span><a href="###">模板下载</a></span></div>
+          </div>
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 信用修复承诺书：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right">《信用修复承诺书》 <span><a href="###">模板下载</a></span></div>
+          </div>
+        </div>
+        <div class="reportitemBox clear">
+          <div class="left title"><span>*</span> 培训证书：</div>
+          <div class="left">
+            <div class="warp-content">上传文件</div>
+            <input type="file" id="legalSettlementFile" />
+          </div>
+          <div class="right">没有培训证书？ <span><a href="###">参与培训</a></span></div>
+        </div>
+
+        <div class="radioBox">
+          <div class="labelDiy"><span style="color:#f00;">*</span> 参加培训人是否是法人：</div>
+          　　<input type="radio" value="" name="reserve" id="radio_yes">
+          　　<label for="radio_yes">是</label>
+          　　<input type="radio" value="" name="reserve" id="radio_no">
+          　　<label for="radio_no">否</label>
+        </div>
+        <!-- 严重非法人 -->
+        <div class="seriousNOlegalPerson">
+          <label for="phone" style="width: 100%;font-size: 16px;">
+            <span style="width: 150px;display: inline-block;"><span style="color:#f00;">*</span> 参培人姓名：</span>
+
+            <input type="text" class="commonInput" value="" id="legalPersonName" placeholder="请填写参培人姓名">
+          </label>
+          <label for="phone" style="width: 100%;font-size: 16px;">
+            <span style="width: 150px;display: inline-block;"><span style="color:#f00;">*</span> 参培人联系方式：</span>
+            <input type="text" class="commonInput" value="" id="legalPersonPhone" placeholder="请填写参培人联系方式">
+          </label>
+        </div>
+        <div class="clear trainTimeBox">
+          <div class="left title"><span>*</span> 参与培训日期：</div>
+          <div class="form-group clear">
+            <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control dateTimeVal" id="dateTimeVal1" placeholder="选择开始日期" />
+              <span class="input-group-addon" style="border-radius: 0;">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+            <div class='input-group date' id='datetimepicker2'>
+              <input type='text' class="form-control dateTimeVal" id="dateTimeVal2" placeholder="选择结束日期" />
+              <span class="input-group-addon" style="border-radius: 0;">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- 严重非法人 -->
+        <div class="seriousNOlegalPerson">
+          <div style="width: 100%;border-bottom: 1px solid #eee;margin: 20px 30px;"></div>
+          <div class="reportitemBox clear">
+            <div class="left title"><span>*</span> 培训授权委托书：</div>
+            <div class="left">
+              <div class="warp-content">上传文件</div>
+              <input type="file" id="legalSettlementFile" />
+            </div>
+            <div class="right">《培训授权委托书》<span><a href="###">模板下载</a></span></div>
+          </div>
+        </div>
+
+
+        <div class="uploadBtnBox">
+          <button class="prevStepBtn"><a href="./repairApplication.html">上一步</a></button>
+          <button class="repair1" data-toggle="modal" data-target="#directRepair">下一步</button>
+          <button class="repair2" style="display: none;" onclick="nextStepTwo()">下一步</button>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger" id="alertDanger"></div>
+  </main>
+  <!-- 批量修复--有可以直接修复的  弹窗 -->
+  <div class="modal fade" id="directRepair" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p>您修复项中包含3项可以直接修复，2项需要培训报告，是否继续修复？</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="nextStepTwo()">继续修复</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment-with-locales.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  // 默认选中 是
+  if ($("#radio_yes").val() == '' && $("#radio_no").val() == '') {
+    $("#radio_yes").attr("checked", true);
+  }
+
+  // 修复材料  1--严重法人，2--严重非法人
+  let seriousFlag = 2
+  if (seriousFlag == 2) {
+    $(".seriousNOlegalPerson").show()
+  }
+  // 批量修复--有可以直接修复的，显示提示框（1有可以直接修复的，0--无）
+  let directRepairFlag = 1
+  if (directRepairFlag == 1) {
+    $(".repair1").show()
+    $(".repair2").hide()
+  } else {
+    $(".repair1").hide()
+    $(".repair2").show()
+  }
+  // 下一步（第三步）
+  function nextStepTwo() {
+    window.location.href = "./repairApplicationStepThree.html"
+  }
+  // 选择开始日期
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      format: 'YYYY-MM-DD',
+      locale: moment.locale('zh-cn')
+    });
+    // 选择结束日期
+    $('#datetimepicker2').datetimepicker({
+      // format: 'YYYY-MM-DD hh:mm',
+      format: 'YYYY-MM-DD',
+      locale: moment.locale('zh-cn')
+    });
+  });
+
+  function testFileFn() {
+    console.log($("#legalSettlementFile")[0].files[0])
+    var formData = new FormData();
+    formData.append("file", $("#legalSettlementFile")[0].files[0]);
+    $.ajax({
+      url: 'http://www.baidu.com/', /*接口域名地址*/
+      type: 'post',
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function (res) {
+        console.log(res.data);
+      }
+    })
+  }
+
+  let uploadStr = "<div class='uploadListBox clear'>" +
+    "<div div class='left' > 履约证件文件.xls</div>" +
+    "<img src='../../static/picture/delIcon.png' class='right' onclick='delUploadFileFn()'>" +
+    "</div>"
+  $(".uploadInputBox").append(uploadStr)
+  function delUploadFileFn() {
+    // 删除
+    console.log("del")
+  }
+</script>

@@ -1,0 +1,156 @@
+<template>
+  <div :style="{ width: isMenuColl ? '64px' : '180px' }" class="page_left">
+    <el-menu
+      :default-active="onRoutes"
+      :router="true"
+      :unique-opened="true"
+      :collapse-transition="false"
+      :collapse="isMenuColl"
+      class="page_menu"
+      text-color="#eee"
+      active-text-color="#0068d3"
+      background-color="#0058B3"
+      @select="selectIn"
+    >
+      <!-- element 导航栏组件 :index="" 相当于vue得 <route-link></route-link> 跳转到对应路由 -->
+      <template v-for="item in menuList">
+        <el-menu-item
+          v-if="item.child == null"
+          :index="item.code"
+          :key="item.id"
+        >
+          <!-- <i :class="item.icon_url"></i> -->
+          <span slot="title">{{ item.name }}</span>
+        </el-menu-item>
+        <el-submenu
+          v-else
+          :index="item.code"
+          :class="{ collapse: isMenuColl }"
+          :key="item.code"
+        >
+          <template slot="title">
+            <i :class="item.icon_url"></i>
+            <span>{{ item.name }}</span>
+          </template>
+          <el-menu-item-group v-if="item.child">
+            <el-menu-item
+              v-for="it in item.child"
+              :key="it.id"
+              :index="it.code"
+            >
+              <!-- <i class="iconfont" :class="it.icon"></i> -->
+              {{ it.name }}</el-menu-item
+            >
+          </el-menu-item-group>
+        </el-submenu>
+      </template>
+    </el-menu>
+    <router-link to="/operating/user"></router-link>
+  </div>
+</template>
+<script>
+import { mapActions, mapGetters, mapMutations } from "vuex";
+export default {
+  name: "sAside",
+  data() {
+    return {
+      menuList: [],
+    };
+  },
+  created() {
+    this.menuList = this.getRouter;
+    // console.log(this.$store.state.routers,'routers')
+  },
+  computed: {
+    ...mapGetters({
+      isMenuColl: "getIsMenuColl",
+      getToken: "getToken",
+      getRouter: "getRouter",
+    }),
+    onRoutes() {
+      // let path = this.$route.path;
+      // if (path == "/vip" || path.indexOf("vip") != -1) {
+      //   return "/vip";
+      // } else if (path == "/product" || path.indexOf("pro") != -1) {
+      //   return "/product";
+      // } else {
+      //   return this.$route.path;
+      // }
+      return this.$route.path;
+    },
+  },
+  methods: {
+    ...mapMutations({
+      setTitles: "setTitles",
+    }),
+    selectIn(index, indexPath) {
+      for (let i = 0; i < this.menuList.length; i++) {
+        if (this.menuList[i].child != null) {
+          for (let j = 0; j < this.menuList[i].child.length; j++) {
+            if (this.menuList[i].child[j].code == index) {
+              this.setTitles(this.menuList[i].child[j].name);
+            }
+          }
+        } else {
+          if (this.menuList[i].code == index) {
+            this.setTitles(this.menuList[i].name);
+          }
+        }
+      }
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+::v-deep .el-menu-item-group > ul {
+  overflow: hidden;
+}
+::v-deep .el-menu-item-group__title {
+  display: none;
+}
+::v-deep .el-submenu__title i {
+  color: #fff;
+  padding-right: 5px;
+}
+::v-deep .el-menu--collapse .el-submenu {
+  overflow: hidden;
+}
+::v-deep .el-menu .el-menu-item.is-active {
+  background-color: #fff !important;
+  font-weight: bold;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+::v-deep .el-menu-item {
+  transition: none;
+}
+::v-deep .el-menu-item i {
+  color: #fff;
+}
+.page_left {
+  flex-shrink: 0;
+  min-height: calc(100vh - 64px);
+  background: none repeat scroll 0 0 #0058b3;
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+  transition: width 0.28s;
+  ::v-deep .el-menu {
+    border-right: none;
+    .el-menu-item {
+      background-color: #1d1e23;
+      &.collapse {
+        width: 64px;
+      }
+      .iconfont {
+        font-size: 22px;
+        margin: 5px;
+      }
+      &.is-active {
+        background-color: #101117;
+      }
+      &:hover {
+        background-color: #101117;
+      }
+    }
+  }
+}
+</style>

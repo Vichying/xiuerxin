@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="static/css/swiper.min.css">
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body class="body-container">
+
+  <div class="nav-header nav-fixed">
+    <div class="meau-main">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <!-- 未登录 -->
+          <!-- <a href="login.html"><img src="static/picture/userIcon.png" alt=""> 登录</a> -->
+          <!-- 已登录 - 点击去用户中心 -->
+          <a href="javascript:void(0);"><img src="static/picture/userIcon.png" alt=""> 张三</a>
+          <a href="register.html">注册</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="home.html"><img src="static/picture/logoImg.png" alt=""></a>
+      </div>
+      <div class="nav-list">
+        <ul>
+          <li><a href="home.html" class="active">首页</a></li>
+          <li><a href="./pages/creditExamination.html">信用体检</a></li>
+          <li><a href="./pages/creditRestoration.html">信用修复</a></li>
+          <li><a href="./pages/restorationPublicity.html">修复公示</a></li>
+          <li><a href="./pages/riskMonitoring.html">风险监控</a></li>
+          <li><a href="./pages/creditUniversity.html">信用大学</a></li>
+          <li><a href="./pages/openPlatform.html">开放平台</a></li>
+          <li><a href="./pages/about.html">关于修尔信</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container" style="overflow: hidden">
+    <div class="swiper-wrapper">
+      <!-- 信用体检 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video1" loop="loop">
+          <source src="./static/images/home/slider_01.mp4" type="video/mp4">
+        </video>
+        <!-- <img class="bg-video" id="video1" src="./static/images/icon_chuatu_01.png" alt=""> -->
+        <div class="banner-title" id="bannerTitleOne">
+          <!-- <a href="javascript:void(0);" style="display: block" target="_blank"> -->
+          <h1>信用<span class="mark">体检</span></h1>
+          <div class="tabBox homeTabBox">
+            <ul class="clear">
+              <li class="tabActive">个人信用体检</li>
+              <li>企业信用体检</li>
+            </ul>
+          </div>
+          <div class="inputBox">
+            <ul class="clear">
+              <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;">
+                <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+              </li>
+              <li class="left" id="creInput">
+                <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入身份证号码">
+              </li>
+              <li class="left" id="creInput2" style="display: none;">
+                <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入企业全称 / 统一社会信用代码">
+              </li>
+              <li class="right buttonBox">
+                <button class="btn btn-default" type="button" onClick="searchBtn()">查询</button>
+              </li>
+            </ul>
+          </div>
+          <div style="font-size: 18px;margin-top: 20px;color: #fff;">已有<span class="marks">124，456、456</span>位用户参与了信用体检
+          </div>
+          <!-- </a> -->
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 信用修复 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video2" loop="loop">
+          <source src="./static/images/home/slider_02.mp4" type="video/mp4">
+          </source>
+        </video>
+        <!-- <img class="bg-video" id="video2" src="./static/images/icon_chuatu_01.png" alt=""> -->
+        <div class="banner-title">
+          <a href="./pages/creditRestoration.html" target="_blank">
+            <h1>信用<span class="marks">修复</span></h1>
+            <h3>我们的<span class="marks">修复报告</span>推送至2000+银行，<span class="marks">一处修复，处处修复</span></h3>
+            <h3>行政信用修复，赠送<span class="marks">信用中国</span>数据更新服务</h3>
+            <h3>信用修复，是失信主体在规定时间内采取有效措施及时纠正失信行为，继而，
+              <h3>通过综合信用修复资质机构进行信用修复消除不良社会影响后果的一种措施。</h3>
+              <h3>我要信用修复<img src="static/picture/icon_tiaoz.png" alt=""
+                  style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 修复公示 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video3" loop="loop">
+          <source src="./static/images/home/slider_03.mp4" type="video/mp4">
+          </source>
+        </video>
+        <div class="banner-title">
+          <a href="./pages/restorationPublicity.html" target="_blank">
+            <h1>修复<span class="marks">公示</span></h1>
+            <h3><span class="marks">一键查询，实时</span>公示修复进度</h3>
+            <h3><span class="marks">透明全程，在线</span>公示修复结果</h3>
+            <h3>查看我的修复公示<img src="static/picture/icon_tiaoz.png" alt=""
+                style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 风险监控 -->
+      <div class="swiper-slide">
+        <video loop muted class="bg-video" id="video4" loop="loop">
+          <source src="./static/images/home/slider_04.mp4" type="video/mp4">
+          </source>
+        </video>
+        <div class="banner-title">
+          <a href="./pages/riskMonitoring.html" target="_blank">
+            <h1>风险<span class="marks">监控</span></h1>
+            <h3><span class="marks">高管护航，</span> 董监高管理层的风险监控护航 </h3>
+            <h3><span class="marks">经营护航，</span> 从集团到公司，全域经营的风险评分，护航决策经营 </h3>
+            <h3><span class="marks">行业监控，</span> 实时定制监控行业风险，抢先一步</h3>
+            <h3><span class="marks">量身定制，</span> 个性化风险监控解决方案，特色预约政策讲解培训</h3>
+            <h3>免费体检风险监控<img src="static/picture/icon_tiaoz.png" alt=""
+                style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 信用大学 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video5" loop="loop">
+          <source src="./static/images/home/slider_05.mp4" type="video/mp4">
+        </video>
+        <div class="banner-title" style="height:135px;margin-top:-67.5px;">
+          <a href="./pages/creditUniversity.html" target="_blank">
+            <h1>信用大学</h1>
+            <h3>创新开放，<span class="marks">注册信用培训师</span>入驻</h3>
+            <h3>在线信用培训课件，<span class="marks">在线权威培训证书</span></h3>
+            <h3>最新<span class="marks">信用行业新闻，</span>一手掌握</h3>
+            <h3>一键预约，线下<span class="marks">信用培训定制服务</span></h3>
+            <h3>前往学习<img src="static/picture/icon_tiaoz.png" alt=""
+                style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 开放平台 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video6" loop="loop">
+          <source src="./static/images/home/slider_06.mp4" type="video/mp4">
+        </video>
+        <div class="banner-title">
+          <a href="./pages/openPlatform.html" target="_blank">
+            <h1>开放平台</h1>
+            <h3><span class="marks">高性能，</span>日检索2000万+信用查询负载接口</h3>
+            <h3><span class="marks">多语言，跨平台，</span>灵活接入支持 </h3>
+            <h3>日更数十万+，海量数据，覆盖维度广，定向精度高</h3>
+            <h3>秒查秒询，高响应，高可靠，支持定制接口</h3>
+            <h3>申请接入<img src="static/picture/icon_tiaoz.png" alt=""
+                style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+      <!-- 关于修尔信 -->
+      <div class="swiper-slide">
+        <video muted class="bg-video" id="video7" loop="loop">
+          <source src="./static/images/home/slider_07.mp4" type="video/mp4">
+        </video>
+        <div class="banner-title">
+          <a href="./pages/about.html" target="_blank">
+            <h1>关于修尔信</h1>
+            <h3><span class="marks">响应国家信用体系建设</span>号召</h3>
+            <h3>为存在信用不良记录市场主体<span class="marks">提供修复信用服务</span></h3>
+            <h3>信用修复，可以<span class="marks">更加真实地反映信用主体的信用状况</span></h3>
+            <h3><span class="marks">让已经纠正失信行为的人回归正常</span></h3>
+            <h3>走进修尔信<img src="static/picture/icon_tiaoz.png" alt=""
+                style="vertical-align: text-bottom;position: relative;top: 3px;"></h3>
+          </a>
+        </div>
+        <div class="next-mouse"> <img src="static/picture/mouse.png" alt=""> </div>
+      </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="pagination"></div>
+  </div>
+  <script type="text/javascript" src="static/js/jquery.min.js"></script>
+  <script src="static/js/swiper.min.js"></script>
+  <script>
+    // 判断当前系统
+    function Mobile() {
+      var u = navigator.userAgent;
+      if (!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+        return 'ios';
+      }
+    }
+
+    window.onload = function () {
+      var swiperList = $('.swiper-slide');
+      var videoList = $('video');
+      if (Mobile() == 'ios') {
+        for (var i = 0; i < swiperList.length; i++) {
+          swiperList[i].style.backgroundRepeat = 'no-repeat';
+          swiperList[i].style.backgroundSize = '100% 100%';
+        }
+        for (var i = 0; i < videoList.length; i++) {
+          videoList[i].style.display = 'none';
+        }
+      }
+      var Video1 = document.getElementById('video1');
+      var Video2 = document.getElementById('video2');
+      var Video3 = document.getElementById('video3');
+      var Video4 = document.getElementById('video4');
+      var Video5 = document.getElementById('video5');
+      var Video6 = document.getElementById('video6');
+      var Video7 = document.getElementById('video7');
+      Video1.play();
+    };
+    var height = window.screen.height;
+    var width = window.screen.width;
+    if (Mobile() == 'ios') {
+      $('.swiper-container').css('height', height)
+    } else {
+      $('body').css('height', '100%');
+      $('html').css('height', '100%');
+    }
+    var swiper = new Swiper('.swiper-container', {
+      mode: 'vertical',
+      direction: 'vertical',
+      pagination: '.pagination',
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      mousewheelControl: true,
+      autoplay: 5000,//可选选项，自动滑动
+      // autoplay: false,//可选选项，不自动滑动
+      loop: true,//可选选项，开启循环
+      autoplayDisableOnInteraction: false,
+      onSlideChangeStart: function (swiper) {
+        if (Mobile() == 'ios') {
+          return;
+        }
+        var index = swiper.activeIndex;
+        if (index == 1 || index == 8) {
+          window.video1[0].currentTime = 0;
+          window.video1[0].play();
+          window.video1[1].currentTime = 0;
+          window.video1[1].play();
+        } else if (index == 2) {
+          window.video2.currentTime = 0;
+          window.video2.play();
+        } else if (index == 3) {
+          window.video3.currentTime = 0;
+          window.video3.play();
+        } else if (index == 4) {
+          window.video4.currentTime = 0;
+          window.video4.play();
+        } else if (index == 5) {
+          window.video5.currentTime = 0;
+          window.video5.play();
+        } else if (index == 6) {
+          window.video6.currentTime = 0;
+          window.video6.play();
+        } else if (index == 7) {
+          window.video7[0].currentTime = 0;
+          window.video7[0].play();
+          window.video7[1].currentTime = 0;
+          window.video7[1].play();
+        }
+      },
+    });
+
+    // $(".swiper-container").onmouseover = function(){ //鼠标放上暂停轮播
+    //   // swiper.autoplay.stop();
+    //   console.log("0000")
+    //   // $(".formControl").focus(function(){
+    //   //   console.log("获取焦点")
+    //   //   swiper.autoplay.stop();
+    //   // })
+    // }
+
+    // 信用体检查询框
+    $(".tabBox ul li").click(function () {
+      console.log($(this).index() == 0 ? '个人信用体检' : '企业信用体检')
+      $(this).addClass('tabActive');
+      $(this).siblings().removeClass('tabActive');
+      if ($(this).index() == 0) {
+        $("#creTipLeftText").show()
+        $("#creInput").show()
+        $("#creInput2").hide()
+      } else {
+        $("#creTipLeftText").hide()
+        $("#creInput").hide()
+        $("#creInput2").show()
+      }
+    })
+    $(".formControl").focus(function () {
+      console.log("获取焦点")
+      console.log(swiper)
+    })
+    $(".formControl").blur(function () {
+      console.log("失去焦点")
+    })
+    // 点击查询
+    function searchBtn() {
+      console.log("身份证号码为===>", $(".formControl").val())
+      window.location.href = "./pages/creditExamination.html"
+    }
+
+  </script>
+</body>
+
+</html>

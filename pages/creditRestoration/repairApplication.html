@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 修复申请 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/creditRestoration/repairApplication.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../../home.html">首页</a></li>
+              <li><a href="../creditExamination.html">信用体检</a></li>
+              <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+              <li><a href="../restorationPublicity.html">修复公示</a></li>
+              <li><a href="../riskMonitoring.html">风险监控</a></li>
+              <li><a href="../creditUniversity.html">信用大学</a></li>
+              <li><a href="../openPlatform.html">开放平台</a></li>
+              <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html" style="color: #333;">信用修复</a> ><span>信用修复申请</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title">信用修复申请</div>
+      <div class="line"></div>
+      <div class="stepBox">
+        <div class="stepListBox">
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_01.png" alt="">
+            <p style="color:#1164DF;">基本信息填报</p>
+          </div>
+          <div class="subline subline2 activeLine"></div>
+          <div class="stepItemBox">
+            <img class="stepImg2" src="../../static/picture/img_yuanq_02.png" alt="">
+            <p>修复材料上传</p>
+          </div>
+          <div class="subline subline3"></div>
+          <div class="stepItemBox">
+            <img class="stepImg3" src="../../static/picture/img_yuanq_03.png" alt="">
+            <p>在线修复协议</p>
+          </div>
+          <div class="subline subline4"></div>
+          <div class="stepItemBox">
+            <img class="stepImg4" src="../../static/picture/img_yuanq_04.png" alt="">
+            <p>付款修复信用</p>
+          </div>
+        </div>
+      </div>
+      <!-- 填写信息 -->
+      <!-- 第一步 -->
+      <div id="stepOneBox">
+        <div class="formBox">
+          <!-- 个人 -->
+          <div id="personalBox" style="display: none;">
+            <label for="phone" style="width: 100%;font-size: 16px;"><span style="color:#f00;">*</span> 联系方式：
+              <input type="text" class="commonInput" value="" id="personPhone" placeholder="请填写联系方式">
+            </label>
+            <div class="labelDiy"><span style="color:#f00;">*</span> 个人身份证:</div>
+          </div>
+          <!-- 企业 -->
+          <div id="companyBox" style="display: none;">
+            <label for="phone" style="width: 100%;font-size: 16px;"><span style="color:#f00;">*</span> 法人联系方式：
+              <input type="text" class="commonInput" value="" id="phone" placeholder="请填写联系方式">
+            </label>
+            <div class="radioBox">
+              <div class="labelDiy"><span style="color:#f00;">*</span> 申请人是否是法人：</div>
+          　　<input type="radio" value="" name="reserve" id="radio_yes">
+          　　<label for="radio_yes">是</label>
+          　　<input type="radio" value="" name="reserve" id="radio_no">
+          　　<label for="radio_no">否</label>
+            </div>
+            <div class="labelDiy"><span style="color:#f00;">*</span> 公司营业执照：</div>
+            <div class="warp uploadImgBox">
+              <div class="warp-content contentCompany">点击上传</div>
+              <input type="file" id="file" />
+              <img src="" id="fileImg" style="display: none;"/>
+              <div style="width: 260px;text-align: center;margin: 20px 0 50px;">上传营业执照</div>
+            </div>
+            <div class="labelDiy"><span style="color:#f00;">*</span> 法人身份证:</div>
+          </div>
+          <!-- 上传身份证 -->
+          <div class="uploadIDBox clear">
+            <div class="left warp">
+              <div class="warp-content warp-content1">点击上传</div>
+              <input type="file" id="file1" />
+              <img src="" id="fileImg1" style="display: none;"/>
+              <div style="width: 330px;text-align: center;margin: 20px 0 50px;">上传身份证照片（正面）</div>
+            </div>
+            <div class="left warp">
+              <div class="warp-content warp-content2">点击上传</div>
+              <input type="file" id="file2" />
+              <img src="" id="fileImg2" style="display: none;"/>
+              <div style="width: 330px;text-align: center;margin: 20px 0 50px;">上传身份证照片（反面）</div>
+            </div>
+          </div>
+          <!-- 企业非法人 -->
+          <div id="unincorporate" style="display: none;">
+            <label for="phone" style="width: 100%;font-size: 16px;"><span style="color:#f00;">*</span> 申请人姓名：
+              <input type="text" class="commonInput" value="" id="applicantName" placeholder="请填写申请人姓名">
+            </label>
+            <label for="phone" style="width: 100%;font-size: 16px;"><span style="color:#f00;">*</span> 申请人联系方式：
+              <input type="text" class="commonInput" value="" id="applicantPhone" placeholder="请填写申请人联系方式">
+            </label>  
+            <div class="labelDiy"><span style="color:#f00;">*</span> 申请人身份证:</div>
+            <div class="uploadIDBox clear">
+              <div class="left warp">
+                <div class="warp-content warp-content3">点击上传</div>
+                <input type="file" id="file3" />
+                <img src="" id="fileImg3" style="display: none;"/>
+                <div style="width: 330px;text-align: center;margin: 20px 0 50px;">上传身份证照片（正面）</div>
+              </div>
+              <div class="left warp">
+                <div class="warp-content warp-content4">点击上传</div>
+                <input type="file" id="file4" />
+                <img src="" id="fileImg4" style="display: none;"/>
+                <div style="width: 330px;text-align: center;margin: 20px 0 50px;">上传身份证照片（反面）</div>
+              </div>
+            </div>
+          </div>
+          <div class="uploadBtnBox"><button onclick="nextStepOne()">下一步</button></div>
+        </div>
+      </div>
+      <!-- 第二步 -->
+      <!-- <div id="stepTwo">
+
+      </div> -->
+    </div>
+    <div class="alert alert-danger" id="alertDanger"></div>
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/repairApplication.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  // 默认选中 是
+  if($("#radio_yes").val() == '' && $("#radio_no").val() == ''){
+    $("#radio_yes").attr("checked",true);
+  }
+
+
+</script>

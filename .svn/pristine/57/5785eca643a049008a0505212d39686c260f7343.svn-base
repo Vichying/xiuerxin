@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 修复申请 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/creditRestoration/repairApplication.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../../home.html">首页</a></li>
+              <li><a href="../creditExamination.html">信用体检</a></li>
+              <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+              <li><a href="../restorationPublicity.html">修复公示</a></li>
+              <li><a href="../riskMonitoring.html">风险监控</a></li>
+              <li><a href="../creditUniversity.html">信用大学</a></li>
+              <li><a href="../openPlatform.html">开放平台</a></li>
+              <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html" style="color: #333;">信用修复</a> ><span>信用修复申请</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title">信用修复申请</div>
+      <div class="line"></div>
+      <div class="stepBox">
+        <div class="stepListBox">
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_01.png" alt="">
+            <p style="color:#1164DF;">基本信息填报</p>
+          </div>
+          <div class="subline subline2 activeLine"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanqBlue_02.png" alt="">
+            <p style="color:#1164DF;">修复材料上传</p>
+          </div>
+          <div class="subline subline3 activeLine"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanqBlue_03.png" alt="">
+            <p style="color:#1164DF;">在线修复协议</p>
+          </div>
+          <div class="subline subline4 activeLine"></div>
+          <div class="stepItemBox">
+            <img src="../../static/picture/img_yuanq_04.png" alt="">
+            <p>付款修复信用</p>
+          </div>
+        </div>
+      </div>
+      <!-- 填写信息第三步 -->
+        <div class="formBox threeBox">
+          <div class="topTitel">《修尔信在线信用服务项目须知》</div>
+          <div class="textBox">
+        
+<p>尊敬的修尔信网站信用服务申请人，本服协议效力等同纸质版合同，同意即视为您已仔细阅读，并同意修尔信在线信用服务协议。为使您更好的了解信用服务的有关内容，请您认真仔细阅读以下内容：</p>
+
+<p><strong>一、服务内容</strong></p>
+
+<p>1.申请人申请信用服务，应提交相应材料，其中信用修复服务项目需向北京汇法正信科技有限公司（以下简称&ldquo;汇法正信&rdquo;）提供以下材料，并保证真实有效。</p>
+
+<p>1.1如果您是个人用户，您需要提供以下材料：</p>
+
+<p>1.1.1信用修复服务申请承诺书，本人签字（纸质和扫描版各一份）；</p>
+
+<p>1.1.2申请修复主体主要证件照复印件，本人签字（纸质和扫描版各一份）；</p>
+
+<p>1.1.3已履行处罚/判决的相关证明材料复印件（如法院出具已履行证明或者和解协议）加盖公章（包括纸质和扫描版各一份）；</p>
+
+<p>1.1.4其他需要提交的材料。</p>
+
+<p>1.2如果您是企业用户，您需要提供以下材料：</p>
+
+<p>1.2.1信用修复服务申请承诺书，加盖公章、法人签字（包括纸质和扫描版各一份）；</p>
+
+<p>1.2.2申请修复主体主要登记证照复印件（包括工商营业执照、事业单位法人证书、社会团体法人登记证书、民办非企业单位登记证书、基金会法人登记证书等）加盖公章（包括纸质和扫描版各一份）；</p>
+
+<p>1.2.3法定代表人身份证复印件加盖公章。非法定代表人参加的需提交代理人授权委托书并加盖公章（包括纸质和扫描版各一份）；</p>
+
+<p>1.2.4已履行处罚/判决的相关证明材料复印件（如法院出具已履行证明或者和解协议）加盖公章（包括纸质和扫描版各一份）；</p>
+
+<p>1.2.5汇法正信认为需要提交的其他材料。</p>
+
+<p>1.3汇法正信在申请人的信用体检/信用修复/风险预警服务生效后，通过账户内通知、二维码查看等多种方式供申请人选择查看信用服务，如信用体检电子报告，信用修复电子报告。申请人应在收到购买的信用服务的两个工作日内账户进行确认，确认服务信息有无异议；若两日未有异议回复，则视为申请人认可信用电子报告内容，本协议项下的信用服务项目已生效并履约执行。</p>
+
+<p>1.4申请人应在线支付信用体检/修复报告/风险预警等服务费并保证资料的真实有效，汇法正信为申请人出具信用体检/信用修复报告，或风险监控服务，通过账户内通知、二维码查看等方式通知到申请人。若申请人自行放弃查看的，一切损失由申请人自行承担。</p>
+
+<p>1.5如申请人不配合提供资料或不缴纳相应信用服务项目的费用，则视为用户放弃申请信用服务，汇法正信可以终止用户申请信用服务，无需再继续提供约定服务。</p>
+
+<p><strong>二、服务费用</strong></p>
+
+<p>出具信用体检报告、修复报告，风险监控的服务收费标准为网站公示的标准价格。如需要多条服务，则该按网站标注费用标准乘以条数；申请人应在同意本条款后，自愿、主动在线完成支付，方可进入信用体检/信用修复服务/风险监控等在线流程服务，服务完成，如需具电子发票，可后台发起申请，并指定接收邮箱。</p>
+
+<p><strong>三、权利、义务与责任</strong></p>
+
+<p>3.1申请人有权了解信用体检、信用修复，风险监控的流程及各项工作内容。</p>
+
+<p>3.2申请人应严格履行《信用修复服务申请承诺书》承诺的内容，并在约定的时间内，及时向汇法正信提供与本协议业务有关的各项资料。申请人拒绝根据汇法正信要求提供资料或补正资料的，汇法正信有权解除合同，已支付款项不予退还。</p>
+
+<p>3.3申请人应按照汇法正信要求建立相关信用机制，主动应用信用服务。</p>
+
+<p>3.4申请人应按网站公示约定服务价格，在线完成支付汇法正信信用在线服务的费用，申请人放弃支付费用，汇法正信视为用户同意中止在线提供信用体检、信用修复、风险监控等服务。</p>
+
+<p>3.5 《修尔信在线信用服务协议》勾选同意后，后即视为申请人了解并理解，所申请的信用体检、或信用修复，或风险监控服务项目为网路虚拟产品，如勾选同意《修尔信在线信用服务协议》后，在项目流程启动前申请人退款的，汇法正信自动视需求方放弃需求，系统在5个工作日内退款申请人；如项目流程开始实施后，申请人申请退款的，因信用服务的特殊虚拟产品特征，已支付款项不予退还。</p>
+
+<p>3.6申请人应当在信用体检、信用修复，风险监控等报告限定的效力和权益范围内合理使用信用项目报告，如申请人超出限定范围使用信用体检、信用修复、风险预警等报告的汇法正信不承担任何承诺与责任，一切法律后果由申请人自行承担，违反上述约定造成汇法正信损失的应全面赔偿。</p>
+
+<p>3.7修尔信在线信用服务项目相关法律法规及政策发生变动的，汇法正信有权根据变动内容对修尔信在线信用服务项目服务做出相应调整或停止修尔信在线信用服务项目服务而不视为违约。但汇法正信停止修尔信在线信用服务项目服务的应当退还申请人已支付的相关费用。</p>
+
+<p>3.8申请人勾选同意本协议条款，但未在线支付约定信用服务项目的支付价款，视为默认同意汇法正信有权单方终止本协议，不提供信用服务流程下一步动作。</p>
+
+<p>3.9因申请人提供资料瑕疵造成信用体检、信用修复、风险监控报告存在效力瑕疵的，汇法正信不承担任何违约责任，由此造成汇法正信或第三方一切损失由申请人承担。</p>
+
+<p>3.10，申请人申请信用修复服务项目时，已详细了解并同意;信用修复不等于删除负面信用瑕疵;信用修复是汇法正信从第三方角度提供的申请人信用修复意见报告;汇法正信不保证提供的信用修复报告服务一定为用信单位采纳;汇法正信针对行政类信用能修复会主动为申请人提供增值服务，即协助更新信用中国信用记录，但屏蔽需满足最短公示期条件。</p>
+
+<p><strong>四、保密条款</strong></p>
+
+<p>除法律有特别规定，任何一方未经对方同意不得以任何形式将履行合同期间知悉的对方的信息及资料（包括但不限于双方往来书面文字文件、电子邮件及信息、磁盘数据等）中涉及的商业秘密披露给第三方，但正常履行本合同项目义务的除外。本保密条款具有独立性，不受本合同的终止或解除的影响。</p>
+
+          </div>
+          <div class="agreetoterms"><label><input type="checkbox" name="terms" class="terms"> <span>我已阅读并同意在线修复协议</span></label></div>
+          <div class="uploadBtnBox">
+            <button class="prevStepBtn"><a href="./repairApplicationStepTwo.html">上一步</a></button>
+            <button class="nextstep" onclick="nextStepFour()">下一步</button>
+          </div>
+        </div>
+    </div>
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+    $('.nextstep').attr('disabled',"true");
+    $(".terms").on('change',function () {
+         if($(this).is(':checked')){
+          $('button.nextstep').removeAttr("disabled");
+         }else{
+         $('.nextstep').attr('disabled',"true");
+         }
+     });
+  function nextStepFour(){
+    window.location.href = "./repairApplicationStepFour.html"
+  }
+</script>

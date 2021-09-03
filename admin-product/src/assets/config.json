@@ -1,0 +1,8 @@
+{
+  "https": {
+    "api": "http://www.xiuerxin.com"
+  },
+  "testHttps": {
+    "api": "http://www.xiuerxin.com"
+  }
+}

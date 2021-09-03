@@ -1,0 +1,93 @@
+body{background: #F7F8FA;}
+main{width: 1050px;margin: 0 auto;margin-bottom: 60px;}
+.topBannerBox{margin: 106px 0 30px;background-size: cover;background-position: center;}
+.topBannerBox .positionText{width: 1050px;margin: 0 auto;padding-top: 20px;color: #333;font-size: 16px;}
+.topBannerBox .positionText span{color:#1164DF;}
+.contentBox .foldTabBox{width: 220px;}
+.contentBox .contBox{width: 810px;padding: 23px 30px;background-color: #fff;height: 737px;}
+.topBox{height: 60px;background-color: #1164DF;}
+.userAvatarBox{width: 60px;height: 60px;border-radius: 50%;background: #EAEAEA;margin: 0 auto;margin-top: -30px;text-align: center;}
+.userAvatarBox img{margin-top: 10px;}
+.topInfoBox{margin-bottom: 20px;background-color: #fff;}
+.topInfoBox .title{text-align: center;height: 42px;line-height: 42px;font-size: 16px;border-bottom: 1px solid #F7F8FA;}
+.btnsBox{padding: 15px 20px;}
+.btnsBox .btn{padding: 8px 15px;font-size: 12px;}
+.btnsBox .btn.left{background-color: #1164DF;color: #fff;}
+.btnsBox .btn.right{border: 1px solid #ddd;}
+.bottomTabsBpx{background-color: #fff;padding: 10px 20px 20px;height: 520px;}
+.bottomTabsBpx .panel-heading{padding: 0!important;background-color: #fff!important;border: 0!important;}
+.bottomTabsBpx .panel-default{border: 0!important;
+  -webkit-box-shadow:inherit!important;box-shadow:inherit!important;}
+.bottomTabsBpx .panel-default>.panel-heading+.panel-collapse>.panel-body{border: 0!important;}
+.bottomTabsBpx .panel-title a{display: block!important;padding: 15px!important;font-size: 16px!important;font-weight: bold!important;}
+.bottomTabsBpx .panel-title a:hover{color: #333!important;}
+.bottomTabsBpx .panel-title a img{vertical-align: middle;}
+.bottomTabsBpx .panel-title a img:first-child{margin-top: -2px;}
+.bottomTabsBpx .panel-title a img.icon{margin-top: -3px;}
+.bottomTabsBpx .panel-title a span{margin: 0 15px;}
+.bottomTabsBpx .panel-body .tabText{font-size: 16px!important;color: #666!important;text-align: center;}
+.bottomTabsBpx .activeTabText{color: #1164DF!important;}
+.bottomTabsBpx .panel-body .activeTabText{color: #1164DF!important;}
+.bottomTabsBpx .panel-body div:hover{cursor: pointer;color: #1164DF!important;}
+.bottomTabsBpx .secendTabTitle{margin-top: 15px;}
+/* 修改密码 */
+.contBox .rightTopTitle{font-size: 16px;font-weight: bold;padding-bottom: 20px;border-bottom: 1px solid#EAEAEA;margin-bottom: 20px;}
+.rightUserInfoBox{padding: 0 50px;margin-top: 40px;}
+.rightUserInfoBox .iteminfoBox{margin-bottom: 20px;font-size: 16px;font-weight: 400;}
+.rightUserInfoBox .iteminfoBox div:first-child{width: 120px;}
+.rightUserInfoBox .iteminfoBox .changePwBtn{padding: 10px 16px;border: 1px solid #ddd;margin-left: 150px;margin-top: -15px;}
+.rightUserInfoBox .iteminfoBox .changePwBtn:hover{cursor: pointer;background-color: #FF9A23;color: #fff;}
+.tipDescText{font-size: 16px;color: #666;}
+.pwStepsBox{margin-top: 48px;padding: 0 70px;}
+.stepImgBox{display: flex;display: -webket-flex;display: -webkit-box;display: -ms-flexbox;justify-content: space-between;-webkit-box-pack: justify;-ms-flex-pack: justify;align-items:center;-webkit-box-align: center;-ms-flex-align: center;}
+.stepImgBox .line{width: 80px;border-bottom: 2px solid #ccc;margin-top: -34px;}
+.stepImgBox .activeLine{border-color: #1164DF;}
+.stepImgBox .imgAndTextBox{font-size: 16px;text-align: center;color: #999;}
+.stepImgBox .imgAndTextBox img{margin-bottom: 13px;}
+.stepImgBox .activeText{color: #1164DF;}
+.phoneBtn{width: 240px;height: 52px;line-height: 52px;text-align: center;background: #1164DF;font-size: 16px;color: #fff;margin: 0 auto;margin-top: 80px;}
+.phoneBtn:hover{cursor: pointer;background-color: #FF9A23;}
+.codeBox{text-align: center;margin-top: 50px;color: #999;}
+.codeBox p .phoneNum{color: #333;}
+.codeInputBox{width: 360px;margin: 25px auto;}
+.codeInput{width: 260px;height: 46px;padding: 0 13px;}
+.buttonBox{width: 100px;height: 46px;background: #1164DF;text-align: center;line-height: 46px;color: #fff;}
+.buttonBox:hover{color: #1164DF;cursor: pointer;color: #fff;}
+.noGetCodeText{color: #999;}
+.noGetCodeText span{color: #1164DF;}
+.noGetCodeText span:hover{cursor: pointer;}
+
+.pwInputsBox{margin-top: 25px;}
+.pwItemInputBox{position: relative;margin-bottom: 20px;}
+.pwInputsBox input{width: 360px;height: 46px;border: 1px solid #ddd;padding: 0 13px;}
+.pwInputsBox img{position: absolute;left: 445px;top: 7px;}
+.pwInputsBox img:hover{cursor: pointer;}
+.commonSureBtn{width: 180px;text-align: center;height: 52px;line-height: 52px;margin: 0 auto;background: #CCCCCC;margin-top: 30px;font-size: 16px;color: #fff;}
+.sureBtnBox{background-color: #1164DF;}
+.sureBtnBox:hover{cursor: pointer;}
+
+.successIconBox{width: 88.5px;height: 88.5px;background-color: #fff;border-radius: 50%;margin: 0 auto;margin-top: 76px;}
+.successIconBox img{width: 88.5px;height: 88.5px;}
+.successText{font-size: 16px;font-weight: bold;margin-top: 30px;text-align: center;}
+
+/* 订单管理 */
+.searchBox{margin: 30px 0;}
+.searchBox .inputBox span{font-size: 16px;margin-right: 20px;}
+.searchBox .inputBox select{width: 250px;height: 38px;padding: 0 15px;border: 1px solid #ddd;}
+.searchBox .inputBox option{height: 38px;}
+/* .orderTableBox{height: 430px;overflow-y: auto;} */
+.orderTableBox table{width: 100%;}
+.orderTableBox table thead tr th{padding: 14px 16px;background-color: #F1F2F5;border-right: 1px solid #fff;}
+.orderTableBox table tbody tr td{padding: 12px 16px;}
+.orderTableBox table tbody tr:nth-child(even) td{background-color: #F1F2F5;}
+.orderTableBox table tbody tr td:last-child{color: #409EFF;}
+.orderTableBox table tbody tr td:last-child:hover{cursor: pointer;}
+/* 订单详情 */
+.commonDetailBox{padding: 40px 80px;}
+.commonDetailBox .left{font-size: 16px;margin-bottom: 20px;color: #666;}
+.commonDetailBox .title{width: 120px;font-weight: bold;}
+.commonDetailBox .optionBtn{width: 160px;text-align: center;height: 46px;line-height: 46px;font-size: 16px;color: #1164DF;border: 1px solid #1164DF;margin: 100px auto;}
+.commonDetailBox .optionBtn:hover{cursor: pointer;background-color: #FF9A23;color: #fff;border-color: #FF9A23;}
+.commonDetailBox .optionBtn a:hover{color: #fff!important;}
+.commonDetailBox .checkWords{color: #1164DF;margin-left: 20px;}
+.commonDetailBox .checkWords:hover{cursor: pointer;}

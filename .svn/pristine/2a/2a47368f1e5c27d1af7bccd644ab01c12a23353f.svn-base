@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 信用修复 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>信用修复</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/common.css">
+  <link rel="stylesheet" href="../static/css/creditRestoration.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <!-- 未登录 -->
+          <!-- <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a> -->
+          <!-- 已登录 - 点击去用户中心 -->
+          <a href="../pages/userCenter/personalInfo.html"><img src="../static/picture/userIconBlack.png" alt=""> 张三</a>
+          <a href="../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../home.html">首页</a></li>
+            <li><a href="./creditExamination.html">信用体检</a></li>
+            <li><a href="javascript:void(0);" class="active">信用修复</a></li>
+            <li><a href="./restorationPublicity.html">修复公示</a></li>
+            <li><a href="./riskMonitoring.html">风险监控</a></li>
+            <li><a href="./creditUniversity.html">信用大学</a></li>
+            <li><a href="./openPlatform.html">开放平台</a></li>
+            <li><a href="./about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- 侧导航开始 -->
+    <div class="rightFload">
+      <div class="pf_div">
+        <ul class="divBox">
+          <li class="l1" id="li_tel">
+            <img src="../static/picture/icon_kfdh_01.png" alt="">
+            <p>客服电话</p>
+          </li>
+          <li class="l2" id="li_wx">
+            <img src="../static/picture/icon_kfdh_wx.png" alt="">
+            <p>微信公众号</p>
+          </li>
+          <li id="gobakTop">
+            <img src="../static/picture/icon_kfdh_02.png" alt="">
+            <p>返回顶部</p>
+          </li>
+        </ul>
+        <div class="tele" id="tel">021-62311883</div>
+        <div class="wxEwm" id="wx">
+          <img src="../static/picture/img_erwm _01.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- 侧导航结束 -->
+  </header>
+  <div class="bannerBox">
+    <img src="../static/images/Banner.png" alt="">
+  </div>
+
+  <main>
+    <!-- 搜索框 -->
+    <div style="max-width: 1050px;margin: 60px auto;">
+      <!-- <div class="inputBox">
+        <form class="bs-example bs-example-form" role="form">
+          <ul class="clear">
+            <li class="left" id="creInput" style="border-radius: 0px 0px 0px 2px;">
+              <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入案件号">
+            </li>
+            <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+              <button class="btn btn-default" type="button" onclick="toRewtoration()">前往修复</button>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+      <div class="tabBox">
+        <ul class="clear">
+          <li class="tabActive" style="border-radius: 2px 0px 0px 0px;">个人信用修复</li>
+          <li style="border-radius: 0px 2px 0px 0px;">企业信用修复</li>
+        </ul>
+      </div>
+      <div class="inputBox" id="creditInputBox">
+        <form class="bs-example bs-example-form" role="form">
+          <ul class="clear">
+            <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;">
+              <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+            </li>
+            <li class="left" id="creInput">
+              <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入身份证号码">
+            </li>
+            <li class="left" id="creInput2" style="border-radius: 0px 0px 0px 2px;display: none;">
+              <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入企业全称 / 统一社会信用代码">
+            </li>
+            <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+              <button class="btn btn-default" type="button" onClick="toRewtoration()">前往修复</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!-- 修复流程 -->
+    <div class="repairProcess">
+      <h3>信用修复流程</h3>
+      <div class="processBox processBoxBottom">
+        <div class="itemBox">
+          <div class="textBox" style="line-height:42px;">在线输入案件号</div>
+        </div>
+        <img class="iconImg" src="../static/picture/icon_jiantou.png" alt="">
+        <div class="itemBox">
+          <div class="textBox">系统判断是否<br />可修复</div>
+        </div>
+        <img class="iconImg" src="../static/picture/icon_jiantou.png" alt="">
+        <div class="itemBox">
+          <div class="textBox">系统判断是否<br />需做信用培训</div>
+        </div>
+        <img class="iconImg" src="../static/picture/icon_jiantou.png" alt="">
+        <div class="itemBox">
+          <div class="textBox" style="line-height:42px;">在线提交修复材料</div>
+        </div>
+        <img class="iconImg" src="../static/picture/icon_jiantou.png" alt="">
+        <div class="itemBox">
+          <div class="textBox" style="line-height:42px;">在线出具修复报告</div>
+        </div>
+      </div>
+    </div>
+    <!-- 信用修复资料预览 -->
+    <div class="processData">
+      <h3>信用修复资料</h3>
+      <div class="processDataItemsBox">
+        <a class="processDataItem">
+          <img src="../static/images/icon_xfcl_01.png" alt="">
+          <p>信用报告申请材料清单</p>
+        </a>
+        <a class="processDataItem">
+          <img src="../static/images/icon_xfcl_02.png" alt="">
+          <p>信用修复报告模板</p>
+        </a>
+        <a class="processDataItem">
+          <img src="../static/images/icon_xfcl_03.png" alt="">
+          <p>信用培训证明材料</p>
+        </a>
+        <a class="processDataItem">
+          <img src="../static/images/icon_xfcl_04.png" alt="">
+          <p>信用修复申请书</p>
+        </a>
+        <a class="processDataItem">
+          <img src="../static/images/icon_xfcl_05.png" alt="">
+          <p>信用修复承诺书</p>
+        </a>
+      </div>
+    </div>
+    <!-- 常见信用修复问题 -->
+    <div class="repairProblems">
+      <h3>常见信用修复问题</h3>
+      <div class="repairProblemsItemBox clear">
+        <div class="left" style="background-image: url(../static/images/img_bj_01.png);">
+          <h4>如何使用“修尔信”进行在线信用修复申请？</h4>
+          <p>失信人通过“修尔信”官网进行个人/企业信用查询，根据查询结果选择可修复的相关内容，准备材料，然后进行信用修复申请。</p>
+        </div>
+        <div class="right" style="background-image: url(../static/images/img_bj_02.png);">
+          <h4>哪些行政处罚涉及一般失信行为？</h4>
+          <p>目前主要是指针对性质较轻、情节较轻、社会危害程度小的违法失信行为的行政处罚信息，除了认定涉及严重失信行为的行政处罚信息外，在除去按简易程序做出的行政处罚信息，原则上均为涉及一般失信行为的行政处罚信息。</p>
+        </div>
+      </div>
+      <div class="repairProblemsItemBox clear">
+        <div class="left" style="background-image: url(../static/images/img_bj_03.png);">
+          <h4>如何准备信用报告？</h4>
+          <p>失信主体可通过以下两种方式获得信用报告，一是通过“修尔信”网站平台进行个人信用体检报告下载，二是通过“信用中国”网站以及各省级信用门户网站下载公共信用信息概况（信用报告）。</p>
+        </div>
+        <div class="right" style="background-image: url(../static/images/img_bj_04.png);">
+          <h4>信用修复培训的证明材料和信用报告的时效性如何界定？</h4>
+          <p>信用修复培训的证明材料只能用于培训结束时间之前产生的行政处罚信用修复申请；信用报告只能用于报告出具日期之前产生的行政处罚信用修复申请。</p>
+        </div>
+      </div>
+    </div>
+    <!-- 更多问题  -->
+    <div class="moerProblemsBox">
+      <!-- <button>更多问题 ></button> -->
+    </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../static/js/commonJS.js"></script>
+<script src="../static/js/footer.js"></script>
+<script src="../static/js/base.js"></script>
+<script>
+  function toRewtoration() {
+    window.location.href = "./creditRestoration/caseList.html";
+  }
+
+  // 查询框
+  $(".tabBox ul li").click(function () {
+    console.log($(this).index() == 0 ? '个人' : '企业')
+    $(this).addClass('tabActive');
+    $(this).siblings().removeClass('tabActive');
+    if ($(this).index() == 0) {
+      $("#creTipLeftText").show()
+      $("#creInput").show()
+      $("#creInput2").hide()
+    } else {
+      $("#creTipLeftText").hide()
+      $("#creInput").hide()
+      $("#creInput2").show()
+    }
+  })
+</script>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 充值套餐 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/riskSetMeal.css">
+</head>
+
+<body>
+  <div>
+    <!-- 头部 -->
+    <header id="header">
+      <div id="topTitleBox" class="topTitleBox">
+        <div class="topTitle clear">
+          <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+          <div class="right">
+            <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+            <a href="../../register.html">注册</a>
+          </div>
+        </div>
+        <nav>
+          <div class="menuBox clear">
+            <div class="logoImg left">
+              <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+            </div>
+              <ul class="menuList left clear">
+                <li><a href="../../home.html">首页</a></li>
+                <li><a href="../creditExamination.html">信用体检</a></li>
+                <li><a href="../creditRestoration.html">信用修复</a></li>
+                <li><a href="../restorationPublicity.html">修复公示</a></li>
+                <li><a href="../riskMonitoring.html" class="active">风险监控</a></li>
+                <li><a href="../creditUniversity.html">信用大学</a></li>
+                <li><a href="../openPlatform.html">开放平台</a></li>
+                <li><a href="../about.html">关于修尔信</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div id="riskBannerBox">
+      <div class="positionText">当前位置：首页>风险监控><span>服务套餐</span></div>
+    </div>
+    <main>
+      <div class="packageListBox">
+        <div id="vueBox" v-cloak>
+          <!-- 单项服务套餐 -->
+          <h3 class="title">单项服务套餐：</h3>
+          <div class="line"></div>
+          <div id="radioBox">
+            <el-radio-group v-model="radioVal" @change="radioChangeFn">
+              <el-radio-button  v-for="(item,index) in singleChoiceData" :label="item.label" :key="item.val">
+                <p class="text">{{item.label}}</p>
+                <div v-if="index == 0" class="moneyBox"><span class="subMoney">免费试用1个月</span></div>
+                <div v-else class="moneyBox">￥<span class="subMoney">{{item.val}}</span>元</div>
+                <img src="../../static/picture/img_gouxuan_01.png" alt="" v-for="(childItem,childIndex) in checkboxGroup" v-show="childItem == item.label">
+              </el-radio-button>
+            </el-radio-group>
+          </div>
+          <!-- 多项服务套餐 -->
+          <h3 class="title">多项服务套餐：</h3>
+          <div class="line"></div>
+          <div id="checkBox">
+            <el-checkbox-group v-model="checkboxGroup" @change="checkChangeFn">
+              <el-checkbox-button v-for="(item,index) in multiChoiceData" :label="item.label" :key="item.val">
+                <p class="text">{{item.label}}</p>
+                <div class="moneyBox">￥<span class="subMoney">{{item.val}}</span>元</div>
+                <img src="../../static/picture/img_gouxuan_01.png" alt="" v-for="(childItem,childIndex) in checkboxGroup" v-show="childItem == item.label">
+              </el-checkbox-button>
+            </el-checkbox-group>
+          </div>
+
+          <h3 class="title">优惠券：</h3>
+          <div>
+            <el-select v-model="cunpnValue" placeholder="选择优惠券" @change="cunponValFn" :disabled="disabledFlag">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+            <span style="margin-left:18px;font-size:16px;">兑换优惠券</span>
+          </div>
+          <div class="line" style="margin: 52px 0 48px;"></div>
+          <div class="bottomPriceBox clear">
+            <div class="bottomPrice right">
+              <div class="clear">
+                <div class="left">总价</div>
+                <div class="right">￥{{totalPriceVal}}</div>
+              </div>
+              <div class="clear">
+                <div class="left">优惠券：</div>
+                <div class="right">-￥{{cunpnValue}}</div>
+              </div>
+              <div class="line" style="margin: 30px 0;"></div>
+              <div class="clear">
+                <div class="left">需付金额：</div>
+                <div class="right priceVal">￥<span>{{totalPriceVal}}</span></div>
+              </div>
+              <div class="clear">
+                <button class="right" id="nowPayBtn" @click="nowPayFn">立即支付</button>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="commonFooter"></footer>
+  </div>
+</body>
+<script src="../../static/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  new Vue({
+    el: '#vueBox',
+    data() {
+      return {
+        // 单项套餐
+        radioVal:'',
+        singleChoiceData:[
+          {label:"风险监控XXX服务A",val:0},
+          {label:"风险监控XXX服务B",val:200},
+          {label:"风险监控XXX服务C",val:300},
+          {label:"风险监控XXX服务D",val:500},
+          {label:"风险监控XXX服务E",val:1000},
+          {label:"风险监控XXX服务F",val:1500},
+          {label:"风险监控XXX服务G",val:2000},
+          {label:"风险监控XXX服务H",val:2500},
+        ],
+        // 多项套餐
+        checkboxGroup: ['风险监控XXX服务A+B'],
+        multiChoiceData:[
+          {label:"风险监控XXX服务A+B",val:100},
+          {label:"风险监控XXX服务B+C",val:450},
+          {label:"风险监控XXX服务A+C",val:800},
+          {label:"风险监控XXX服务B+D",val:1500},
+          {label:"风险监控XXX服务A+B+E",val:2200},
+          {label:"风险监控XXX服务B+C+F",val:3500},
+          {label:"风险监控XXX服务A+B+C+D",val:6500},
+          {label:"风险监控XXX服务B+C+F+H",val:8500},
+        ],
+        // 优惠券
+        cunpnValue: 0,
+        options: [{
+          value: 100,
+          label: '100元优惠券'
+        }, {
+          value: 200,
+          label: '200元优惠券'
+        }, {
+          value: 500,
+          label: '500元优惠券'
+        }, {
+          value: 0,
+          label: '不使用优惠券'
+        }],
+        disabledFlag: false,
+        totalPriceVal:'100.00',//总价
+      }
+    },
+    methods: {
+      radioChangeFn(val){
+        console.log(val)
+        this.totalPriceVal = 0
+        if(val != "" || val != null){
+          this.checkboxGroup=[]
+          // console.log(this.cunpnValue)
+          this.singleChoiceData.forEach(item => {
+            if(item.label == val){
+              // console.log(item.val)
+              if(item.val == 0){
+                this.disabledFlag = true
+              }else{
+                this.disabledFlag = false
+              }
+              this.totalPriceVal = item.val - this.cunpnValue
+              // console.log(this.totalPriceVal)
+            }
+          })
+        }
+      },
+      checkChangeFn(val){
+        // console.log(val)
+        this.totalPriceVal = 0
+        if(val != "" || val != null){
+          this.radioVal=""
+          this.multiChoiceData.forEach((item,index)=>{
+            val.forEach(subItem=>{
+              if(item.label == subItem){
+                // console.log("多选套餐金额==》",item.val)
+                this.totalPriceVal = Number(this.totalPriceVal + item.val) - this.cunpnValue
+                console.log(this.totalPriceVal)
+              }
+            })
+          })
+        }
+      },
+      // 优惠券
+      cunponValFn(val){
+        console.log(val)
+        this.totalPriceVal = this.totalPriceVal - val
+      },
+      // 立即支付
+      nowPayFn(){
+        console.log("需要支付金额-->",this.totalPriceVal - this.cunpnValue)
+      }
+    }
+  })
+</script>

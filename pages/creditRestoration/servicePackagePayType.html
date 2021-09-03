@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 修复申请 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/creditRestoration/repairApplication.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../../home.html">首页</a></li>
+              <li><a href="../creditExamination.html">信用体检</a></li>
+              <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+              <li><a href="../restorationPublicity.html">修复公示</a></li>
+              <li><a href="../riskMonitoring.html">风险监控</a></li>
+              <li><a href="../creditUniversity.html">信用大学</a></li>
+              <li><a href="../openPlatform.html">开放平台</a></li>
+              <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html" style="color: #333;">信用修复</a>><a href="./topUpPackage.html"  style="color: #333;">服务套餐</a>><span>服务套餐支付</span></p>
+    </div>
+    <div class="applicationBox">
+      <div class="title">服务套餐支付</div>
+      <div class="fourBox">
+        <div class="payInfoBox">
+          <p class="timeAndMoney">订单已于 2020-12-02 12:10:30 提交生成，请您尽快付款！在线支付金额：<span>￥1200.00</span></p>
+          <table>
+            <thead>
+              <tr>
+                <th>服务订单号</th>
+                <th>支付方式</th>
+                <th>支付金额（元）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3000000000096688</td>
+                <td>在线支付</td>
+                <td>￥1200.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 18px;margin-bottom: 30px;">选择支付方式</p>
+          <div class="payTypeBox clear">
+            <div class="payTypeItemBox left clear" style="margin-right:60px;" onclick="zfbzfFn()">
+              <img src="../../static/picture/icon_xuanz_01.png" alt="" id="radiozfbzf1">
+              <img src="../../static/picture/icon_xuanz_02.png" alt="" id="radiozfbzf2" style="display: none;">
+              <img class="zfIconImg" src="../../static/picture/img_zfbzf_01.png" alt="">
+            </div>
+            <div class="payTypeItemBox left clear" onclick="wxzfFn()">
+              <img src="../../static/picture/icon_xuanz_01.png" alt="" id="radiowxzf1" style="display: none;">
+              <img src="../../static/picture/icon_xuanz_02.png" alt="" id="radiowxzf2">
+              <img class="zfIconImg" src="../../static/picture/img_wxzf_01.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="uploadBtnBox">
+          <button onclick="nextStepFour()">确认提交支付</button>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger" id="alertDanger"></div>
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  // 支付方式   1--支付宝，2--微信
+  let payType = 1
+  function zfbzfFn(){
+    payType = 1
+    $("#radiozfbzf1").show()
+    $("#radiozfbzf2").hide()
+    $("#radiowxzf1").hide()
+    $("#radiowxzf2").show()
+  }
+  function wxzfFn(){
+    payType = 2
+    $("#radiozfbzf1").hide()
+    $("#radiozfbzf2").show()
+    $("#radiowxzf1").show()
+    $("#radiowxzf2").hide()
+  }
+
+  function nextStepFour(){
+    if(payType == 1){
+      window.location.href = "./wxZfbPay.html?payType=1"
+    }else if(payType == 2){
+      window.location.href = "./wxZfbPay.html?payType=2"
+    }
+  }
+</script>

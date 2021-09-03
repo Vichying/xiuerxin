@@ -1,0 +1,494 @@
+<template>
+  <div class="home_index">
+    <el-card style="width: 100%" class="myCard">
+      <el-form
+        label-position="left"
+        :model="ruleForm"
+        :inline="true"
+        ref="ruleForm"
+        label-width="100px"
+        border
+      >
+        <el-form-item prop="name" style="margin-right: 40px">
+          <el-input
+            v-model="ruleForm.name"
+            autocomplete="off"
+            clearable
+            placeholder="菜单名称/菜单编号"
+          ></el-input>
+        </el-form-item>
+        <el-form-item style="float: right">
+          <el-button
+            type="primary"
+            @click="submitForm('ruleForm')"
+            size="medium"
+            >查询</el-button
+          >
+          <el-button
+            type="primary"
+            @click="addFormFn"
+            size="medium"
+            v-if="getAuthorityFunc('create')"
+            >新增</el-button
+          >
+          <el-button
+            type="primary"
+            size="medium"
+            @click="deleteSelect(2)"
+            v-if="getAuthorityFunc('delete')"
+            >删除</el-button
+          >
+        </el-form-item>
+      </el-form>
+    </el-card>
+    <div class="page_con">
+      <list ref="list" :name="ruleForm.name" @dataBind="dataBind"></list>
+    </div>
+    <el-dialog
+      center
+      :title="isUpdate ? '修改二级菜单' : '新增二级菜单'"
+      :visible.sync="dialogVisible"
+      width="576px"
+      :before-close="handleClose"
+    >
+      <el-form
+        :model="addRuleForm"
+        :rules="addRules"
+        ref="addRuleForm"
+        label-width="120px"
+        class="add"
+        label-position="top"
+      >
+        <el-form-item label="菜单名称：" prop="menu_name">
+          <el-input
+            v-model="addRuleForm.menu_name"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="菜单编号：" prop="menu_code">
+          <el-input
+            v-model="addRuleForm.menu_code"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="一级菜单：" prop="parent_id" style="width: 100%">
+          <el-select v-model="addRuleForm.parent_id" placeholder="请选择">
+            <el-option
+              v-for="item in firstMenuList"
+              :key="item.id"
+              :label="item.menu_name"
+              :value="item.id"
+            >
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="文件路径：" prop="file_url">
+          <el-input
+            v-model="addRuleForm.file_url"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="备注：" prop="memo">
+          <el-input
+            v-model="addRuleForm.memo"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-checkbox-group v-model="addRuleForm.sub_child_ids">
+            <el-checkbox
+              :label="item.id"
+              v-for="item in optionList"
+              :key="item.id"
+              >{{ item.menu_name }}</el-checkbox
+            >
+          </el-checkbox-group>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="resetForm('addRuleForm')" size="medium"
+          >取 消</el-button
+        >
+        <el-button
+          type="primary"
+          @click="addOrUpdateSysMenus"
+          size="medium"
+          :loading="btnLoad"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
+  </div>
+</template>
+<script>
+import { mapActions, mapGetters, mapMutations } from "vuex"; //vuex得各个方法   mapGetters放在computed里面 之后可以在当前页面用 this.userInfo 使用这个全局变量
+import list from "./components/list.vue";
+export default {
+  data() {
+    return {
+      checkList: null,
+      btnLoad: false,
+      options: [
+        {
+          value: "修尔信后台",
+          label: "修尔信后台",
+        },
+      ],
+      dialogVisible: false,
+      val: "你好",
+      ruleForm: {
+        name: "",
+      },
+      addRuleForm: {
+        id: null,
+        menu_name: "",
+        menu_code: "",
+        parent_id: "",
+        file_url: "",
+        memo: "",
+        sub_child_ids: [],
+      },
+      isUpdate: false,
+      addRules: {
+        menu_name: [
+          { required: true, message: "请输入菜单名称", trigger: "blur" },
+        ],
+        menu_code: [
+          { required: true, message: "请输入菜单编号", trigger: "blur" },
+        ],
+        parent_id: [
+          { required: true, message: "请选择一级菜单", trigger: "blur" },
+        ],
+      },
+      oldForm: {},
+      firstMenuList: [],
+      optionList: [],
+      menuList: [],
+      authorityList: [],
+    };
+  },
+  components: {
+    //声明组件
+    list,
+  },
+  created() {
+    this.getFirstMenu();
+    this.getOption();
+  },
+  mounted() {
+    // console.log($('.top_info').height());
+  },
+  computed: {
+    ...mapGetters(["getToken", "getAuthority"]),
+  },
+  methods: {
+    ...mapActions({
+      sysmenusCreate: "loginModule/sysmenusCreate",
+      sysmenusUpdate: "loginModule/sysmenusUpdate",
+      insertJournal: "loginModule/insertJournal",
+      getSysmenusList: "loginModule/getSysmenusList",
+      getMenusLists: "loginModule/getMenusLists",
+    }),
+
+    ...mapMutations({
+      setRouters: "setRouters",
+      setAuthority: "setAuthority",
+    }),
+    getAuthorityFunc(opt) {
+      if (this.getAuthority && this.getAuthority.length != 0) {
+        let obj = this.getAuthority.find((v) => {
+          return v.code == this.$route.path;
+        });
+        if (obj && obj.child && obj.child.length != 0) {
+          return obj.child.some((v) => {
+            return v.code == opt;
+          });
+        }
+      }
+    },
+    addFormFn() {
+      this.dialogVisible = true;
+      this.addRuleForm = {
+        id: null,
+        menu_name: "",
+        menu_code: "",
+        parent_id: "",
+        file_url: "",
+        memo: "",
+        sub_child_ids: [],
+      };
+    },
+    deleteSelect(tag) {
+      this.$refs.list.deleteMenu(tag);
+    },
+    copyData(val) {
+      return JSON.parse(JSON.stringify(val));
+    },
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.$refs.list.initList(1);
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
+    },
+    resetForm(formName, tag) {
+      this.dialogVisible = false;
+      this.$refs[formName].resetFields();
+      if (tag == 0) {
+        this.$nextTick(() => {
+          this.$refs.list.initList(1);
+        });
+      }
+    },
+    dataBind(tag, row) {
+      this.dialogVisible = true;
+      let _row = this.copyData(row);
+      this.oldForm = this.copyData(_row);
+      this.oldForm.sub_child_ids = this.copyData(_row).sub_child_ids.split(",");
+      let str = "";
+      this.optionList.forEach((item) => {
+        this.oldForm.sub_child_ids.forEach((v) => {
+          if (item.id == v) {
+            str += item.menu_name + ",";
+          }
+        });
+      });
+      this.oldForm.sub_child_str = str;
+      this.addRuleForm = _row;
+      this.addRuleForm.sub_child_ids = _row.sub_child_ids.split(",");
+      if (tag == 2) {
+        this.isUpdate = true;
+      } else {
+        this.isUpdate = false;
+      }
+    },
+    handleClose() {
+      this.dialogVisible = false;
+      this.isUpdate = false;
+      this.$refs.addRuleForm.resetFields();
+    },
+    logOption(content, beforeCon, tag) {
+      let data = {
+        plate: "二级菜单",
+        plateRouter: "/secondMenu",
+        user: this.$store.state.userInfo.identity_name,
+        // userId:this.$store.state.user.info.userId,
+        userId: 111,
+        action: tag,
+        time: new Date(),
+        content: content,
+      };
+      if (beforeCon) {
+        data.beforeCon = beforeCon;
+      }
+      this.insertJournal(data);
+    },
+    // 获取一级菜单
+    async getFirstMenu() {
+      try {
+        let opt = {
+          token: this.getToken, //token
+          level: 1, //层级  1代表一级菜单  2代表二级菜单
+          menu_type_id: 1, //类型  1菜单  2操作 必填
+          page: 0, //当前页数
+          page_size: 0, //每页多少条
+        };
+        let res = await this.getSysmenusList(opt);
+        // console.log(res);
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.firstMenuList = res.data.list;
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    // 获取操作权限
+    async getOption() {
+      try {
+        let opt = {
+          token: this.getToken, //token
+          menu_type_id: 2, //类型  1菜单  2操作 必填
+          page: 0, //当前页数
+          page_size: 0, //每页多少条
+        };
+        let res = await this.getSysmenusList(opt);
+        // console.log(res);
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.optionList = res.data.list;
+        // console.log(this.optionList);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    formDataArr() {
+      this.menuList.forEach((v) => {
+        if (v.child && v.child.length != 0) {
+          v.child.forEach((a) => {
+            if (a.child && a.child != 0) {
+              let o = {
+                code: a.code,
+                child: a.child,
+              };
+              this.authorityList.push(o);
+            }
+          });
+        }
+      });
+      this.setAuthority(this.authorityList);
+    },
+    Bind() {
+      console.log("rouchange");
+      try {
+        this.getMenusLists({ token: this.getToken }).then((res) => {
+          if (res.code != 1) {
+            return this.$message.error("获取数据失败，请重新登录！");
+          }
+          this.menuList = res.data.treeList;
+          this.setRouters(this.menuList);
+          this.formDataArr();
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    // 添加菜单
+    addOrUpdateSysMenus() {
+      this.$refs.addRuleForm.validate(async (valid) => {
+        if (valid) {
+          this.btnLoad = true;
+          try {
+            let idList = "";
+            this.addRuleForm.sub_child_ids.forEach((item) => {
+              idList += item + ",";
+            });
+            let opt = {
+              token: this.getToken, //用户token
+              parent_id: this.addRuleForm.parent_id, //父级id，  操作按钮的父级为二级菜单
+              menu_name: this.addRuleForm.menu_name, //菜单名称
+              menu_code: this.addRuleForm.menu_code, //菜单编号
+              menu_type_id: 1, //类型  1 菜单  2 操作
+              file_url: this.addRuleForm.file_url, //文件路径
+              memo: this.addRuleForm.memo, //备注  非必填
+              sub_child_ids: idList.slice(0, idList.length - 1),
+            };
+            if (this.isUpdate) {
+              opt.id = this.addRuleForm.id;
+            }
+            // console.log(opt);
+            let res = this.isUpdate
+              ? await this.sysmenusUpdate(opt)
+              : await this.sysmenusCreate(opt);
+            // console.log(res);
+            if (res.code != 1) {
+              return this.$message.error(res.msg);
+            }
+            this.$message.success(!this.isUpdate ? "添加成功!" : "修改成功!");
+            let str = "";
+            this.optionList.forEach((item) => {
+              this.addRuleForm.sub_child_ids.forEach((v) => {
+                if (item.id == v) {
+                  str += item.menu_name + ",";
+                }
+              });
+            });
+            this.addRuleForm.sub_child_str = str;
+            let content = {
+              菜单编号: this.addRuleForm.menu_code,
+              菜单名称: this.addRuleForm.menu_name,
+              二级菜单: this.addRuleForm.parent_name,
+              备注: this.addRuleForm.memo,
+              权限: this.addRuleForm.sub_child_str,
+            };
+            let beforeCon;
+            if (this.isUpdate) {
+              beforeCon = {
+                菜单编号: this.oldForm.menu_code,
+                菜单名称: this.oldForm.menu_name,
+                二级菜单: this.oldForm.parent_name,
+                备注: this.oldForm.memo,
+                权限: this.oldForm.sub_child_str,
+              };
+              this.logOption(content, beforeCon, 2);
+            } else {
+              this.logOption(content, beforeCon, 1);
+            }
+          } catch (err) {
+            console.log(err);
+          } finally {
+            this.dialogVisible = false;
+            this.isUpdate = false;
+            this.btnLoad = false;
+            this.$refs.addRuleForm.resetFields();
+            this.$refs.list.initList();
+            this.Bind();
+          }
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
+    },
+  },
+};
+</script>           
+<style lang="scss" scoped>
+// scoped 只在这个页面有效得css样式  不污染全局
+.page_con {
+  color: #999;
+  margin: 0 !important;
+  margin-top: 20px !important;
+}
+.home_index {
+  padding: 20px !important;
+}
+
+.myCard {
+  min-width: 1200px;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
+
+.myBtn {
+  margin-bottom: 20px;
+}
+.page_top {
+  min-width: 1200px;
+}
+
+.add {
+  ::v-deep .el-form-item__label {
+    width: 100px !important;
+  }
+  ::v-deep .el-form-item {
+    width: 100%;
+    display: flex;
+  }
+  ::v-deep .el-form-item__content {
+    flex: 1;
+  }
+}
+
+.el-select {
+  width: 100%;
+}
+
+.el-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  .el-checkbox {
+    width: 16.6%;
+    margin: 0;
+  }
+}
+</style>

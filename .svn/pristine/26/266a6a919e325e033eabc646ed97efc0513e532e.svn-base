@@ -1,0 +1,431 @@
+<template>
+  <div>
+    <el-table
+      ref="multipleTable"
+      :data="tableData"
+      tooltip-effect="dark"
+      style="width: 100%"
+      border
+      v-loading="isLoad"
+      @selection-change="handleSelectionChange"
+    >
+      <el-table-column type="selection" width="55"> </el-table-column>
+      <el-table-column label="角色ID" width="120" prop="id"> </el-table-column>
+      <el-table-column prop="role_name" label="角色名称" show-overflow-tooltip>
+      </el-table-column>
+      <el-table-column prop="status" label="是否启用" show-overflow-tooltip>
+        <template slot-scope="scope">
+          <span>{{ scope.row.status == 1 ? "启用" : "禁用" }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column prop="create_time" label="创建时间"> </el-table-column>
+      <el-table-column
+        prop="option"
+        label="操作"
+        width="200"
+        v-if="result(getAuthorityFunc('edit'), getAuthorityFunc('delete'))"
+      >
+        <template slot-scope="scope">
+          <el-link
+            type="primary"
+            @click="updateFn(scope.row)"
+            v-if="getAuthorityFunc('edit')"
+            >设置权限</el-link
+          >
+          <el-link
+            type="primary"
+            @click="deleteMenu(1, scope.row)"
+            v-if="getAuthorityFunc('delete')"
+            >删除</el-link
+          >
+        </template>
+      </el-table-column>
+    </el-table>
+    <div class="deleteAll">
+      <div>
+        <el-button
+          type="primary"
+          size="mini"
+          @click="changeStatus(1)"
+          v-if="getAuthorityFunc('edit')"
+          >启用</el-button
+        >
+        <el-button
+          type="primary"
+          size="mini"
+          @click="changeStatus(2)"
+          v-if="getAuthorityFunc('edit')"
+          >禁用</el-button
+        >
+        <el-button
+          type="primary"
+          size="mini"
+          @click="deleteMenu(2)"
+          v-if="getAuthorityFunc('delete')"
+          >删除</el-button
+        >
+      </div>
+    </div>
+    <div class="page_tion">
+      <el-pagination
+        background
+        layout="total, prev, pager, next"
+        :page-size="size"
+        @size-change="handleSizeChange"
+        :current-page="page"
+        @current-change="handleCurrentChange"
+        :total="total"
+      ></el-pagination>
+    </div>
+    <div class="dialog">
+      <el-dialog
+        title="配置权限"
+        :visible.sync="dialogVisible"
+        width="1000px"
+        :before-close="closeDia"
+      >
+        <div class="minH">
+          <tree-table
+            ref="treeTableO"
+            :treeData="treeData"
+            :row="row"
+            @func="initList"
+          ></tree-table>
+        </div>
+        <span slot="footer" class="dialog-footer" style="text-algin: center">
+          <el-button @click="dialogVisible = false" size="medium"
+            >取 消</el-button
+          >
+          <el-button type="primary" @click="submitFn" size="medium"
+            >确 定</el-button
+          >
+        </span>
+      </el-dialog>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapActions, mapGetters, mapMutations } from "vuex";
+import treeTable from "@/components/common/treeTable.vue";
+
+export default {
+  data() {
+    return {
+      treeData: [],
+      _treeData: [],
+      dialogVisible: false,
+      isLoad: false,
+      page: 1,
+      size: 10,
+      total: 0,
+      tableData: [],
+      multipleSelection: [],
+      checked: false,
+      deleteList: [],
+      statusChangeList: [],
+      row: null,
+    };
+  },
+  components: { treeTable },
+  props: ["name", "status"],
+  computed: {
+    ...mapGetters(["getToken", "getAuthority"]),
+  },
+  created() {
+    this.initList(1);
+    this.getTreelist();
+  },
+  methods: {
+    ...mapActions({
+      getSysrolesList: "loginModule/getSysrolesList",
+      sysrolesDelete: "loginModule/sysrolesDelete",
+      sysrolesStatus: "loginModule/sysrolesStatus",
+      insertJournal: "loginModule/insertJournal",
+      sysrolesTreelist: "loginModule/sysrolesTreelist",
+    }),
+    result(a, b) {
+      if (a == false && b == false) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    getAuthorityFunc(opt) {
+      if (this.getAuthority && this.getAuthority.length != 0) {
+        let obj = this.getAuthority.find((v) => {
+          return v.code == this.$route.path;
+        });
+        if (obj && obj.child && obj.child.length != 0) {
+          return obj.child.some((v) => {
+            return v.code == opt;
+          });
+        }
+      }
+    },
+    updateFn(row) {
+      this.dialogVisible = true;
+      this.row = row;
+      let obj = JSON.parse(row.check_ids);
+      this.$nextTick(() => {
+        this.$refs.treeTableO.dab(obj);
+      });
+    },
+
+    submitFn() {
+      this.$refs.treeTableO.sysrolesUpdateFun();
+    },
+    closeDia() {
+      this.dialogVisible = false;
+      this.row = null;
+      this.treeData = JSON.parse(JSON.stringify(this._treeData));
+      this.$refs.treeTableO.checkAll = false;
+    },
+    async getTreelist() {
+      try {
+        let res = await this.sysrolesTreelist({ token: this.getToken });
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.treeData = res.data.treeData;
+        // console.log(this.treeData);
+        this.treeData.forEach((item) => {
+          item.checked = false;
+          item.type = 1;
+          if (item.child) {
+            item.child.forEach((v) => {
+              v.pid = item.id;
+              v.checked = false;
+              v.type = 2;
+              if (v.child) {
+                v.child.forEach((i) => {
+                  i.pid = v.id;
+                  i.checked = false;
+                  i.type = 3;
+                });
+              }
+            });
+          }
+        });
+        this._treeData = JSON.parse(JSON.stringify(this.treeData));
+      } catch (err) {
+        console.log(err);
+        this.getTreelist();
+      } finally {
+      }
+    },
+    async changeStatus(tag) {
+      this.statusChangeList = [];
+      let _id = [];
+      this.multipleSelection.forEach((item) => {
+        _id.push(item.id);
+        this.statusChangeList.push(item);
+      });
+      if (this.statusChangeList && this.statusChangeList.length == 0) {
+        return this.$message.warning("请选择要更新的角色！");
+      }
+      try {
+        this.isLoad = true;
+        let opt = {
+          token: this.getToken,
+          id: _id,
+          status: tag,
+        };
+        let res = await this.sysrolesStatus(opt);
+        // console.log(res);
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.$message({
+          type: "success",
+          message: "修改成功!",
+        });
+
+        this.statusChangeList.forEach((item) => {
+          let beforeCon = {
+            角色ID: item.id,
+            角色名称: item.role_name,
+            是否启用: item.status == 1 ? "启用" : "禁用",
+            创建时间: item.create_time,
+          };
+          let content = {
+            角色ID: item.id,
+            角色名称: item.role_name,
+            是否启用: tag == 1 ? "启用" : "禁用",
+            创建时间: item.create_time,
+          };
+          this.logOption(content, 2, beforeCon);
+        });
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.initList();
+      }
+    },
+    toggleAllSelect() {
+      this.$refs.multipleTable.toggleAllSelection();
+    },
+    handleSelectionChange(val) {
+      this.multipleSelection = val;
+    },
+    async initList(tag) {
+      try {
+        if (tag == 1) {
+          this.page = 1;
+        }
+        this.isLoad = true;
+        let opt = {
+          token: this.getToken, //token
+          role_name: this.name, //角色名称模糊搜索  非必填
+          page: this.page, //当前页数
+          page_size: this.size, //每页大小
+          status: this.status == 0 ? null : this.status,
+        };
+        let res = await this.getSysrolesList(opt);
+        // console.log(res);
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.tableData = res.data.list;
+        this.total = res.data.count;
+      } catch (err) {
+        console.log(err);
+        this.initList(tag);
+      } finally {
+        this.isLoad = false;
+        this.dialogVisible = false;
+      }
+    },
+    logOption(content, tag, beforeCon) {
+      let data = {
+        plate: "角色管理",
+        plateRouter: "/character",
+        user: this.$store.state.userInfo.identity_name,
+        // userId:this.$store.state.user.info.userId,
+        userId: 111,
+        action: tag,
+        time: new Date(),
+        content: content,
+      };
+      if (beforeCon) {
+        data.beforeCon = beforeCon;
+      }
+      this.insertJournal(data);
+    },
+    deleteMenu(tag, row) {
+      this.deleteList = [];
+      let _id = [];
+      if (tag == 1) {
+        _id.push(row.id);
+        this.deleteList.push(row);
+      } else {
+        this.multipleSelection.forEach((item) => {
+          _id.push(item.id);
+          this.deleteList.push(item);
+        });
+      }
+      if (this.deleteList && this.deleteList.length == 0) {
+        return this.$message.warning("请选择要删除的角色！");
+      }
+      this.$confirm(
+        tag == 1 ? "是否删除该角色？" : "是否删除选中角色？",
+        "删除提示",
+        {
+          confirmButtonText: "确定",
+          cancelButtonText: "取消",
+          type: "warning",
+        }
+      )
+        .then(async () => {
+          try {
+            this.isLoad = true;
+            let opt = {
+              token: this.getToken,
+              id: _id,
+            };
+            let res = await this.sysrolesDelete(opt);
+            if (res.code != 1) {
+              return this.$message.error(res.msg);
+            }
+            this.$message({
+              type: "success",
+              message: "删除成功!",
+            });
+            this.deleteList.forEach((item) => {
+              let content = {
+                角色ID: item.id,
+                角色名称: item.role_name,
+                是否启用: item.status == 1 ? "启用" : "禁用",
+                创建时间: item.create_time,
+              };
+              this.logOption(content, 3);
+            });
+          } catch (err) {
+            console.log(err);
+          } finally {
+            this.initList();
+          }
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除",
+          });
+        });
+    },
+    handleSizeChange(val) {
+      this.size = val;
+      this.bind();
+    },
+    //当前页切换  调数据
+    handleCurrentChange(val) {
+      this.page = val;
+      this.bind();
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.rowOption {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  span {
+    cursor: pointer;
+  }
+}
+.red {
+  color: #f56c6c;
+}
+
+::v-deep .el-table td,
+::v-deep .el-table th {
+  text-align: center;
+}
+
+.green {
+  color: #67c23a;
+}
+
+.deleteAll {
+  margin: 16px 0;
+  padding: 10px 20px;
+  background: #f2f6fc;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+::v-deep .el-link--inner {
+  margin: 0 8px;
+  display: inline-block;
+}
+.m8 {
+  margin: 0 8px;
+}
+.minH {
+  max-height: 560px;
+  overflow-y: scroll;
+}
+</style>

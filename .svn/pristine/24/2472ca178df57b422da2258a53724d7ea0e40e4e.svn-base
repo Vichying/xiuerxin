@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>修尔信</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/creditRestoration/caseList.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt=""
+                style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html">首页</a></li>
+            <li><a href="../creditExamination.html">信用体检</a></li>
+            <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+            <li><a href="../restorationPublicity.html">修复公示</a></li>
+            <li><a href="../riskMonitoring.html">风险监控</a></li>
+            <li><a href="../creditUniversity.html">信用大学</a></li>
+            <li><a href="../openPlatform.html">开放平台</a></li>
+            <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="bannerBox">
+    <img src="../../static/images/Banner.png" alt="">
+  </div>
+  <main>
+    <!-- 搜索框 -->
+    <div class="tabBox">
+      <ul class="clear">
+        <li class="tabActive" style="border-radius: 2px 0px 0px 0px;">个人信用修复</li>
+        <li style="border-radius: 0px 2px 0px 0px;">企业信用修复</li>
+      </ul>
+    </div>
+    <div class="inputBox" id="creditInputBox">
+      <form class="bs-example bs-example-form" role="form">
+        <ul class="clear">
+          <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;">
+            <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+          </li>
+          <li class="left" id="creInput">
+            <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入身份证号码">
+          </li>
+          <li class="left" id="creInput2" style="border-radius: 0px 0px 0px 2px;display: none;">
+            <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入企业全称 / 统一社会信用代码">
+          </li>
+          <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+            <button class="btn btn-default" type="button">查询修复</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- loading加载中 -->
+    <div class="loadingBox" style="text-align: center;padding: 100px 0;display: none;">
+      <img src="../../static/picture/smallLoading.gif" alt="">
+    </div>
+    <!-- 没有查询次数--去充值 -->
+    <div class="noDataBox" style="display: none;">
+      <div class="clear">
+        <div class="left">平台赠送的X次免费查询服务已用完，充值后可查询</div>
+        <button class="right" onclick="toPackageFn()">去充值</button>
+      </div>
+    </div>
+    <!-- 有查询次数 -->
+    <div class="listBox" id="listBox" style="display: none;">
+      <!-- <div class="topListBox">
+        <div class="topListTitle">案件号：6465115644N</div>
+        <div class="itemBox clear">
+          <div class="left" style="margin-right: 15px;">
+            <label class="checkbox-inline">
+              <input type="checkbox" value="0">
+            </label>
+          </div>
+          <div class="left textTitle" onclick="toDetail(1)">
+            <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+            <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+          </div>
+          <div class="left">
+            <p>一般失信</p>
+          </div>
+          <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty" onclick="toApplicationFn(0)">在线修复</button>
+        </div>
+      </div> -->
+
+      <div class="clear mainsBox">
+        <div class="left tabTitlesBox">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading panelActive">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">全部（20）</a>
+                </h4>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">司法诉讼（20）</a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li class="activLi">司法诉讼<span>（20）</span> </li>
+                    <li>立案公告<span>（20）</span> </li>
+                    <li>开庭公告<span>（20）</span> </li>
+                    <li>审判流程<span>（20）</span> </li>
+                    <li>裁判文书<span>（20）</span> </li>
+                    <li>被执行人<span>（20）</span> </li>
+                    <li>终本案件<span>（20）</span> </li>
+                    <li>失信被执行人<span>（20）</span> </li>
+                    <li>司法协执<span>（20）</span> </li>
+                    <li>行政处罚<span>（20）</span> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">行政处罚（20）</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="bottomListBox">
+            <div class="topListTitle">全部</div>
+            <div class="itemBox clear">
+              <div class="left checkInputBox" style="margin-right: 15px;"></div>
+              <div class="left textTitle" onclick="toDetail(0)">
+                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+              </div>
+              <div class="left">
+                <p>特定严重失信</p>
+              </div>
+              <button class="creditBtn right seriousBreach" data-toggle="modal"
+                data-target="#IrreparableModal">不可修复</button>
+            </div>
+            <div class="itemBox clear">
+              <div class="left" style="margin-right: 15px;">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="checkbox" value="1">
+                </label>
+              </div>
+              <div class="left textTitle" onclick="toDetail(1)">
+                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+              </div>
+              <div class="left">
+                <p>严重失信</p>
+              </div>
+              <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty"
+                onclick="toApplicationFn(1)">在线修复</button>
+            </div>
+            <div class="itemBox clear">
+              <div class="left checkInputBox" style="margin-right: 15px;"></div>
+              <div class="left textTitle" onclick="toDetail(0)">
+                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+              </div>
+              <div class="left">
+                <p>特定严重失信</p>
+              </div>
+              <button class="creditBtn right seriousBreach" data-toggle="modal"
+                data-target="#IrreparableModal">不可修复</button>
+            </div>
+            <div class="itemBox clear">
+              <div class="left" style="margin-right: 15px;">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="checkbox" value="2">
+                </label>
+              </div>
+              <div class="left textTitle" onclick="toDetail(1)">
+                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+              </div>
+              <div class="left">
+                <p>严重失信</p>
+              </div>
+              <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty"
+                onclick="toApplicationFn(1)">在线修复</button>
+            </div>
+            <div class="itemBox clear">
+              <div class="left" style="margin-right: 15px;">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="checkbox" value="3">
+                </label>
+              </div>
+              <div class="left textTitle" onclick="toDetail(1)">
+                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+              </div>
+              <div class="left">
+                <p>严重失信</p>
+              </div>
+              <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty"
+                onclick="toApplicationFn(1)">在线修复</button>
+            </div>
+          </div>
+          <!-- 全选 -->
+          <div class="checkAllBox clear">
+            <div class="left" style="margin-right: 15px;">
+              <label class="checkbox-inline">
+                <input name="allCheckBox" type="checkbox" value="" id="allCheck">
+              </label>
+            </div>
+            <div class="left checkAllText">全选</div>
+            <div class="left checkedNum">已选择0项</div>
+            <button class="right btnText">批量修复</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 一般失信/严重失信 在线修复弹窗 -->
+    <div class="modal fade" id="dishonesty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">修复说明</h4>
+          </div>
+          <div class="modal-body">
+            <div class="fixpopup">
+            <p>尊敬的用户您好！</p>
+            <p style="margin:30px 0;">为了本次顺利修复，您需要准备以下修复材料：</p>
+            <p>1.法结案/履约证明；</p>
+            <p>2.法人联系方式及身份证正反面；</p>
+            <p>3.申请人联系方式及身份证正反面；</p>
+            <!-- 一般失信 -->
+            <div id="commonly" style="display: none;">
+              <p>4.信用修复承诺书；<span><a href="###">《信用修复承诺书》 模板下载</a></span></p>
+              <p>5.信用修复申请书；<span><a href="###">《信用修复申请书》 模板下载</a></span></p>
+            </div>
+            <!-- 严重失信 -->
+            <div id="serious" style="display: none;">
+              <p>4.参培人姓名及联系方式；</p>
+              <p>5.信用修复承诺书；<span><a href="###">《信用修复承诺书》 模板下载</a></span></p>
+              <p>6.信用修复申请书；<span><a href="###">《信用修复申请书》 模板下载</a></span></p>
+              <p>7.信用修复委托书；<span><a href="###">《信用修复委托书》 模板下载</a></span></p>
+            </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">未准备</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal"
+              onclick="toRestorationFn()">已准备开始修复</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 不可修复弹窗 -->
+    <div class="modal fade" id="IrreparableModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">不可修复说明</h4>
+          </div>
+          <div class="modal-body">
+            <p>以下行为被处罚后不可修复：</p>
+            <p>1.在食品药品、生态环境、工程质量。安全生产、消防安全、强制性产品认证等会领域被处以责令停产停业，或吊销许可证、吊销执照的行政处罚信息；</p>
+            <p>
+              2.因贿赂、逃税骗税、恶意逃废债务、恶意拖欠贷款或服务费、恶意欠薪、非法集资、合同欺诈、传销、无证照经营、制售假冒伪劣产品和故意侵犯知识产权、出借和借用资质投标、围标串标、虚假广告、侵害消费者或证券期货投资者合法权益、严重破坏网络空间传播秩序、聚众扰乱社会秩序等行为被处以责令停产停业，或吊销许可证、吊销执照的行政处罚信息；
+            </p>
+            <p>3.法律、法规、规章另有规定不可修复的行政处罚信息。</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  // 判断有无查询次数   1--有次数，2--无次数（去充值）
+  let dataFlag = 1
+  if (dataFlag == 1) {
+    $(".noDataBox").hide()
+    $(".listBox").show()
+  } else {
+    $(".noDataBox").show()
+    $(".listBox").hide()
+  }
+
+  // 查询框
+  $(".tabBox ul li").click(function () {
+    console.log($(this).index() == 0 ? '个人' : '企业')
+    $(this).addClass('tabActive');
+    $(this).siblings().removeClass('tabActive');
+    if ($(this).index() == 0) {
+      $("#creTipLeftText").show()
+      $("#creInput").show()
+      $("#creInput2").hide()
+    } else {
+      $("#creTipLeftText").hide()
+      $("#creInput").hide()
+      $("#creInput2").show()
+    }
+  })
+
+  // 1可修复，0不可修复
+  function toDetail(val) {
+    window.location.href = "./caseDetail.html?flag=" + val
+  }
+
+  // 全选
+  var arr = [];
+  //获取选中选项的值
+  $("#allCheck").click(function () {
+    var valArr = new Array;
+    if (this.checked) {
+      // $("#listBox :checkbox").attr("checked", true);
+      $("input[name='checkbox']").prop("checked", true);
+      $("input[name='checkbox']").each(function (i) {
+        valArr[i] = $(this).val();
+      });
+      var vals = valArr.join(',');
+      var valArrVal = valArr.filter(function (el) {
+        return el !== '';
+      });
+      $(".checkedNum").empty().html("已选择" + valArrVal.length + "项")
+    } else {
+      // $("#listBox :checkbox").attr("checked", false);
+      $("input[name='checkbox']").prop("checked", false);
+      $(".checkedNum").empty().html("已选择0项")
+    }
+
+    arr = valArr
+    console.log(arr)
+  });
+
+  //判断当全选时	若有一个不选 全选按钮为不选状态
+  $('input[name="checkbox"]').change(function () {
+    var checkedLength = $("input[name='checkbox']:checked").length;
+    var checkLength = $("input[name='checkbox']").length;
+    if (checkLength == checkedLength) {
+      $("input[name='allCheckBox']").prop("checked", true);
+      return true;
+    } else {
+      $("input[name='allCheckBox']").prop("checked", false);
+      return true;
+    }
+  })
+  $(".bottomListBox .itemBox").change(function () {
+    if ($(this).find("input[type='checkbox']").is(':checked')) {
+      if (arr.length == 0) {
+        arr.push($(this).find("input[type='checkbox']").val())
+      } else {
+        for (let i = 0; i < arr.length; i++) {
+          if ($(this).find("input[type='checkbox']").val() == arr[i]) {
+            //
+          } else {
+            arr.push($(this).find("input[type='checkbox']").val())
+          }
+        }
+      }
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        if ($(this).find("input[type='checkbox']").val() == arr[i]) {
+          arr.splice(i, 1)
+        }
+      }
+    }
+    $(".checkedNum").empty().html("已选择" + $("input[name='checkbox']:checked").length + "项")
+  })
+
+  // 在线修复   0一般失信，1严重失信
+  function toApplicationFn(val) {
+    if (val == 0) {
+      $("#commonly").show()
+      $("#serious").hide()
+    } else {
+      $("#commonly").hide()
+      $("#serious").show()
+    }
+  }
+  function toRestorationFn() {
+    window.location.href = "./repairApplication.html"
+  }
+
+  // 批量修复
+  $(".btnText").click(function () {
+    var new_arr = [];
+    for (var i = 0; i < arr.length; i++) {
+      var items = arr[i];
+      if ($.inArray(items, new_arr) == -1) {
+        new_arr.push(items);
+      }
+    }
+    console.log(new_arr);
+  })
+
+  // 去充值
+  function toPackageFn() {
+    window.location.href = "./topUpPackage.html"
+  }
+
+</script>
+
+</html>

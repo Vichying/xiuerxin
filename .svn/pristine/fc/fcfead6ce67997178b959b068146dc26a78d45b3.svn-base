@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修复报告</title>
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/creditRestorationReport.css">
+</head>
+
+<body>
+  <div class="contentBox">
+    <header>
+      <table class="headTable">
+        <tbody>
+          <tr>
+            <td class="headFirstHeadTd">
+              <img src="../../static/images/reporPDF/img_logo_02.png" alt="">
+            </td>
+            <td class="headSecendHeadTd">
+              <div>报告编号：D001-2020CR1226181A</div>
+              <div>生成时间：2020年12月10日 16:52:06</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </header>
+    <main>
+      <!-- 页头 -->
+      <table class="topTitleBox">
+        <thead>
+          <tr class="titleFirstTr">
+            <th>
+              <div>深圳市福泰信息科技有限公司</div>
+              <div>（企业信用修复报告）</div>
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <table class="topInfoBox">
+        <tbody>
+          <tr>
+            <td>报告编号：</td>
+            <td>D001-2020CR12261A</td>
+          </tr>
+          <tr>
+            <td>报告类型：</td>
+            <td>企业标准信用修复报告</td>
+          </tr>
+          <tr>
+            <td>修复类型：</td>
+            <td>报告</td>
+          </tr>
+          <tr>
+            <td>适用范围：</td>
+            <td>本报告主体企业</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="borderTable topTimeTable">
+        <tbody>
+          <tr>
+            <td>生成时间</td>
+            <td>2020年12月26日</td>
+          </tr>
+          <tr>
+            <td>出具单位</td>
+            <td>
+              <div style="position: relative;">
+                <div>北京汇法正信科技有限公司</div>
+                <img src="../../static/picture/img_dianzz_01@2x.png"
+                  style="position: absolute;right: -30px;top: -120px;">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 信用修复介绍 -->
+      <table class="secendDescTitleBox">
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">信用修复介绍</div>
+              <div class="descBox">
+                2019年7月，国务院办公厅印发《关于加快推进社会信用体系建设构建以信用为基础的新型监管机制的指导意见》（以下简称“《指导意见》”），其中规定“探索建立信用修复机制。失信市场主体在规定期限内纠正失信行为、消除不良影响的，可通过作出信用承诺、完成信用整改、通过信用核查、接受专题培训、提交信用报告、参加公益慈善活动等方式开展信用修复。修复完成后，各地区各部门要按程序及时停止公示其失信记录，终止实施联合惩戒措施。”北京汇法正信科技有限公司（以下简称“汇法正信”）作为综合信用服务机构，依据《指导意见》开展信用修复业务，为申请人提供信用修复服务。实际修复结果，以有关部门或机构的认定为准，汇法正信不承担因修复失败而产生的任何责任。
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 公司声明 -->
+      <table class="secendDescTitleBox companyStatement">
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">公司声明</div>
+              <div class="descBox">
+                为落实《国务院关于印发社会信用体系建设规划纲要（2014—2020年）的通知》（国发〔2014〕21号）、《国务院关于建立完善守信联合激励和失信联合惩戒制度加快推进社会诚信建设的指导意见（国发〔2016〕33号）和《国家发展改革委办公厅关于进一步完善“信用中国”网站和地方信用门户网站行政处罚信息信用修复机制的通知》（发改办财金〔2019〕527号）等文件精神，规范开展“信用中国”及地方门户网站行政处罚信息修复工作，北京汇法正信科技有限公司现针对所出具《信用修复报告》做出以下声明。
+              </div>
+              <div class="descBoxItem">1.本报告由北京汇法正信科技有限公司依据报告打印截止时间之前，北京汇法正信科技有限公司内部数据库自动生成，公司对生成报告前的信用信息负责。</div>
+              <div class="descBoxItem">
+                2.报告内企业/个人基本信息、信用修复申请信息、信用修复承诺书、信用修复培训记录信息由申报人自行提供，申报人对其填写的信息的真实性负责。其他信息均依据《征信业管理条例》采集、整理、保存，并在汇总、加工、整合的全过程中保持客观、中立的地位。
+              </div>
+              <div class="descBoxItem">3.本报告仅限用于本次申请事项使用，本次事项使用完毕即失效。</div>
+              <div class="descBoxItem">4.本报告未经授权，任何机构和个人不得复制、转载、出售和发布；如引用、刊发，需注明出处，且不得歪曲篡改。</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 目录 -->
+      <table class="catalogBox">
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">目录</div>
+              <div class="firstTitletext dotBox"><span>一、基本信息</span><s></s></div>
+              <div class="secendTitleTextBox">
+                <div class="secendTitleText dotBox"><span>1.1、企业基础信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>1.2、企业股东信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>1.3、企业主要管理人员信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>1.4、企业营业执照</span><s></s></div>
+              </div>
+              <div class="firstTitletext dotBox"><span>二、失信情况</span><s></s></div>
+              <div class="firstTitletext dotBox"><span>二、信用修复信息</span><s></s></div>
+              <div class="secendTitleTextBox">
+                <div class="secendTitleText dotBox"><span>3.1、信用修复申请信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>3.2、已履行证明材</span>料<s></s></div>
+                <div class="secendTitleText dotBox"><span>3.3、信用修复承诺书</span><s></s></div>
+                <!-- 3.4条  一般修复情况下无这一条   -->
+                <div class="secendTitleText dotBox"><span>3.4、信用修复培训记录信息</span><s></s></div>
+              </div>
+              <div class="firstTitletext dotBox"><span>四、其他事项查证信息</span><s></s></div>
+              <div class="secendTitleTextBox">
+                <div class="secendTitleText dotBox"><span>4.1、民商事裁判文</span>书<s></s></div>
+                <div class="secendTitleText dotBox"><span>4.2、被执行人信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>4.3、行政违法记录</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>4.4、欠税信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>4.5、纳税非正常户信息</span><s></s></div>
+                <div class="secendTitleText dotBox"><span>4.6、民间负债信息</span><s></s></div>
+              </div>
+              <div class="firstTitletext dotBox"><span>五、第三方评估意见</span><s></s></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 企业-基础信息（需和下面个人版基本信息作对比判断显示与否） -->
+      <table class="baseInfoBox" id="companyBaseInfo">
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">一、基础信息</div>
+              <div class="subTitleText">1.1、企业基础信息</div>
+            </td>
+          </tr>
+          <tr>
+            <table class="borderTable baseInfoTable">
+              <tbody>
+                <tr>
+                  <td>企业名称</td>
+                  <td colspan="3">深圳市福泰信息科技有限公司</td>
+                </tr>
+                <tr>
+                  <td>统一社会信用代码</td>
+                  <td>92220106698755665P</td>
+                  <td>法定代表人</td>
+                  <td>张全福</td>
+                </tr>
+                <tr>
+                  <td>注册资本（万元）</td>
+                  <td>3060.60（万元）</td>
+                  <td>经营状态</td>
+                  <td>在营（开业）</td>
+                </tr>
+                <tr>
+                  <td>注册资本币种</td>
+                  <td>人民币元</td>
+                  <td>成立日期</td>
+                  <td>2020-06-12</td>
+                </tr>
+                <tr>
+                  <td>营业期限</td>
+                  <td>2020-06-12至无固定期限</td>
+                  <td>企业类型</td>
+                  <td>有限责任公司</td>
+                </tr>
+                <tr>
+                  <td>所属行业</td>
+                  <td>信息服务业</td>
+                  <td>机构类型</td>
+                  <td>服务型组织结构</td>
+                </tr>
+                <tr>
+                  <td>经营范围</td>
+                  <td colspan="3">
+                    一般经营项目是：货物批发、零售；货物和技术进出口；技术开发、技术咨询、技术服务、技术转让；软件开发和销售；商务咨询、企业管理咨询、商品信息咨询；会务服务；教育培训；房屋租赁及物业管理服务。，许可经营项目是：医疗器械Ⅰ类、Ⅱ类、Ⅲ类的生产和销售（以医疗器械生产许可证或生产许可备案凭证为准）；医疗器械Ⅰ类、Ⅱ类、Ⅲ类的批发和零售（以医疗器械经营许可证或经营备案凭证为准）；产品研发、生产；
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">1.2、企业股东信息</div>
+            </td>
+          </tr>
+          <tr>
+            <table class="borderTable baseInfoTable2">
+              <tbody>
+                <tr>
+                  <td>序号</td>
+                  <td>股东名称</td>
+                  <td>认缴出资额（万元）</td>
+                  <td>出资比例</td>
+                  <td>出资币种</td>
+                  <td>出资日期</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>张全福</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>深圳市康美佳有限公司</td>
+                  <td>800</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>深圳市新创投资集团有限 公司</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>深圳市铭冠投资有限公司</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>梁虹英</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>06</td>
+                  <td>深圳市铭冠投资有限公司</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+                <tr>
+                  <td>07</td>
+                  <td>梁虹英</td>
+                  <td>2650</td>
+                  <td>71.70%</td>
+                  <td>人民币元</td>
+                  <td>2020-07-18</td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">1.3、企业主要管理人员信息</div>
+            </td>
+          </tr>
+          <tr>
+            <table class="borderTable baseInfoTable2">
+              <tbody>
+                <tr>
+                  <td>序号</td>
+                  <td>姓名</td>
+                  <td>职务</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>张全福</td>
+                  <td>总经理</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>张全福</td>
+                  <td>总经理</td>
+                </tr>
+              </tbody>
+            </table>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">1.4、企业营业执照</div>
+              <div style="text-align: center;margin-bottom: 270px;"><img src="../../static/picture/img_yyzz_01.png">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 个人-基本信息（需和上面企业版基本信息作对比判断显示与否）-->
+      <table class="baseInfoBox" id="personalBaseInfo">
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">一、基本信息</div>
+              <div class="subTitleText">1.1、个人基本信息</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="borderTable baseInfoTable">
+                <tbody>
+                  <tr>
+                    <td>个人名称</td>
+                    <td>张小二</td>
+                  </tr>
+                  <tr>
+                    <td>证件类型</td>
+                    <td>身份证</td>
+                  </tr>
+                  <tr>
+                    <td>证件号码</td>
+                    <td>670126198610240637</td>
+                  </tr>
+                  <tr>
+                    <td>性别</td>
+                    <td>男</td>
+                  </tr>
+                  <tr>
+                    <td>年龄</td>
+                    <td>36</td>
+                  </tr>
+                  <tr>
+                    <td>出生年月</td>
+                    <td>1986年10月24日</td>
+                  </tr>
+                  <tr>
+                    <td>身份证原始发证地</td>
+                    <td>山东省商和县</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">1.2、个人证件</div>
+              <div class="clear personalImgBox">
+                <div class="left"><img src="../../static/picture/img_sfz_01.png"></div>
+                <div class="right"><img src="../../static/picture/img_sfz_02.png"></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 二、失信情况 -->
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">二、失信情况</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="borderTable baseInfoTable">
+                <tbody>
+                  <tr>
+                    <td>失去行为判定</td>
+                    <td colspan="3">涉及严重失信行为</td>
+                  </tr>
+                  <tr>
+                    <td>当事人名称</td>
+                    <td>深圳市福泰信息科技有限公司</td>
+                    <td>证件类型</td>
+                    <td>统一社会信用代码</td>
+                  </tr>
+                  <tr>
+                    <td>证件号码</td>
+                    <td colspan="3">92220106698755665P</td>
+                  </tr>
+                  <tr>
+                    <td>失信被执行文号</td>
+                    <td>深市监坪罚【2020】坑梓 206号</td>
+                    <td>失信日期</td>
+                    <td>2020-06-12</td>
+                  </tr>
+                  <tr>
+                    <td>失信事实</td>
+                    <td colspan="3">
+                      <div>使用建设单位未经审批同意占用、挖掘道路或者开设路口的处罚依据:《深圳经济特区道路交通安全管理条例》（2015年深圳市人大常委会第二次修正）第一百一十一条
+                        <div>处罚结果: 罚款拾万元整（100000元）</div>
+                        <div>统一社会信用代码: 91440300618855174Y</div>
+                        <div>处罚决定日期:2019-01-28</div>
+                        <div>填补以下内容:</div>
+                        <div>
+                          处罚依据:《深圳经济特区道路交通安全管理条例》（2015年深圳市人大常委会第二次修正）第二十六条第一款、《深圳经济特区道路交通安全管理条例》（2015年深圳市人大常委会第二次修正）第一百一十一条
+                        </div>
+                        <div>处罚类别:罚款</div>
+                        <div>处罚内容:罚款壹拾万元整（100000元）</div>
+                        <div>处罚机关:深圳市交通委员会</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 三、信用修复信息 -->
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">三、信用修复信息</div>
+              <div class="subTitleText">3.1、信用修复申请信息</div>
+              <div style="text-align: center;margin-bottom: 270px;"><img src="../../static/picture/img_sqs_01.png">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">3.2、已履行证明材料</div>
+              <div style="text-align: center;margin-bottom: 270px;"><img src="../../static/picture/img_sqs_02.png">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">3.3、信用修复承诺书</div>
+              <div style="text-align: center;margin-bottom: 270px;"><img src="../../static/picture/img_sqs_03.png">
+              </div>
+            </td>
+          </tr>
+          <!-- 3.4条  一般修复情况下无这一条 -->
+          <tr>
+            <td>
+              <div class="subTitleText">3.4、信用修复培训记录信息</div>
+              <div style="text-align: center;margin-bottom: 270px;"><img src="../../static/picture/img_sqs_04.png">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 四、其他事项查证信息 -->
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">四、其他事项查证信息</div>
+              <div class="subTitleText">4.1、民商事裁判文书</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到2条信息</div>
+                <!-- 如果查询到0条信息，整个table则不显示 -->
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>案号</td>
+                      <td>涉及事由</td>
+                      <td>诉讼地位</td>
+                      <td>涉案金额</td>
+                      <td>诉讼日期</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>（2014）浏民 初字第1622号</td>
+                      <td>广告违法</td>
+                      <td>被告</td>
+                      <td>18900000.00</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>（2014）浏民 初字第1622号</td>
+                      <td>广告违法</td>
+                      <td>被告</td>
+                      <td>18900000.00</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">4.2、被执行人信息</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到1条信息</div>
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>执行案号</td>
+                      <td>执行内容</td>
+                      <td>执行状态</td>
+                      <td>执行惩戒</td>
+                      <td>立案日期</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>（2014）浏民 初字第1622号</td>
+                      <td>广告违法</td>
+                      <td>被告</td>
+                      <td>18900000.00</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">4.3、行政违法记录</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到1条信息</div>
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>案号</td>
+                      <td>违法事由</td>
+                      <td>出资比例</td>
+                      <td>出资日期</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>深市监坪罚【2020】坑 梓206号</td>
+                      <td>广告违法</td>
+                      <td>深圳市市场监督管理局 坪山监管局</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">4.4、欠税信息</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到1条信息</div>
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>主管税务机关</td>
+                      <td>欠税税种</td>
+                      <td>欠税金额</td>
+                      <td>欠税时间</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>深圳市税务局</td>
+                      <td>增值税</td>
+                      <td>11523.75</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">4.5、纳税非正常户信息</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到1条信息</div>
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>主管税务机关</td>
+                      <td>内容</td>
+                      <td>认证时间</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>深圳市税务局</td>
+                      <td>内容</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="subTitleText">4.6、民间负债信息</div>
+              <div class="infoDataBox">
+                <div class="infoNumText">共查询到1条信息</div>
+                <table class="borderTable baseInfoTable2">
+                  <tbody>
+                    <tr>
+                      <td>序号</td>
+                      <td>或有负债身份</td>
+                      <td>或有负债原因</td>
+                      <td>或有负债金额</td>
+                      <td>统计时间</td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>负债身份</td>
+                      <td>负债原因</td>
+                      <td>20000.00</td>
+                      <td>2020-07-18</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 五、信用修复第三方评估意见 -->
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <div class="descTitle">五、信用修复第三方评估意见</div>
+              <div class="subTitleText">评估意见</div>
+              <div class="opinionBox">
+                <div class="opinion">
+                  <div>修复意见：</div>
+                  <div>经核实报告产生信息无误。</div>
+                </div>
+                <div class="autograph clear" style="position: relative;">
+                  <div class="left">评估人签名</div>
+                  <div class="right">张萍萍</div>
+                  <img src="../../static/picture/img_dianzz_01@2x.png" style="position: absolute;right: 0;top: -70px;">
+                </div>
+              </div>
+              <div class="userDescBox">
+                <div>本信用修复报告使用说明：</div>
+                <div>1、本报告著作权属于北京汇法正信科技有限公司，未经书面许可，不得复制、摘录、转载和发表。</div>
+                <div>2、本报告仅供信用修复主体参考，北京汇法正信科技有限公司不承担据此报告产生的任何责任。</div>
+                <div>3、公司地址：北京市朝阳区安定路 35 号 9 层 902-A
+                  <div style="padding-left: 32px;">客服电话：021-62311883</div>
+                  <div style="padding-left: 32px;">电子邮箱：tangxiaofeng@lawxp.com</div>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+<script src="../../static/js/jquery.min.js"></script>
+<script>
+  // 目录后面的点
+  $(function () {
+    var resultWidth = $(".dotBox").width() - $(".dotBox > span").width();
+    $(".dotBox > s").css("width", resultWidth)
+  })
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+/* .inputBox{width: 1050px;margin: 60px auto;}
+.inputBox input{width: 948px!important;background-color: #F7F8FA!important;height: 44px!important;}
+#creInput{border: 1px solid #ddd} */
+
+.tabBox ul li,.buttonBox{text-align: center;}
+.tabBox ul li:hover,.buttonBox:hover{cursor: pointer;}
+#creTipLeftText{border: 2px solid rgba(104, 110, 136, 0.4);height: 46px;line-height: 46px;width: 151px;padding-left: 0;padding-right: 0;}
+#creTipLeftText input{width: 100%;}
+#creInput{border: 2px solid rgba(104, 110, 136, 0.4);border-left: 0;height: 46px;line-height: 46px;border-right: 0;}
+#identify{width: 779px;}
+#creInput2{width: 930px;border-top: 2px solid rgba(104, 110, 136, 0.4);border-bottom: 2px solid rgba(104, 110, 136, 0.4);border-left: 2px solid rgba(104, 110, 136, 0.4);height: 46px;line-height: 46px;}
+#creditInputBox .buttonBox{background-color: #1164DF;}
+#creditInputBox .buttonBox:hover{background-color: #FFA825;}
+
+.repairProcess{max-width: 1050px;margin: 0 auto;}
+.repairProcess h3{font-size: 28px;font-weight: bold;text-align: center;margin-bottom: 40px;}
+.processBox{display: flex;display: -webkit-flex;justify-content: space-between;margin-bottom: 80px;}
+.itemBox{padding: 10px;border: 1px solid #C0CDDF;}
+.textBox{background-color: #1164DF;width: 160px;text-align: center;color: #fff;font-size: 16px;}
+.repairProcess .iconImg{width: 36px;height: 36px;margin-top: 30px;}
+.processBoxTop .itemBox .textBox{padding: 24px 0;}
+.processBoxBottom .itemBox .textBox{padding: 13px 0;}
+
+.processData{width: 100%;height: 430px;background-image: url(../images/img_processbeijing_01.png);background-size: cover;background-repeat: no-repeat;background-position: center;padding: 50px 60px;margin-bottom: 60px;}
+.processData h3{font-size: 28px;color: #fff;font-weight: bold;text-align: center;margin-bottom: 40px;}
+.processDataItemsBox{display: flex;display: -webkit-flex;justify-content: space-between;max-width: 1050px;margin: 0 auto;}
+.processDataItem{padding: 30px 17px;background-color: #fff;text-align: center;display: block;color: #333;width: 194px;}
+.processDataItem img{margin-bottom: 40px;}
+.processDataItem p{font-size: 16px;}
+.processDataItem:hover p{color: #FF9000;}
+
+.repairProblems{width: 1050px;margin: 0 auto;}
+.repairProblems h3{font-size: 28px;margin-bottom: 40px;text-align: center;font-weight: bold;}
+.repairProblemsItemBox{margin-bottom: 30px;}
+.repairProblemsItemBox .left,.repairProblemsItemBox .right{width: 510px;height: 184px;padding: 20px;background-size: 100% 100%;}
+.repairProblemsItemBox h4{font-size: 18px;font-weight: bold;margin-bottom: 20px;}
+.repairProblemsItemBox p{font-size: 16px;font-weight: bold;}
+
+.moerProblemsBox{margin-top: 10px;text-align: center;}
+.moerProblemsBox button{width: 200px;height: 52px;line-height: 52px;background: #1164DF;color: #FFF;font-size: 16PX;font-weight: bold;margin-bottom: 60px;}
+.moerProblemsBox button:hover{background-color: #FFA825;}
+

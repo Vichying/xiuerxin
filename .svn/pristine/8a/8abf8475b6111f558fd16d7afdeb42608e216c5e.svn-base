@@ -1,0 +1,465 @@
+<template>
+  <div class="home_index">
+    <el-card style="width: 100%" class="myCard">
+      <el-form
+        label-position="left"
+        :model="ruleForm"
+        :inline="true"
+        ref="ruleForm"
+        label-width="100px"
+      >
+        <el-form-item prop="name" style="margin-right: 40px">
+          <el-input
+            v-model="ruleForm.name"
+            autocomplete="off"
+            clearable
+            placeholder="菜单名称/菜单编号"
+          ></el-input>
+        </el-form-item>
+        <el-form-item prop="name" style="margin-right: 40px">
+          <el-select
+            v-model="ruleForm.status"
+            placeholder="是否启用"
+            @change="changeStatus"
+          >
+            <el-option label="全部" value="0"></el-option>
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            >
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item prop="name" style="margin-right: 40px">
+          <el-select
+            v-model="ruleForm.sys_role_id"
+            placeholder="选择角色"
+            @change="changeStatus"
+          >
+            <el-option label="全部" value="0"></el-option>
+            <el-option
+              v-for="item in sysrolesList"
+              :key="item.id"
+              :label="item.role_name"
+              :value="item.id"
+            >
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item style="float: right">
+          <el-button
+            type="primary"
+            @click="submitForm('ruleForm')"
+            size="medium"
+            >查询</el-button
+          >
+          <el-button type="primary" @click="addFormFn" size="medium" v-if="getAuthorityFunc('create')"
+            >新增</el-button
+          >
+        </el-form-item>
+      </el-form>
+    </el-card>
+    <div class="page_con">
+      <list
+        ref="list"
+        :name="ruleForm.name"
+        :status="ruleForm.status"
+        :sys_role_id="ruleForm.sys_role_id"
+        :sysrolesList="sysrolesList"
+        @dataBind="dataBind"
+      ></list>
+    </div>
+    <el-dialog
+      center
+      :title="isUpdate ? '编辑人员信息' : '新增人员信息'"
+      :visible.sync="dialogVisible"
+      width="576px"
+      :before-close="handleClose"
+    >
+      <el-form
+        :model="addRuleForm"
+        :rules="addRules"
+        ref="addRuleForm"
+        label-width="120px"
+        class="add"
+        label-position="top"
+      >
+        <el-form-item label="用户名称：" prop="name">
+          <el-input
+            v-model="addRuleForm.name"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="用户账号：" prop="admins">
+          <el-input
+            v-model="addRuleForm.admins"
+            autocomplete="off"
+            clearable
+            :disabled="isUpdate"
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="用户密码：" prop="psws">
+          <el-input
+            type="password"
+            v-model="addRuleForm.psws"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="确认密码：" prop="confirmPassword">
+          <el-input
+            type="password"
+            v-model="addRuleForm.confirmPassword"
+            autocomplete="off"
+            clearable
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="用户角色：" prop="sys_role_id" style="width: 100%">
+          <el-select v-model="addRuleForm.sys_role_id" placeholder="选择角色">
+            <el-option
+              v-for="item in sysrolesList"
+              :key="item.id"
+              :label="item.role_name"
+              :value="item.id"
+            >
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="是否启用：" prop="status">
+          <el-radio-group v-model="addRuleForm.status">
+            <el-radio label="1">启用</el-radio>
+            <el-radio label="2">禁用</el-radio>
+          </el-radio-group>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="resetForm('addRuleForm')" size="medium"
+          >取 消</el-button
+        >
+        <el-button type="primary" size="medium" @click="addOrUpdateSysAccount"
+          >确 定</el-button
+        >
+      </span>
+    </el-dialog>
+  </div>
+</template>
+<script>
+import { mapActions, mapGetters, mapMutations } from "vuex"; //vuex得各个方法   mapGetters放在computed里面 之后可以在当前页面用 this.userInfo 使用这个全局变量
+import list from "./components/list.vue";
+export default {
+  data() {
+    var validatePass = (rule, value, callback) => {
+      let reg = /^[A-Za-z0-9]+$/;
+      if (reg.test(value)) {
+        callback();
+      } else {
+        callback(new Error("密码不能为特殊字符"));
+      }
+    };
+    var validatePass2 = (rule, value, callback) => {
+      if (value === "") {
+        callback(new Error("请再次输入密码"));
+      } else if (value !== this.addRuleForm.psws) {
+        callback(new Error("两次输入密码不一致!"));
+      } else {
+        callback();
+      }
+    };
+    return {
+      sysrolesList: [],
+      options: [
+        {
+          value: "1",
+          label: "启用",
+        },
+        {
+          value: "2",
+          label: "禁用",
+        },
+      ],
+      dialogVisible: false,
+      val: "你好",
+      ruleForm: {
+        name: "",
+        status: "",
+        role: "",
+      },
+      addRuleForm: {
+        name: "",
+        admins: "",
+        psws: "",
+        confirmPassword: "",
+        sys_role_id: "",
+        status: "1",
+      },
+      addRules: {
+        name: [{ required: true, message: "请输入用户名称", trigger: "blur" }],
+        admins: [
+          { required: true, message: "请输入用户账号", trigger: "blur" },
+        ],
+        psws: [
+          { required: true, validator: validatePass, trigger: "blur" },
+          {
+            min: 6,
+            max: 15,
+            message: "长度在 6 到 15 个字符",
+            trigger: "blur",
+          },
+        ],
+        confirmPassword: [
+          { required: true, validator: validatePass2, trigger: "blur" },
+          {
+            min: 6,
+            max: 15,
+            message: "长度在 6 到 15 个字符",
+            trigger: "blur",
+          },
+        ],
+
+        sys_role_id: [
+          { required: true, message: "请选择角色", trigger: "blur" },
+        ],
+        status: [
+          { required: true, message: "请选择是否禁用", trigger: "blur" },
+        ],
+      },
+      oldForm: {},
+      isUpdate: false,
+    };
+  },
+  components: {
+    //声明组件
+    list,
+  },
+  created() {
+    this.getRolesList();
+  },
+  mounted() {},
+  computed: {
+    ...mapGetters(["getToken", "getAuthority"]),
+  },
+  methods: {
+    ...mapActions({
+      getSysrolesList: "loginModule/getSysrolesList",
+      accountCreate: "loginModule/accountCreate",
+      accountUpdate: "loginModule/accountUpdate",
+      insertJournal: "loginModule/insertJournal",
+    }),
+    getAuthorityFunc(opt) {
+      if (this.getAuthority && this.getAuthority.length != 0) {
+        let obj = this.getAuthority.find((v) => {
+          return v.code == this.$route.path;
+        });
+        if (obj && obj.child && obj.child.length != 0) {
+          return obj.child.some((v) => {
+            return v.code == opt;
+          });
+        }
+      }
+    },
+    addFormFn() {
+      this.dialogVisible = true;
+      this.addRuleForm = {
+        name: "",
+        admins: "",
+        psws: "",
+        confirmPassword: "",
+        sys_role_id: "",
+        status: "1",
+      };
+    },
+    copyData(val) {
+      return JSON.parse(JSON.stringify(val));
+    },
+    handleClose() {
+      this.dialogVisible = false;
+      this.isUpdate = false;
+      this.$refs.addRuleForm.resetFields();
+    },
+    dataBind(tag, row) {
+      this.dialogVisible = true;
+      let _row = this.copyData(row);
+      this.oldForm = this.copyData(_row);
+      this.addRuleForm = _row;
+      this.addRuleForm.psws = null;
+      this.addRuleForm.sys_role_id = _row.sys_role_id;
+      if (this.addRuleForm.sys_role_id == 0) {
+        this.addRuleForm.sys_role_id = "";
+      }
+      if (tag == 2) {
+        this.isUpdate = true;
+      } else {
+        this.isUpdate = false;
+      }
+    },
+    async getRolesList() {
+      try {
+        let opt = {
+          token: this.getToken, //token
+          page: 0, //当前页数
+          page_size: 0, //每页大小
+        };
+        let res = await this.getSysrolesList(opt);
+        // console.log(res);
+        if (res.code != 1) {
+          return this.$message.error(res.msg);
+        }
+        this.sysrolesList = res.data.list;
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    changeStatus() {
+      this.$nextTick(() => {
+        this.$refs.list.initList();
+      });
+    },
+    logOption(content, tag, beforeCon) {
+      let data = {
+        plate: "员工管理",
+        plateRouter: "/personnel",
+        user: this.$store.state.userInfo.identity_name,
+        // userId:this.$store.state.user.info.userId,
+        userId: 111,
+        action: tag,
+        time: new Date(),
+        content: content,
+      };
+      if (beforeCon) {
+        data.beforeCon = beforeCon;
+      }
+      this.insertJournal(data);
+    },
+    addOrUpdateSysAccount() {
+      this.$refs.addRuleForm.validate(async (valid) => {
+        if (valid) {
+          this.btnLoad = true;
+          try {
+            let opt = {
+              token: this.getToken,
+              admins: this.addRuleForm.admins, //账户名称
+              name: this.addRuleForm.name, //用户名称
+              psws: this.addRuleForm.psws, //密码
+              sys_role_id: this.addRuleForm.sys_role_id, //角色id
+              status: this.addRuleForm.status, //状态  1启用  2禁用
+            };
+            if (this.isUpdate) {
+              opt.id = this.addRuleForm.id;
+            }
+            let res = this.isUpdate
+              ? await this.accountUpdate(opt)
+              : await this.accountCreate(opt);
+            // console.log(res);
+            if (res.code != 1) {
+              return this.$message.error(res.msg);
+            }
+            this.$message.success(!this.isUpdate ? "添加成功!" : "修改成功!");
+            let _role = this.sysrolesList.find((v) => {
+              return v.id == this.addRuleForm.sys_role_id;
+            });
+
+            let old_role = this.sysrolesList.find((v) => {
+              return v.id == this.oldForm.sys_role_id;
+            });
+
+            let content = {
+              用户名称: this.addRuleForm.name,
+              账号: this.addRuleForm.admins,
+              角色: _role.role_name,
+              是否启用: this.addRuleForm.status == 1 ? "启用" : "禁用",
+            };
+            let beforeCon;
+            if (this.isUpdate) {
+              beforeCon = {
+                用户名称: this.oldForm.name,
+                账号: this.oldForm.admins,
+                角色: old_role.role_name,
+                是否启用: this.oldForm.status == 1 ? "启用" : "禁用",
+              };
+              this.logOption(content, 2, beforeCon);
+            } else {
+              this.logOption(content, 1, beforeCon);
+            }
+          } catch (err) {
+            console.log(err);
+          } finally {
+            this.dialogVisible = false;
+            this.isUpdate = false;
+            this.btnLoad = false;
+            this.$refs.addRuleForm.resetFields();
+            this.$refs.list.initList(1);
+          }
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
+    },
+
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.$refs.list.initList(1);
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
+    },
+    resetForm(formName, tag) {
+      this.dialogVisible = false;
+      this.$refs[formName].resetFields();
+      if (tag == 0) {
+        this.$nextTick(() => {
+          this.$refs.list.initList(1);
+        });
+      }
+    },
+  },
+};
+</script>           
+<style lang="scss" scoped>
+// scoped 只在这个页面有效得css样式  不污染全局
+.page_con {
+  color: #999;
+  margin: 0 !important;
+  margin-top: 20px !important;
+}
+.home_index {
+  padding: 20px !important;
+}
+
+.myCard {
+  min-width: 1200px;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
+
+.myBtn {
+  margin-bottom: 20px;
+}
+.page_top {
+  min-width: 1200px;
+}
+
+.add {
+  ::v-deep .el-form-item__label {
+    width: 100px !important;
+  }
+  ::v-deep .el-form-item {
+    width: 100%;
+    display: flex;
+  }
+  ::v-deep .el-form-item__content {
+    flex: 1;
+  }
+}
+
+.el-select {
+  width: 100%;
+}
+</style>

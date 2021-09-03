@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/creditExamination.css">
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../home.html">首页</a></li>
+              <li><a href="javascript:void(0);" class="active">信用体检</a></li>
+              <li><a href="./creditRestoration.html">信用修复</a></li>
+              <li><a href="./restorationPublicity.html">修复公示</a></li>
+              <li><a href="./riskMonitoring.html">风险监控</a></li>
+              <li><a href="./creditUniversity.html">信用大学</a></li>
+              <li><a href="./openPlatform.html">开放平台</a></li>
+              <li><a href="./about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="bannerBox">
+    <img src="../static/images/Banner_01.png" alt="">
+  </div>
+
+  <main>
+    <!-- 搜索框 -->
+    <div>
+      <div class="tabBox">
+        <ul class="clear">
+          <li class="tabActive" style="border-radius: 2px 0px 0px 0px;">个人信用体检</li>
+          <li style="border-radius: 0px 2px 0px 0px;">企业信用体检</li>
+        </ul>
+      </div>
+      <div class="inputBox" id="creditInputBox">
+        <form class="bs-example bs-example-form" role="form">
+          <ul class="clear">
+            <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;">
+              <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+            </li>
+            <li class="left" id="creInput">
+              <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入身份证号码">
+            </li>
+            <li class="left" id="creInput2" style="display: none;border-radius: 0px 0px 0px 2px;">
+              <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入企业全称 / 统一社会信用代码">
+            </li>
+            <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+              <button class="btn btn-default" type="button" onClick="searchBtn()">查询</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <!-- 信用体检 -->
+    <div class="personalNoDataBox">
+      <div class="title">尊敬的张三（322111889966663322），你的信用体检报告如下：</div>
+      <!-- （个人暂无数据） -->
+      <div class="imgBox" style="margin-bottom:60px;">
+        <img src="../static/images/img_zwsj_01.png" alt="">
+        <p>暂无数据~</p>
+      </div>
+    </div>
+    <!-- 在线信用服务 -->
+    <div class="creditServiceBox">
+      <h3>在线信用服务</h3>
+      <div class="">
+        <div class="rowBox clear">
+          <a class="colLg left colLgOne">
+            <img src="../static/images/img_chua_01.png" alt="">
+            <div>在线信用体检</div>
+          </a>
+          <a class="colLg left">
+            <img src="../static/images/img_chua_02.png" alt="">
+            <div>在线信用修复</div>
+          </a>      
+          <a class="colLg left">
+            <img src="../static/images/img_chua_03.png" alt="">
+            <div>在线风险监控</div>
+          </a>      
+          <a class="colLg left colLgLast">
+            <img src="../static/images/img_chua_04.png" alt="">
+            <div>在线信用培训</div>
+          </a>      
+      </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../static/js/commonJS.js"></script>
+<script src="../static/js/creditExamination.js"></script>
+<script src="../static/js/footer.js"></script>
+</html>

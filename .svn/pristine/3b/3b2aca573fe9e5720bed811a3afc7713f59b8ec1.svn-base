@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 企业动态 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>企业动态</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/common.css">
+  <link rel="stylesheet" href="../../static/css/enterpriseTrends.css">
+  </style>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a
+            href="#">风险预警网</a> </div>
+        <div class="right">
+          <!-- 未登录 -->
+          <!-- <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a> -->
+          <!-- 已登录 - 点击去用户中心 -->
+          <a href="../../pages/userCenter/personalInfo.html"><img src="../../static/picture/userIconBlack.png" alt="">
+            张三</a>
+          <a href="../../register.html">注册</a>
+        </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+          <ul class="menuList left clear">
+            <li><a href="../../home.html">首页</a></li>
+            <li><a href="./../creditExamination.html">信用体检</a></li>
+            <li><a href="./../creditRestoration.html">信用修复</a></li>
+            <li><a href="./../restorationPublicity.html">修复公示</a></li>
+            <li><a href="./../riskMonitoring.html">风险监控</a></li>
+            <li><a href="./../creditUniversity.html">信用大学</a></li>
+            <li><a href="./../openPlatform.html">开放平台</a></li>
+            <li><a href="./../about.html" class="active">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="bannerBox">
+    <img src="../../static/images/img_banner_aboutLList.png">
+  </div>
+  <main>
+    <div class="mainBox">
+      <div class="listBox">
+        <div class="itemBox clear" onclick="toDetail(0)">
+          <div class="imgBox left">
+            <img src="../../static/images/icon_chuatu_aboutList.png" alt="">
+          </div>
+          <div class="descBox left">
+            <h3>东莞市召开企业信用体系建设联席会议2020年全体会议</h3>
+            <div class="descText">
+              11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商...
+            </div>
+          </div>
+          <div class="clear sourceTimeBox">
+            <div class="left">信用君</div>
+            <div class="right">
+              <img src="../../static/picture/icon_rqi_01.png" alt="">
+              <span>2020-11-30</span>
+            </div>
+          </div>
+        </div>
+        <div class="itemBox clear" onclick="toDetail(1)">
+          <div class="imgBox left">
+            <img src="../../static/images/icon_chuatu_aboutList.png" alt="">
+          </div>
+          <div class="descBox left">
+            <h3>东莞市召开企业信用体系建设联席会议2020年全体会议</h3>
+            <div class="descText">
+              11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商...
+            </div>
+          </div>
+          <div class="clear sourceTimeBox">
+            <div class="left">信用君</div>
+            <div class="right">
+              <img src="../../static/picture/icon_rqi_01.png" alt="">
+              <span>2020-11-30</span>
+            </div>
+          </div>
+        </div>
+        <div class="itemBox clear" onclick="toDetail(2)">
+          <div class="imgBox left">
+            <img src="../../static/images/icon_chuatu_aboutList.png" alt="">
+          </div>
+          <div class="descBox left">
+            <h3>东莞市召开企业信用体系建设联席会议2020年全体会议</h3>
+            <div class="descText">
+              11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商11月25日，市企业信用体系建设联席会议2020年全体会议在市行政办事未联通的地方通过电子邮件向平台报送。国家公共信用信息中心负责名单汇总，经全国信用信息共享平台信用筛查后，通过全国“信易贷”平台提供给商...
+            </div>
+          </div>
+          <div class="clear sourceTimeBox">
+            <div class="left">信用君</div>
+            <div class="right">
+              <img src="../../static/picture/icon_rqi_01.png" alt="">
+              <span>2020-11-30</span>
+            </div>
+          </div>
+        </div>
+        <!-- 分页 -->
+        <div style="text-align: center;">
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 底部 -->
+  <footer id="commonFooter"></footer>
+
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  function toDetail(val) {
+    window.location.href = "./enterpriseTrendsDetail.html"
+  }
+</script>
+
+</html>

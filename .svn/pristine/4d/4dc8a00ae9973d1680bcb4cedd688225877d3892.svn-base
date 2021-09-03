@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 培训讲师 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>培训讲师</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/creditUniversitySubPage/megsList.css">
+</head>
+
+<body>
+  <div>
+    <!-- 头部 -->
+    <header id="header">
+      <div id="topTitleBox" class="topTitleBox">
+        <div class="topTitle clear">
+          <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+          <div class="right">
+            <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+            <a href="../../register.html">注册</a>
+          </div>
+        </div>
+        <nav>
+          <div class="menuBox clear">
+            <div class="logoImg left">
+              <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+            </div>
+              <ul class="menuList left clear">
+                <li><a href="../../home.html">首页</a></li>
+                <li><a href="../creditExamination.html">信用体检</a></li>
+                <li><a href="../creditRestoration.html">信用修复</a></li>
+                <li><a href="../restorationPublicity.html">修复公示</a></li>
+                <li><a href="../riskMonitoring.html">风险监控</a></li>
+                <li><a href="../creditUniversity.html" class="active">信用大学</a></li>
+                <li><a href="../openPlatform.html">开放平台</a></li>
+                <li><a href="../about.html">关于修尔信</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div id="topBannerBox" class="trainersBox">
+      <div class="positionText" style="color: #888;">当前位置：<a href="../../home.html" style="color: #888;">首页</a>><a href="../creditUniversity.html" style="color: #888;">信用大学</a>><span>培训讲师</span></div>
+    </div>
+    <main>
+      <div class="newsListBox clear">
+        <div class="trainersTitle">培训讲师</div>
+        <div id="trainer">
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>讲师编号</th>
+                  <th>注册日期</th>
+                  <th>认证日期</th>
+                  <th>主讲类目</th>
+                  <th>讲师评分</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+                <tr>
+                  <td>HF2020089-XRX</td>
+                  <td>2020-10-26</td>
+                  <td>2020-10-28</td>
+                  <td>综合</td>
+                  <td>98.5分</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 分页 -->
+            <div style="text-align: center;">
+              <ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="commonFooter"></footer>
+  </div>
+</body>
+<script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  function toDetailFn(val){
+    window.location.href = "./policyNewsDetail.html?" + "id=" + val
+  }
+</script>

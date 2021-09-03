@@ -1,0 +1,80 @@
+.bannerBox{width: 100%;height: 380px;}
+.bannerBox img{width: 100%;height: 100%;}
+.tabTopBox{width: 100%;height: 70px;box-shadow: 0px 2px 10px 0px rgba(1, 15, 73, 0.08);padding: 3px 0;}
+.navBox{width: 1050px;margin: 0 auto;height: 60px;}
+.tabLeft{border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
+.tebRight{border-right: 1px solid #ddd;}
+.tabLeft li{float: left;line-height: 60px;font-size: 18px;
+  /* margin: 0 40px; */
+  margin: 0 60px;
+}
+.tabLeft li a,.tebRight li a{color: #333;}
+.tabLeft li:hover a,.tebRight li:hover a{color: #FF9A23;cursor: pointer;}
+.tebRight li{float: left;text-align: center;margin: 0 40px;}
+
+.subTtopTitle{width: 1050px;margin: 0 auto;border-left: 4px solid #FF9000;padding-left: 20px;margin-bottom: 28px;}
+.subTtopTitle .left{font-size: 28px;font-weight: bold;}
+.subTtopTitle .right a{font-size: 18px;color: #666;line-height: 37px;}
+.subTtopTitle .right a:hover{color: #FF9A23;}
+/* 政策新闻 */
+#policyNews{width: 1050px;margin: 0 auto;margin-top: 50px;margin-bottom: 60px;}
+#policyNews .imgBox{width: 600px;height: 380px;margin-right: 30px;}
+#policyNews .imgBox .marks{width: 600px;height: 46px;position: relative;z-index: 1;top: -46px;background-color: rgba(0, 13, 41, .1);}
+#policyNews .listBox{width: 420px;}
+#policyNews .listBox h3{font-size: 18px;font-weight: bold;border-bottom: 1px solid #eaeaea;padding-bottom: 12px;}
+#policyNews .listTextBox li{padding: 17.5px 0;border-bottom: 1px solid #eaeaea;}
+#policyNews .listTextBox li:hover{color: #FF9A23;cursor: pointer;}
+#policyNews .listTextBox .left{width: 320px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 16px;}
+#policyNews .listTextBox .right{font-size: 14px;color: #aaa;line-height: 22px;}
+#policyNews .carousel-caption{text-align: left!important;left: 2%!important;padding-bottom: 0!important;font-size: 18px;bottom: 10px!important;}
+#policyNews .carousel-indicators{margin-left: 80px!important;bottom: 10px!important;}
+/* 信用动态 */
+#dynamics{width: 100%;height: 424px;background-image: url("../images/img_xydxbj_01.png");padding-top: 50px;background-position: center;background-size: cover;margin-bottom: 48px;}
+#dynamics .subTtopTitle .left,#dynamics .subTtopTitle .right a{color: #fff;}
+#dynamics .right a:hover{color: #FF9A23;}
+#dynamics .subTtopTitle{margin-bottom: 36px;}
+#dynamics .dynamicsItemsBox{display: flex;display: -webkit-flex;justify-content: space-between;width: 1050px;margin: 0 auto;}
+#dynamics .itemBox{width: 247px;}
+#dynamics .itemBox .imgBox{width:100%;height: 170px;background-color: #ddd;overflow: hidden;}
+#dynamics .itemBox .textBox{padding: 15px;background-color: #fff;}
+#dynamics .itemBox .textBox .title{margin-bottom: 15px;font-size: 16px;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#dynamics .itemBox:hover .textBox .title{color: #FF9A23;}
+/* #dynamics .itemBox:hover .imgBox img{width: 257px;height: 180px;
+  margin-left: -5px;margin-top: -5px;
+  transition: all 3s;
+  -moz-transition: all 3s;
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+} */
+
+#dynamics .itemBox .textBox .clear{font-size: 12px;color: #999;}
+/* 典型案例 */
+#classicCase .listBox{width: 1050px;margin: 0 auto;display: flex;display: -webkit-flex;justify-content: start;flex-wrap: wrap;}
+#classicCase .listBox .itemBox{width: 515px;height: 150px;background: #F7F8FA;padding: 20px;margin-bottom: 20px;}
+#classicCase .listBox .itemBox:hover{background-color: #fff;box-shadow: 0px 6px 22px 4px rgba(1, 15, 73, 0.12);cursor: pointer;}
+#classicCase .listBox .itemBox:nth-child(odd){margin-right: 20px;}
+#classicCase .listBox .itemBox img{width: 180px;height: 110px;margin-right: 15px;}
+#classicCase .listBox .itemBox .text h3{font-size: 16px;margin-bottom: 15px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 280px;}
+#classicCase .listBox .itemBox .text p{color: #999;font-size: 12px;}
+/* 信用培训 */
+#creditTraining{width: 100%;background: #F7F8FA;padding: 50px 0;margin-bottom: 50px;margin-top: 60px;}
+#creditTraining .listBox{width: 1050px;margin: 0 auto;display: flex;display: -webkit-flex;justify-content: start;flex-wrap: wrap;}
+#creditTraining .itemBox{width: 336px;margin-bottom: 20px;}
+#creditTraining .marginWidth{margin: 0 20px;}
+#creditTraining .itemBox .imgBox{width: 100%;height: 200px;background-color: #ddd;}
+#creditTraining .itemBox .textBox{padding: 15px;background-color: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(1, 15, 73, 0.08);}
+#creditTraining .itemBox h3{font-size: 16px;margin-bottom: 10px;}
+#creditTraining .itemBox p{font-size: 12px; color: #666;margin-bottom: 20px;}
+#creditTraining .itemBox button{width: 100%;height: 42px; line-height: 42px;color: #fff;font-size: 16px;background-color: #1164DF;}
+#creditTraining .itemBox button:hover{background-color: #FF9000;}
+/* 培训讲师 */
+#trainer{padding: 50px 0;background: #F7F8FA;}
+#trainer .tableBox{width: 1050px;margin: 0 auto;margin-bottom: 40px;}
+#trainer .tableBox table{width: 100%;}
+#trainer table thead tr th,#trainer table tbody tr td{height: 50px;padding-left: 20px;}
+#trainer table thead tr th{background: #1164DF;border: 1px solid #EAEAEA;color: #fff;font-size: 16px;}
+#trainer table tbody tr td{background: #FFFFFF;border: 1px solid #EAEAEA;}
+#trainer .btnBox{text-align: center;}
+#trainer .btnBox button{width: 200px;height: 52px;line-height: 52px;font-size: 16px;color: #fff;background: #1164DF;}
+#trainer .btnBox button:hover{background-color: #FF9000;}

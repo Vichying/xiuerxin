@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- 充值套餐 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>修尔信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/creditRestoration/caseList.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+      <div class="topTitle clear">
+        <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+         <div class="right">
+           <a href="../../login.html"><img src="../../static/picture/userIconBlack.png" alt=""> 登录</a>
+           <a href="../../register.html">注册</a>
+         </div>
+      </div>
+      <nav>
+        <div class="menuBox clear">
+          <div class="logoImg left">
+            <a href="../../home.html"><img src="../../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+          </div>
+            <ul class="menuList left clear">
+              <li><a href="../../home.html">首页</a></li>
+              <li><a href="../creditExamination.html">信用体检</a></li>
+              <li><a href="../creditRestoration.html" class="active">信用修复</a></li>
+              <li><a href="../restorationPublicity.html">修复公示</a></li>
+              <li><a href="../riskMonitoring.html">风险监控</a></li>
+              <li><a href="../creditUniversity.html">信用大学</a></li>
+              <li><a href="../openPlatform.html">开放平台</a></li>
+              <li><a href="../about.html">关于修尔信</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="topPositionBox">
+      <p>当前位置：<a href="../../home.html" style="color: #333;">首页</a>><a href="../creditRestoration.html" style="color: #333;">信用修复</a>><span>服务套餐</span></p>
+    </div>
+    <div class="packageListBox">
+      <h3 class="title">服务套餐</h3>
+      <div class="line"></div>
+      <div class="subTitle">请选择服务套餐</div>
+      <div class="packageBox">
+        <div class="itemBox activeSearch">
+          <p>1次查询服务</p>
+          <div>￥<span class="subMoney">100</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox">
+          <p>5次查询服务</p>
+          <div>￥<span class="subMoney">450</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox">
+          <p>10次查询服务</p>
+          <div>￥<span class="subMoney">800</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox" style="margin-right: 0;">
+          <p>20次查询服务</p>
+          <div>￥<span class="subMoney">1500</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox">
+          <p>30次查询服务</p>
+          <div>￥<span class="subMoney">2200</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox">
+          <p>50次查询服务</p>
+          <div>￥<span class="subMoney">3500</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+        <div class="itemBox">
+          <p>100次查询服务</p>
+          <div>￥<span class="subMoney">6500</span>元</div>
+          <img class="checkedIcon" src="../../static/picture/img_gouxuan_01.png" alt="">
+        </div>
+      </div>
+      <div class="payBtnBox clear">
+        <button class="right" onclick="nowPayFn()">立即支付</button>
+        <div class="right text">需付金额：<span>￥</span><span class="money" id="money">100</span></div>
+      </div>
+      <div class="line" style="margin-bottom:90px;"></div>
+    </div>
+  </main>
+
+  <footer id="commonFooter"></footer>
+</body>
+<script src="../../static/js/commonJS.js"></script>
+<script src="../../static/js/footer.js"></script>
+<script>
+  let searchFlag = 1 //1次查询服务
+  $(function(){
+    // 默认选中1次查询服务
+    $(".activeSearch").css("border-color","#FF9000").find(".checkedIcon").show()
+  })
+  $(".packageBox .itemBox").click(function(){
+    console.log("查询次数==>",$(this).find("p").html())
+    console.log("需付金额==>",$(this).find(".subMoney").html(),"元")
+    let totalMoney = $(this).find(".subMoney").html()
+    $(this).css("border-color","#FF9000")
+    $(this).siblings().css("border-color","#ddd")
+    $(this).find(".checkedIcon").show()
+    $(this).siblings().find(".checkedIcon").hide()
+    // 需付金额
+    $("#money").empty().html(totalMoney)
+  })
+
+  function nowPayFn(){
+    window.location.href = "./servicePackagePayType.html"
+  }
+</script>

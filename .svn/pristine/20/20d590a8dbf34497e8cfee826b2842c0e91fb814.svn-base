@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="./static/css/common.css">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/login.css">
+  <!-- 验证码 -->
+  <script type="text/javascript">
+    var vailCode;
+    function changeCode() {
+      var cvs = document.getElementById("cvs");
+      vailCode = drawCode(cvs);
+      console.log("验证码：", vailCode)
+    }
+    window.onload = changeCode; //加载页面显示验证码
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logoBox clear">
+      <a href="home.html"><img src="./static/picture/logoImg.png" alt="" class="left"></a>
+
+      <p class="left">欢迎登录修尔信！</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="formBox">
+      <div class="title">用户登录</div>
+      <form role="form">
+        <div class="form-group">
+          <div class="inputDiv">
+            <input type="text" class="form-control" id="name" placeholder="请输入用户名/手机号码" onblur="nameFun()">
+            <p class="tipText tipName">请输入用户名/手机号码</p>
+          </div>
+          <div class="inputDiv">
+            <input type="password" class="form-control passwordInput" id="pw" placeholder="请输入登录密码" onblur="pwFun()">
+            <div class="iconBox">
+              <img class="openeye" src="./static/picture/openeye.png" alt="" onclick="openeyeBtn()">
+              <img class="closeeye" src="./static/picture/closeeye.png" alt="" onclick="closeeyeBtn()"
+                style="display: none;">
+            </div>
+            <p class="tipText tipPw">请输入登录密码</p>
+          </div>
+          <div class="clear verificationCode inputDiv">
+            <input class="left" type="text" class="form-control" id="verificationCode" placeholder="请输入验证码"
+              onblur="codeFun()">
+            <canvas id="cvs" onclick="changeCode()"></canvas>
+            <a class="code_a right" onclick="changeCode()"><img src="./static/picture/uploadData.png" alt=""></a>
+          </div>
+          <div class="tipText tipCode">请输入验证码</div>
+        </div>
+        <button class="submitBtn" type="button" class="btn btn-default" onclick="submitBtn()">立即登录</button>
+
+        <div class="clear userAgreement loginToReg">
+          <a class="left" href="register.html"><span class="blueText">没有账号，去注册</span></a>
+          <a class="right" href="retrievePassword.html">忘记密码?</a>
+        </div>
+        <div class="thirdParty">
+          <div class="line left"></div>
+          <div class="left text">第三方登录</div>
+          <div class="line left"></div>
+        </div>
+        <div class="row thirdPartyBox">
+          <div class="col-lg-4 wxBox">
+            <img class="wx1" src="./static/picture/icon_wx.png" alt="">
+            <img class="wx2" src="./static/picture/icon_wx_02.png" alt="" style="display: none;">
+            <p>微信登录</p>
+          </div>
+          <div class="col-lg-4 qqBox">
+            <img class="qq1" src="./static/picture/icon_qq.png" alt="">
+            <img class="qq2" src="./static/picture/icon_qq_02.png" alt="" style="display: none;">
+            <p>QQ登录</p>
+          </div>
+          <div class="col-lg-4 zfbBox">
+            <img class="zfb1" src="./static/picture/icon_zfb.png" alt="">
+            <img class="zfb2" src="./static/picture/icon_zfb_02.png" alt="" style="display: none;">
+            <p>支付宝登录</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</body>
+<script src="./static/js/commonJS.js"></script>
+<script src="./static/js/verificationCode.js"></script>
+<script>
+  function openeyeBtn() {
+    $(".openeye").hide()
+    $(".closeeye").show()
+    $(".passwordInput").attr("type", "text");
+  }
+  function closeeyeBtn() {
+    $(".openeye").show()
+    $(".closeeye").hide()
+    $(".passwordInput").attr("type", "password");
+  }
+
+  // 提交
+  function submitBtn() {
+    console.log($("#verificationCode").val())
+    var code = document.getElementById("verificationCode").value;
+    if ($("#name").val() == "" || $("#name").val() == null) {
+      $(".tipName").show()
+      $(".tipName").html("请输入用户名/手机号码")
+    } else if ($("#pw").val() == "" || $("#pw").val() == null) {
+      $(".tipPw").show()
+    } else if ($("#verificationCode").val() == "" || $("#verificationCode").val() == null) {
+      $(".tipCode").show()
+    } else if (code.toLowerCase() != vailCode.toLowerCase()) {
+      $(".tipCode").show()
+      $(".tipCode").empty().html("验证码输入错误");
+      // changeCode();
+      return false;
+    } else {
+      // 校验通过，提交数据
+      $(location).attr('href', 'home.html');
+    }
+  }
+
+  // 清除校验
+  function nameFun() {
+    if ($("#name").val() != "" || $("#name").val() != null) {
+      $(".tipName").hide()
+    }
+  }
+  function pwFun() {
+    if ($("#pw").val() != "" || $("#pw").val() != null) {
+      $(".tipPw").hide()
+    }
+  }
+  function codeFun() {
+    if ($("#verificationCode").val() != "" || $("#verificationCode").val() != null) {
+      $(".tipCode").hide()
+    }
+  }
+
+  // 移入移出
+  $(".wxBox").mouseover(function () {
+    $(".wx2").show()
+    $(".wx1").hide()
+  })
+  $(".wxBox").mouseout(function () {
+    $(".wx2").hide()
+    $(".wx1").show()
+  })
+  $(".qqBox").mouseover(function () {
+    $(".qq2").show()
+    $(".qq1").hide()
+  })
+  $(".qqBox").mouseout(function () {
+    $(".qq2").hide()
+    $(".qq1").show()
+  })
+  $(".zfbBox").mouseover(function () {
+    $(".zfb2").show()
+    $(".zfb1").hide()
+  })
+  $(".zfbBox").mouseout(function () {
+    $(".zfb2").hide()
+    $(".zfb1").show()
+  })
+
+</script>
+
+</html>

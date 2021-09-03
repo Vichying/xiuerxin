@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修尔信-案件列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/creditExamination.css">
+    <link rel="stylesheet" href="../static/css/fileinput.min.css">
+</head>
+<body>
+<!-- 头部 -->
+<header id="header">
+    <div id="topTitleBox" class="topTitleBox">
+        <div class="topTitle clear">
+            <div class="left">欢迎光临修尔信！ 汇法集团旗下网站：<a href="#">汇法网</a><a href="#">催天下</a><a href="#">风险信息网</a><a href="#">风险预警网</a> </div>
+            <div class="right">
+                <a href="../login.html"><img src="../static/picture/userIconBlack.png" alt=""> 登录</a>
+                <a href="../register.html">注册</a>
+            </div>
+        </div>
+        <nav>
+            <div class="menuBox clear">
+                <div class="logoImg left">
+                    <a href="home.html"><img src="../static/picture/logoImg.png" alt="" style="vertical-align: middle;"></a>
+                </div>
+                <ul class="menuList left clear">
+                    <li><a href="../home.html">首页</a></li>
+                    <li><a href="javascript:void(0);" class="active">信用体检</a></li>
+                    <li><a href="./creditRestoration.html">信用修复</a></li>
+                    <li><a href="./restorationPublicity.html">修复公示</a></li>
+                    <li><a href="./riskMonitoring.html">风险监控</a></li>
+                    <li><a href="./creditUniversity.html">信用大学</a></li>
+                    <li><a href="./openPlatform.html">开放平台</a></li>
+                    <li><a href="./about.html">关于修尔信</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="bannerBox">
+    <img src="../static/images/Banner_01.png" alt="">
+</div>
+
+<main>
+    <!-- 搜索框 -->
+    <div>
+        <div class="tabBox">
+            <ul class="clear">
+                <li style="border-radius: 2px 0px 0px 0px;">个人信用体检</li>
+                <li class="tabActive" style="border-radius: 0px 2px 0px 0px;">企业信用体检</li>
+            </ul>
+        </div>
+        <div class="inputBox" id="creditInputBox">
+            <form class="bs-example bs-example-form" role="form">
+                <ul class="clear">
+                    <li class="left tipLeftText" id="creTipLeftText" style="border-radius: 0px 0px 0px 2px;display: none;">
+                        <input type="text" name="name" id="name" class="formControl" placeholder="请输入姓名">
+                    </li>
+                    <li class="left" id="creInput" style="display: none;">
+                        <input type="text" name="identify" id="identify" class="formControl" placeholder="请输入身份证号码">
+                    </li>
+                    <li class="left" id="creInput2" style="border-radius: 0px 0px 0px 2px;">
+                        <input type="text" name="qyidentify" id="qyidentify" class="formControl" placeholder="请输入企业全称 / 统一社会信用代码">
+                    </li>
+                    <li class="right buttonBox" style="border-radius: 0px 2px 2px 0px;">
+                        <button class="btn btn-default" type="button" onClick="searchBtn()">信用体检</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!---案件列表--->
+        <div class="case-list">
+
+        <div class="left-list">
+            <div  class="top-title">全部（28）</div>
+            <div class="list-class">
+              <ul>
+                  <li class="list-item"><span>司法诉讼（18）<i class="ico-xia"></i></span>
+                    <ul>
+                        <li><a>立案公告（1）</a></li>
+                        <li><a>开庭公告（12）</a></li>
+                        <li><a>立案公告（1）</a></li>
+                        <li><a>立案公告（1）</a></li>
+                    </ul>
+                  </li>
+                  <li class="list-item"><span>行政处罚（10）<i class="ico-xia"></i></span>
+                      <ul>
+                          <li><a>司法协执（0）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                      </ul>
+                  </li>
+                  <li class="list-item"><span>司法诉讼（18）<i class="ico-xia"></i></span>
+                      <ul>
+                          <li><a>立案公告（1）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                          <li><a>立案公告（1）</a></li>
+                      </ul>
+                  </li>
+              </ul>
+            </div>
+
+        </div>
+        <div class="right-list">
+            <div  class="top-title">裁判文书</div>
+            <div  class="result-list-all">
+
+
+
+
+                <div class="listBox" id="listBox" >
+
+
+                    <div class="bottomListBox">
+
+                        <div class="itemBox clear">
+                            <div class="left checkInputBox" style="margin-right: 15px;"></div>
+                            <div class="left textTitle" onclick="toDetail(0)">
+                                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+                            </div>
+                            <div class="left">
+                                <p>特定严重失信</p>
+                            </div>
+                            <button class="creditBtn right seriousBreach" data-toggle="modal" data-target="#IrreparableModal">不可修复</button>
+                        </div>
+                        <div class="itemBox clear">
+                            <div class="left" style="margin-right: 15px;">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="1">
+                                </label>
+                            </div>
+                            <div class="left textTitle" onclick="toDetail(1)">
+                                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+                            </div>
+                            <div class="left">
+                                <p>严重失信</p>
+                            </div>
+                            <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty" onclick="toApplicationFn(1)">在线修复</button>
+                        </div>
+                        <div class="itemBox clear">
+                            <div class="left checkInputBox" style="margin-right: 15px;"></div>
+                            <div class="left textTitle" onclick="toDetail(0)">
+                                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+                            </div>
+                            <div class="left">
+                                <p>特定严重失信</p>
+                            </div>
+                            <button class="creditBtn right seriousBreach" data-toggle="modal" data-target="#IrreparableModal">不可修复</button>
+                        </div>
+                        <div class="itemBox clear">
+                            <div class="left" style="margin-right: 15px;">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="2">
+                                </label>
+                            </div>
+                            <div class="left textTitle" onclick="toDetail(1)">
+                                <h4>( 黔江 )处罚【2020】第01号（2020-10-10）</h4>
+                                <p>承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段承建的中建国际重庆装配式建筑生产及研发基地项目工程2号段</p>
+                            </div>
+                            <div class="left">
+                                <p>严重失信</p>
+                            </div>
+                            <button class="creditBtn right" data-toggle="modal" data-target="#dishonesty" onclick="toApplicationFn(1)">在线修复</button>
+                        </div>
+                    </div>
+                    <!-- 全选 -->
+                    <div class="checkAllBox clear">
+                        <div class="left" style="margin-right: 15px;">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" value="" id="allCheck">
+                            </label>
+                        </div>
+                        <div class="left checkAllText">全选</div>
+                        <div class="left checkedNum">已选择0项</div>
+                        <button class="right btnText">批量修复</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+        <!---案件列表--->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">最新成功信用修复案例</h4>
+                    </div>
+                    <div class="modal-body success-list">
+                     <!--数据循环输出区域-->
+                        <div class="success-case">
+                        <h3>修复日期：2020-10-11</h3>
+                        <table>
+                            <tr>
+                                <td class="left-title">被执行人/名称</td>
+                                <td>XX网络科技有限公司</td>
+                            </tr>
+                            <tr>
+                                <td class="left-title">身份证号码/组织机构代码</td>
+                                <td>11111118****2111</td>
+                            </tr>
+                            <tr>
+                                <td class="left-title">失信领域</td>
+                                <td>判决文书</td>
+                            </tr>
+                            <tr>
+                                <td class="left-title">修复用途</td>
+                                <td>银行贷款</td>
+                            </tr>
+                        </table>
+                        </div>
+
+                        <!--数据循环输出区域-->
+                        <div class="success-case">
+                            <h3>修复日期：2020-10-11</h3>
+                            <table>
+                                <tr>
+                                    <td class="left-title">被执行人/名称</td>
+                                    <td>XX网络科技有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td class="left-title">身份证号码/组织机构代码</td>
+                                    <td>11111118****2111</td>
+                                </tr>
+                                <tr>
+                                    <td class="left-title">失信领域</td>
+                                    <td>判决文书</td>
+                                </tr>
+                                <tr>
+                                    <td class="left-title">修复用途</td>
+                                    <td>银行贷款</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="text-color-blue">累积信用修复：123668次</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---案例按钮--->
+
+        <!---案例按钮--->
+
+        <div class="creditServiceBox">
+            <h3>在线信用服务</h3>
+            <div class="">
+                <div class="rowBox clear">
+                    <a class="colLg left colLgOne">
+                        <img src="../static/images/img_chua_01.png" alt="">
+                        <div>在线信用体检</div>
+                    </a>
+                    <a class="colLg left">
+                        <img src="../static/images/img_chua_02.png" alt="">
+                        <div>在线信用修复</div>
+                    </a>
+                    <a class="colLg left">
+                        <img src="../static/images/img_chua_03.png" alt="">
+                        <div>在线风险监控</div>
+                    </a>
+                    <a class="colLg left colLgLast">
+                        <img src="../static/images/img_chua_04.png" alt="">
+                        <div>在线信用培训</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 底部 -->
+<footer id="commonFooter">
+    <div id="footerBox">
+        <div class="mainTextBox">
+            <ul class="">
+                <li class="title">联系我们</li>
+                <li>全称：修尔信</li>
+                <li>邮编：200000</li>
+                <li>电话：021-62311883</li>
+                <li>邮箱：tangxiaofeng@lawxp.com</li>
+            </ul>
+            <div class="footerLine"></div>
+            <ul class="">
+                <li class="title">网站导航</li>
+                <li class="clear">
+                    <span class="left"><a href="###">网站首页</a></span>
+                    <span class="left"><a href="###">信用体检</a></span>
+                    <span class="left"><a href="###">信用修复</a></span>
+                </li>
+                <li class="clear">
+                    <span class="left"><a href="###">修复公示</a></span>
+                    <span class="left"><a href="###">风险监控</a></span>
+                    <span class="left"><a href="###">信用大学</a></span>
+                </li>
+                <li class="clear">
+                    <span class="left"><a href="###">开放平台</a></span>
+                    <span class="left"><a href="###">关于修尔信</a></span>
+                    <span class="left"><a href="###">联系我们</a></span>
+                </li>
+            </ul>
+            <div class="footerLine"></div>
+            <ul class="">
+                <li class="title">友情链接</li>
+                <li class="clear">
+                    <span class="left"><a href="###">汇法网</a></span>
+                    <span class="left"><a href="###">风险信息网</a></span>
+                </li>
+                <li class="clear">
+                    <span class="left"><a href="###">催天下</a></span>
+                    <span class="left"><a href="###">风险预警网</a></span>
+                </li>
+                <li class="clear">
+                    <span class="left"><a href="###">九不欺</a></span>
+                    <span class="left"><a href="###">合和社区</a></span>
+                </li>
+                <li class="clear">
+                    <span class="left"><a href="###">信服生活</a></span>
+                </li>
+            </ul>
+            <div class="footerLine"></div>
+            <ul class="">
+                <li class="title">关注修尔信</li>
+                <img src="../static/images/img_gzhewm_01.png" alt="">
+                <li style="text-align: center;margin-top: 10px;">关注公众号</li>
+            </ul>
+        </div>
+    </div>
+    <div id="bootomBox">
+        <div class="box">
+            <img src="../static/picture/img_jhui_01.png" alt="">
+            <p>京公网安备 11010502039987号<span style="margin: 0 50px;">京ICP备16007659号-5</span>Copyright(C) 2010-2028 北京汇法信息技术有限公司 All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+<div id="container">
+    <div id="topLoader"> </div>
+    <button id="animateButton">Animate Loader</button>
+</div>
+
+
+
+<!--成功案例弹窗-->
+
+<!--成功案例弹窗-->
+<script src="../static/js/commonJS.js"></script>
+<script src="../static/js/creditExamination.js"></script>
+</body>
+</html>
